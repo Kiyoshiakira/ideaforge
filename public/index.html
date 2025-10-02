@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeHub - Where Creativity Meets Collaboration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .nav-item {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .nav-item:hover {
+            background-color: rgba(147, 51, 234, 0.1);
+            color: #7c3aed;
+        }
+        
+        .nav-item.active {
+            background-color: rgba(147, 51, 234, 0.2);
+            color: #7c3aed;
+            font-weight: 600;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-hidden {
+            display: none;
+        }
+        
+        .mobile-menu-toggle {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-bg bg-clip-text text-transparent">CreativeHub</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-4">
+                    <div class="nav-item px-4 py-2 rounded-lg active" data-section="home">🏠 Home</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="features">⚡ Features</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="funding">💰 Dream Funding</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="showcase">🎨 Showcase</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="studio">🎨 Creative Studio</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="auditions">🎭 Auditions</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="partnerships">🤝 Partnerships</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="legal">⚖️ Legal</div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block px-4 py-2 text-purple-600 hover:text-purple-700">Sign In</button>
+                    <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">Join Now</button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden mobile-menu-toggle">
+                    <button class="text-gray-700">☰</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <div class="md:hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 p-4 space-y-2 section-hidden" id="mobile-menu">
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="home">🏠 Home</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="features">⚡ Features</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="funding">💰 Dream Funding</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="showcase">🎨 Showcase</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="studio">🎨 Creative Studio</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="auditions">🎭 Auditions</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="partnerships">🤝 Partnerships</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="legal">⚖️ Legal</div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="content-section">
+        <div class="gradient-bg text-white py-20 pt-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Where Creativity Meets Collaboration</h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100">
+                    Share your work, collaborate with other creators, and earn royalties from your art
+                </p>
+                <button class="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg">
+                    Start Creating Free
+                </button>
+            </div>
+        </div>
+        
+        <div class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-semibold mb-3">Upload Your Work</h3>
+                        <p class="text-gray-600">Share your scripts, artwork, music, or any creative content. Set your collaboration preferences and royalty rates.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-semibold mb-3">Collaborate & Create</h3>
+                        <p class="text-gray-600">Connect with other creators, form teams, and build amazing projects using shared resources from the community.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-semibold mb-3">Earn & Grow</h3>
+                        <p class="text-gray-600">Automatically receive royalties when your work is used. Track your impact and grow your creative career.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-8">Platform Statistics</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">1,247</div>
+                            <div class="text-gray-600">Active Creators</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">3,891</div>
+                            <div class="text-gray-600">Shared Assets</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">12</div>
+                            <div class="text-gray-600">Dreams Funded</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">$47K+</div>
+                            <div class="text-gray-600">Total Funding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="content-section section-hidden">
+        <div class="py-20 bg-white pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Everything You Need to Create</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Powerful tools and features designed for creative collaboration
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-hover bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🎨</div>
+                        <h3 class="text-xl font-semibold mb-2">Visual Art & Design</h3>
+                        <p class="text-gray-600 mb-4">Digital art, illustrations, concept art, and graphic designs</p>
+                        <button class="text-purple-600 font-semibold hover:text-purple-700">Browse Art →</button>
+                    </div>
+                    
+                    <div class="card-hover bg-gradient-to-br from-blue-100 to-cyan-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🎵</div>
+                        <h3 class="text-xl font-semibold mb-2">Music & Audio</h3>
+                        <p class="text-gray-600 mb-4">Original music, sound effects, voice-over work, and audio productions</p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-700">Listen Now →</button>
+                    </div>
+                    
+                    <div class="card-hover bg-gradient-to-br from-green-100 to-emerald-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🎥</div>
+                        <h3 class="text-xl font-semibold mb-2">Video & Film</h3>
+                        <p class="text-gray-600 mb-4">Short films, animations, documentaries, and video content</p>
+                        <button class="text-green-600 font-semibold hover:text-green-700">Watch Videos →</button>
+                    </div>
+                    
+                    <div class="card-hover bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">📚</div>
+                        <h3 class="text-xl font-semibold mb-2">Writing & Scripts</h3>
+                        <p class="text-gray-600 mb-4">Screenplays, stories, poetry, and written content</p>
+                        <button class="text-yellow-600 font-semibold hover:text-yellow-700">Read More →</button>
+                    </div>
+                    
+                    <div class="card-hover bg-gradient-to-br from-red-100 to-pink-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🎮</div>
+                        <h3 class="text-xl font-semibold mb-2">Game Assets</h3>
+                        <p class="text-gray-600 mb-4">Character designs, environments, UI elements, and game mechanics</p>
+                        <button class="text-red-600 font-semibold hover:text-red-700">Explore →</button>
+                    </div>
+                    
+                    <div class="card-hover bg-gradient-to-br from-indigo-100 to-purple-100 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🏗️</div>
+                        <h3 class="text-xl font-semibold mb-2">3D Models</h3>
+                        <p class="text-gray-600 mb-4">3D assets, environments, characters, and animations</p>
+                        <button class="text-indigo-600 font-semibold hover:text-indigo-700">View Models →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dream Funding Section -->
+    <section id="funding" class="content-section section-hidden">
+        <div class="py-20 bg-gray-50 pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Dream Funding Program</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Get grants to bring your creative projects to life. No repayment required - just create!
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">How It Works</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Submit Your Pitch</h4>
+                                    <p class="text-gray-600">Share your creative vision and project requirements</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Community Vote</h4>
+                                    <p class="text-gray-600">The community votes on which projects to fund</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Get Funded & Create</h4>
+                                    <p class="text-gray-600">Receive funds and bring your dream to life</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="mt-8 px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+                            Apply for Funding
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Grant Tiers</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-bold text-green-700">Starter Dreams - $500</h4>
+                                <p class="text-sm text-gray-600">Perfect for small projects and first-time creators</p>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-bold text-blue-700">Growing Dreams - $2,500</h4>
+                                <p class="text-sm text-gray-600">For medium-scale projects with clear vision</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold text-purple-700">Big Dreams - $10,000</h4>
+                                <p class="text-sm text-gray-600">For ambitious projects with community impact</p>
+                            </div>
+                            <div class="border-l-4 border-yellow-500 pl-4">
+                                <h4 class="font-bold text-yellow-700">Epic Dreams - $25,000+</h4>
+                                <p class="text-sm text-gray-600">For transformative projects that inspire</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="content-section section-hidden">
+        <div class="py-20 bg-white pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                        Discover amazing work from our creative community
+                    </p>
+                    <button class="mt-8 px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+                        Upload Your Work Now
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative w-full aspect-video bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Video Player Placeholder</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">"Epic Space Battle"</h3>
+                            <p class="text-sm text-gray-600 mb-4">Sci-fi short film. Looking for sound effects and music.</p>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">Watch Video</button>
+                                <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">Collaborate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative w-full aspect-video bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Image Placeholder</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">"Neon Dreams"</h3>
+                            <p class="text-sm text-gray-600 mb-4">Cyberpunk character concept art collection.</p>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm">View Image</button>
+                                <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">Collaborate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative w-full aspect-video bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Audio Player Placeholder</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">"Midnight Jazz"</h3>
+                            <p class="text-sm text-gray-600 mb-4">Original jazz composition. Available for licensing.</p>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">Play Audio</button>
+                                <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">Collaborate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative w-full aspect-video bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">Document Preview</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">"The Last Guardian"</h3>
+                            <p class="text-sm text-gray-600 mb-4">Fantasy screenplay. Seeking collaborators for production.</p>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors text-sm">Read Script</button>
+                                <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">Collaborate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Studio Section -->
+    <section id="studio" class="content-section section-hidden">
+        <div class="py-20 bg-gray-50 pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Creative Studio & Learning</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Learn new skills with free tools and AI-powered guidance
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Free Creative Tools</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm">
+                                <div class="text-3xl mb-3">🎨</div>
+                                <h3 class="font-semibold mb-2">Digital Art</h3>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• GIMP (Photo editing)</li>
+                                    <li>• Krita (Digital painting)</li>
+                                    <li>• Inkscape (Vector graphics)</li>
+                                    <li>• Blender (3D modeling)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm">
+                                <div class="text-3xl mb-3">🎵</div>
+                                <h3 class="font-semibold mb-2">Music Production</h3>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Audacity (Audio editing)</li>
+                                    <li>• LMMS (Music production)</li>
+                                    <li>• Ardour (Recording)</li>
+                                    <li>• MuseScore (Sheet music)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm">
+                                <div class="text-3xl mb-3">🎬</div>
+                                <h3 class="font-semibold mb-2">Video & Animation</h3>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• DaVinci Resolve (Video editing)</li>
+                                    <li>• OpenToonz (2D animation)</li>
+                                    <li>• Natron (Compositing)</li>
+                                    <li>• OBS Studio (Recording)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm">
+                                <div class="text-3xl mb-3">✍️</div>
+                                <h3 class="font-semibold mb-2">Writing & Design</h3>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• LibreOffice (Documents)</li>
+                                    <li>• Scribus (Publishing)</li>
+                                    <li>• Trelby (Screenwriting)</li>
+                                    <li>• Manuskript (Novel writing)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white text-xl">🤖</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">CreativeBot AI Assistant</h4>
+                                <p class="text-gray-600 text-sm">Your 24/7 creative learning companion</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Choose Your Path</h4>
+                                    <p class="text-gray-600">Select from hundreds of courses in art, music, writing, filmmaking, and more</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Learn with AI</h4>
+                                    <p class="text-gray-600">Get personalized guidance from our advanced AI learning assistant</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Practice & Create</h4>
+                                    <p class="text-gray-600">Apply your skills in real projects and get feedback from the community</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">
+                            Start Learning Free
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auditions Section -->
+    <section id="auditions" class="content-section section-hidden">
+        <div class="py-20 bg-white pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Project Audition System</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        A revolutionary way to connect scripts with talent. Submit auditions, showcase your skills, and get cast in amazing projects!
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">🎬</div>
+                        <h3 class="text-xl font-bold mb-3">Script Owners</h3>
+                        <p class="text-gray-600 mb-4">Post your script and open auditions for specific roles or creative positions</p>
+                        <button class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">Post Script</button>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">🎭</div>
+                        <h3 class="text-xl font-bold mb-3">Talent</h3>
+                        <p class="text-gray-600 mb-4">Browse open roles and submit video auditions, artwork samples, or demo reels</p>
+                        <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Find Roles</button>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">🤝</div>
+                        <h3 class="text-xl font-bold mb-3">Collaborators</h3>
+                        <p class="text-gray-600 mb-4">Review auditions, select team members, and start building your project</p>
+                        <button class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Start Casting</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section id="partnerships" class="content-section section-hidden">
+        <div class="py-20 bg-gray-50 pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Partnership Opportunities</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Join forces with brands, studios, and other creators
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold mb-3">For Brands</h3>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Access to creative talent</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Sponsored challenges</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Brand partnerships</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Community engagement</li>
+                        </ul>
+                        <button class="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                            Partner With Us
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">🎬</div>
+                        <h3 class="text-xl font-bold mb-3">For Studios</h3>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Discover new talent</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Project collaboration</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> IP licensing</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Production support</li>
+                        </ul>
+                        <button class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                            Explore Projects
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h3 class="text-xl font-bold mb-3">Enterprise</h3>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Team collaboration tools</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Custom branding</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> API access</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> White-label options</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 1-on-1 mentoring</li>
+                        </ul>
+                        <button class="w-full py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                            Choose Pro
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Section -->
+    <section id="legal" class="content-section section-hidden">
+        <div class="py-20 bg-white pt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Legal Protection & Rights</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Your work is protected. Your rights are respected.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6">Creator Rights</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <div class="text-3xl mb-2">©</div>
+                                <h4 class="font-bold">100% Ownership</h4>
+                                <p class="text-sm text-gray-600">You retain full rights to your work</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">💰</div>
+                                <h4 class="font-bold">Smart Royalties</h4>
+                                <p class="text-sm text-gray-600">Automatic tracking and payment</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">📜</div>
+                                <h4 class="font-bold">Legal Templates</h4>
+                                <p class="text-sm text-gray-600">Every collaboration has automatic legal agreements</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">🔒</div>
+                                <h4 class="font-bold">Platform Immunity</h4>
+                                <p class="text-sm text-gray-600">Safe harbor protections for user-generated content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">The Site of All Sites for Dreamers</h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Where creativity knows no bounds and every dreamer can become a creator. Join our community today!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg">
+                    Start Creating Free
+                </button>
+                <button class="px-8 py-4 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition-colors text-lg">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Forums</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Discord</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p>&copy; 2024 CreativeHub. All rights reserved. Made with ❤️ for creators everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.content-section');
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.add('section-hidden');
+                });
+                
+                // Show selected section
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.remove('section-hidden');
+                }
+                
+                // Update active state
+                navItems.forEach(nav => nav.classList.remove('active'));
+                
+                // Find all nav items with the same data-section and mark them as active
+                document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(nav => {
+                    nav.classList.add('active');
+                });
+                
+                // Close mobile menu if open
+                if (mobileMenu && !mobileMenu.classList.contains('section-hidden')) {
+                    mobileMenu.classList.add('section-hidden');
+                }
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        // Mobile menu toggle
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('section-hidden');
+            });
+        }
+        
+        // Button functionality placeholders
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const buttonText = this.textContent.trim();
+
+                if (buttonText.includes('Sign In')) {
+                    alert('Sign-in functionality would be implemented here.');
+                } else if (buttonText.includes('Join Now') || buttonText.includes('Start Creating')) {
+                    alert('Welcome to CreativeHub! Sign-up functionality would be implemented here.');
+                } else if (buttonText.includes('Upload')) {
+                    alert('Upload interface functionality would be implemented here.');
+                } else if (buttonText.includes('Collaborate')) {
+                    alert('Collaboration request functionality would be implemented here.');
+                } else if (buttonText.includes('Watch Video')) {
+                    alert('Video player functionality would be implemented here, loading the selected video.');
+                } else if (buttonText.includes('View Image')) {
+                    alert('Image viewer functionality would be implemented here, loading the selected image.');
+                } else if (buttonText.includes('Play Audio')) {
+                    alert('Audio player functionality would be implemented here, playing the selected sound file.');
+                } else if (buttonText.includes('Read Script')) {
+                    alert('Script reader functionality would be implemented here, displaying the script.');
+                } else if (buttonText.includes('Apply for Funding') || buttonText.includes('Post Script') || buttonText.includes('Find Roles') || buttonText.includes('Start Casting')) {
+                    alert('This feature would connect to the backend API and open the appropriate interface.');
+                } else if (buttonText.includes('Partner With Us') || buttonText.includes('Explore Projects') || buttonText.includes('Choose Pro')) {
+                    alert('Partnership/Enterprise contact form would be displayed here.');
+                } else if (buttonText.includes('Learn More')) {
+                    alert('More information about CreativeHub features would be displayed here.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
