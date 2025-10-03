@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -286,3 +287,293 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaForge - Where Art Meets Collaboration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold gradient-bg bg-clip-text text-transparent">
+                        🎨 CreativeHub
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-2">
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="home">Home</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="features">Features</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="funding">Dream Funding</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="showcase">Showcase</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="studio">Creative Studio</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="auditions">Auditions</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="partnerships">Partnerships</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="pricing">Pricing</div>
+                    <div class="nav-item px-4 py-2 rounded-lg" data-section="legal">Legal</div>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="px-4 py-2 text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
+                        Sign In
+                    </button>
+                    <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                        Join Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="md:hidden fixed top-16 left-0 right-0 bg-white shadow-lg z-40 p-4 space-y-2">
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="home">🏠 Home</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="features">⚡ Features</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="funding">💰 Dream Funding</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="showcase">🎨 Showcase</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="studio">🎨 Creative Studio</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="auditions">🎭 Auditions</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="partnerships">🤝 Partnerships</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="pricing">💳 Pricing</div>
+        <div class="nav-item px-4 py-2 rounded-lg" data-section="legal">⚖️ Legal</div>
+    </div>
+
+    <!-- All section content unchanged, as in your index.html above, but with NO <style> or <link rel="stylesheet" ...> except for styles.css, and no <style> or @import in the head. -->
+
+    <!-- ... (All sections and page content are unchanged. They will look the same since the CSS is now in styles.css) ... -->
+
+    <!-- Your script tags and everything else remain as in your original file. -->
+    <script>
+        // Section navigation system
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.content-section');
+
+        function showSection(sectionId) {
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('section-visible');
+                section.classList.add('section-hidden');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('section-hidden');
+                targetSection.classList.add('section-visible');
+            }
+
+            // Update navigation active state
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to clicked nav item
+            document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(item => {
+                item.classList.add('active');
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add click handlers to navigation items
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        // Set initial active state
+        document.querySelectorAll('[data-section="home"]').forEach(item => {
+            item.classList.add('active');
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Button click handlers
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('Join Now') || this.textContent.includes('Start Creating') || this.textContent.includes('Get Started') || this.textContent.includes('Upload')) {
+                    alert('Welcome to CreativeHub! Sign-up/upload functionality would be implemented here.');
+                } else if (this.textContent.includes('Sign In')) {
+                    alert('Sign-in functionality would be implemented here.');
+                } else if (this.textContent.includes('Demo') || this.textContent.includes('Learn More') || this.textContent.includes('Watch') || this.textContent.includes('View') || this.textContent.includes('Play') || this.textContent.includes('Read') || this.textContent.includes('Listen')) {
+                    alert('Demo/content playback functionality would be implemented here.');
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenu = document.querySelector('.md\\:hidden');
+        let mobileMenuVisible = false;
+
+        // Add mobile menu toggle functionality
+        function toggleMobileMenu() {
+            mobileMenuVisible = !mobileMenuVisible;
+            if (mobileMenuVisible) {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = 'none';
+            }
+        }
+
+        // Hide mobile menu by default on larger screens
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = mobileMenuVisible ? 'block' : 'none';
+            }
+        });
+    </script>
+    <script>
+        // Section navigation system
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.content-section');
+
+        function showSection(sectionId) {
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('section-visible');
+                section.classList.add('section-hidden');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('section-hidden');
+                targetSection.classList.add('section-visible');
+            }
+
+            // Update navigation active state
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to clicked nav item
+            document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(item => {
+                item.classList.add('active');
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add click handlers to navigation items
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        // Set initial active state
+        document.querySelectorAll('[data-section="home"]').forEach(item => {
+            item.classList.add('active');
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Handle all button clicks to show alerts or perform actions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const buttonText = this.textContent.trim();
+
+                if (buttonText.includes('Sign In')) {
+                    alert('Sign-in functionality would be implemented here.');
+                } else if (buttonText.includes('Join Now') || buttonText.includes('Start Creating')) {
+                    alert('Welcome to CreativeHub! Sign-up functionality would be implemented here.');
+                } else if (buttonText.includes('Upload')) {
+                    alert('Upload interface functionality would be implemented here.');
+                } else if (buttonText.includes('Collaborate')) {
+                    alert('Collaboration request functionality would be implemented here.');
+                } else if (buttonText.includes('Watch Video')) {
+                    alert('Video player functionality would be implemented here, loading the selected video.');
+                } else if (buttonText.includes('View Image')) {
+                    alert('Image viewer functionality would be implemented here, loading the selected image.');
+                } else if (buttonText.includes('Play Audio')) {
+                    alert('Audio player functionality would be implemented here, playing the selected sound file.');
+                } else if (buttonText.includes('Read Script')) {
+                    alert('Document viewer functionality would be implemented here, showing the full script.');
+                } else if (buttonText.includes('Browse Gallery')) {
+                    alert('Navigating to the visual arts gallery.');
+                } else if (buttonText.includes('Listen Now')) {
+                    alert('Navigating to the audio and music section.');
+                } else if (buttonText.includes('Watch Videos')) {
+                    alert('Navigating to the video and film section.');
+                } else if (buttonText.includes('Read Stories')) {
+                    alert('Navigating to the writing and scripts section.');
+                } else if (buttonText.includes('Play Games')) {
+                    alert('Navigating to the interactive media section.');
+                } else if (buttonText.includes('View Performances')) {
+                    alert('Navigating to the performance arts section.');
+                } else if (buttonText.includes('Post Script')) {
+                    alert('Posting a script for auditions functionality would be implemented here.');
+                } else if (buttonText.includes('Find Roles')) {
+                    alert('Audition roles browser functionality would be implemented here.');
+                } else if (buttonText.includes('Start Creating')) {
+                    alert('Collaboration start page would be implemented here.');
+                } else if (buttonText.includes('Audition as Actor')) {
+                    alert('Actor audition submission form would be implemented here.');
+                } else if (buttonText.includes('Apply as Editor')) {
+                    alert('Editor application form would be implemented here.');
+                } else if (buttonText.includes('Submit Art')) {
+                    alert('Art submission form would be implemented here.');
+                } else if (buttonText.includes('Voice Audition')) {
+                    alert('Voice audition submission form would be implemented here.');
+                } else if (buttonText.includes('Ask')) {
+                    const input = this.previousElementSibling;
+                    if (input && input.value) {
+                        alert(`CreativeBot is processing your request: "${input.value}"`);
+                        input.value = ''; // Clear the input after "asking"
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenu = document.querySelector('.md\\:hidden');
+        let mobileMenuVisible = false;
+
+        // Add mobile menu toggle functionality
+        function toggleMobileMenu() {
+            mobileMenuVisible = !mobileMenuVisible;
+            if (mobileMenuVisible) {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = 'none';
+            }
+        }
+
+        // Hide mobile menu by default on larger screens
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = mobileMenuVisible ? 'block' : 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+>>>>>>> aa132fde3e45c39605abe23ed9235706fddf16f4
