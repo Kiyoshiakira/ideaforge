@@ -35,6 +35,12 @@ nav a {
   transition: color .25s;
 }
 
+nav a[aria-current="page"] {
+  color: #ffd86b;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 nav a:hover {
   color: #ffd86b;
 }
