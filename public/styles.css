@@ -26,6 +26,7 @@ nav {
   margin: 20px 0 0 0;
 }
 
+/* Navigation Link Styles */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -37,14 +38,16 @@ nav a {
 
 nav a[aria-current="page"] {
   color: #ffb44d;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
+/* Hover uses a different accent color for clarity */
 nav a:hover {
   color: #ffd86b;
 }
 
+/* Call-to-Action Button Styles */
 .cta-btn {
   background: linear-gradient(90deg, #ffd86b 0%, #ffb44d 100%);
   color: #421e7c;
