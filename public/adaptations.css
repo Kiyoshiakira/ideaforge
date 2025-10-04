@@ -1,0 +1,116 @@
+.original-work {
+  background: #f9f6ff;
+  border: 1.5px solid #e4d8f7;
+  padding: 20px 18px;
+  border-radius: 15px;
+  margin-bottom: 28px;
+}
+
+.adaptations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin: 24px 0 38px 0;
+}
+
+.adaptation-card {
+  background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 17px 14px 14px 14px;
+  box-shadow: 0 2px 12px rgba(80,30,140,.10);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 180px;
+  transition: transform .12s;
+}
+.adaptation-card:hover {
+  transform: translateY(-5px) scale(1.025);
+}
+
+.adaptation-preview {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.adaptation-preview img,
+.adaptation-preview audio {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.adaptation-type {
+  background: #ffd86b;
+  color: #421e7c;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 0.93rem;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.adaptation-creator {
+  font-size: 0.99rem;
+  margin-bottom: 7px;
+  opacity: 0.9;
+}
+.adaptation-creator a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.adaptation-desc {
+  font-size: 0.99rem;
+  color: #fff !important;
+  margin-bottom: 2px;
+}
+
+.adaptation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  max-width: 430px;
+  margin-top: 12px;
+}
+.adaptation-form label {
+  font-size: 1.05rem;
+  color: #421e7c;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.adaptation-form input[type="text"],
+.adaptation-form select,
+.adaptation-form textarea {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #d1c4e9;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  background: #faf7ff;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.adaptation-form input[type="file"] {
+  font-size: 1.01rem;
+  margin: 4px 0 6px 0;
+}
+
+.adaptation-form textarea {
+  min-height: 64px;
+  resize: vertical;
+}
+
+@media (max-width: 900px) {
+  .adaptations-grid {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .adaptation-card {
+    width: 100%;
+    min-width: unset;
+  }
+}
