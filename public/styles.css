@@ -35,14 +35,14 @@ nav a {
   transition: color .25s;
 }
 
-nav a:hover {
-  color: #ffd86b;
+nav a[aria-current="page"] {
+  color: #ffb44d;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-nav a[aria-current="page"] {
+nav a:hover {
   color: #ffd86b;
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 .cta-btn {
