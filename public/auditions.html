@@ -1,41 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auditions | IdeaForge</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditions | IdeaForge</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dropdown { margin-bottom: 22px; border-radius: 12px; border: 1.5px solid #e4d8f7; background: #faf8ff; }
+    .dropdown-header { display: flex; align-items: center; cursor: pointer; padding: 16px 20px; }
+    .dropdown-header h2 { font-size: 1.25rem; margin: 0; flex: 1; color: #421e7c; }
+    .dropdown-header .caret { font-size: 1.3em; margin-left: 8px; transition: transform 0.2s; }
+    .dropdown.open .dropdown-header .caret { transform: rotate(90deg); }
+    .dropdown-content { display: none; padding: 0 20px 18px 38px; }
+    .dropdown.open .dropdown-content { display: block; }
+    .audition-list li { margin: 14px 0; }
+    .audition-list button { margin-top: 4px; }
+    .audition-form { margin-top: 22px; background: #fff; border-radius: 10px; padding: 18px 18px 12px 18px; border: 1px solid #e4d8f7; max-width: 480px;}
+    .audition-form label { font-weight: bold; display: block; margin-top: 12px; }
+    .audition-form input, .audition-form textarea, .audition-form select { width: 100%; margin-top: 6px; margin-bottom: 10px; padding: 7px; border-radius: 6px; border: 1px solid #ccc; }
+    .audition-form input[type="file"] { padding: 0; }
+    .audition-form button { margin-top: 10px; }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">🎨 IdeaForge</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="features.html">Features</a>
-            <a href="funding.html">Dream Funding</a>
-            <a href="showcase.html">Showcase</a>
-            <a href="forge.html">Forge</a>
-            <a href="auditions.html">Auditions</a>
-            <a href="partnerships.html">Partnerships</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="legal.html">Legal</a>
-        </nav>
-    </header>
-    <section>
-        <h1>Auditions</h1>
-        <p>
-            Looking for talent? Posting or finding auditions is easy with IdeaForge!
-        </p>
-        <h2>Open Auditions</h2>
-        <ul>
-            <li>🎤 Voice Actor for "Galactic Dreams" (Remote)</li>
-            <li>🎭 Stage Actor for "Urban Legends" (NYC)</li>
-            <li>🎬 Film Editor for independent short (Remote)</li>
-        </ul>
-        <button class="cta-btn">Post an Audition</button>
-    </section>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
-    </footer>
+  <header>
+    <div class="logo">🎨 IdeaForge</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="funding.html">Dream Funding</a>
+      <a href="showcase.html">Showcase</a>
+      <a href="forge.html">Forge</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="legal.html">Legal</a>
+    </nav>
+  </header>
+  <section>
+    <h1>Auditions</h1>
+    <p>Expand a category and submit your audition!</p>
+
+    <!-- Audition Categories -->
+    <div class="dropdown" id="dropdown-art">
+      <div class="dropdown-header" onclick="toggleDropdown('dropdown-art')">
+        <h2>🎨 Art</h2>
+        <span class="caret">&#9654;</span>
+      </div>
+      <div class="dropdown-content">
+        <label for="art-type">Choose Art Type:</label>
+        <select id="art-type" onchange="showForm('art', this.value)">
+          <option value="">-- Select --</option>
+          <option value="digital">Digital Art</option>
+          <option value="illustration">Illustration</option>
+          <option value="photography">Photography</option>
+          <option value="comic">Comic Art</option>
+          <option value="other">Other</option>
+        </select>
+        <div id="form-art" class="audition-form" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-voice">
+      <div class="dropdown-header" onclick="toggleDropdown('dropdown-voice')">
+        <h2>🎤 Voice</h2>
+        <span class="caret">&#9654;</span>
+      </div>
+      <div class="dropdown-content">
+        <label for="voice-type">Choose Voice Type:</label>
+        <select id="voice-type" onchange="showForm('voice', this.value)">
+          <option value="">-- Select --</option>
+          <option value="acting">Voice Acting</option>
+          <option value="narration">Narration</option>
+          <option value="singing">Singing</option>
+          <option value="impressions">Impressions</option>
+          <option value="other">Other</option>
+        </select>
+        <div id="form-voice" class="audition-form" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-writing">
+      <div class="dropdown-header" onclick="toggleDropdown('dropdown-writing')">
+        <h2>✍️ Writing</h2>
+        <span class="caret">&#9654;</span>
+      </div>
+      <div class="dropdown-content">
+        <label for="writing-type">Choose Writing Type:</label>
+        <select id="writing-type" onchange="showForm('writing', this.value)">
+          <option value="">-- Select --</option>
+          <option value="scripts">Scripts</option>
+          <option value="stories">Stories</option>
+          <option value="poetry">Poetry</option>
+          <option value="gamewriting">Game Writing</option>
+          <option value="other">Other</option>
+        </select>
+        <div id="form-writing" class="audition-form" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-music">
+      <div class="dropdown-header" onclick="toggleDropdown('dropdown-music')">
+        <h2>🎵 Music</h2>
+        <span class="caret">&#9654;</span>
+      </div>
+      <div class="dropdown-content">
+        <label for="music-type">Choose Music Type:</label>
+        <select id="music-type" onchange="showForm('music', this.value)">
+          <option value="">-- Select --</option>
+          <option value="composition">Composition</option>
+          <option value="performance">Performance</option>
+          <option value="production">Production</option>
+          <option value="dj">DJ / Mixing</option>
+          <option value="other">Other</option>
+        </select>
+        <div id="form-music" class="audition-form" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-film">
+      <div class="dropdown-header" onclick="toggleDropdown('dropdown-film')">
+        <h2>🎬 Movies, TV, & Games</h2>
+        <span class="caret">&#9654;</span>
+      </div>
+      <div class="dropdown-content">
+        <label for="film-type">Choose Role Type:</label>
+        <select id="film-type" onchange="showForm('film', this.value)">
+          <option value="">-- Select --</option>
+          <option value="acting">Acting</option>
+          <option value="directing">Directing</option>
+          <option value="editing">Editing</option>
+          <option value="design">Design / Art</option>
+          <option value="other">Other</option>
+        </select>
+        <div id="form-film" class="audition-form" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- Add more categories as needed -->
+    
+  </section>
+  <footer>
+    &copy; 2025 IdeaForge. All rights reserved.
+  </footer>
+  <script>
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle('open');
+    }
+
+    function showForm(category, type) {
+      const formId = `form-${category}`;
+      const formDiv = document.getElementById(formId);
+      // Hide all forms in this category
+      document.querySelectorAll(`#dropdown-${category} .audition-form`).forEach(div => div.style.display = 'none');
+      if (!type) return;
+      formDiv.innerHTML = `
+        <form>
+          <label for="${category}-name">Name:</label>
+          <input type="text" id="${category}-name" name="name" required>
+
+          <label for="${category}-email">Email:</label>
+          <input type="email" id="${category}-email" name="email" required>
+
+          <label for="${category}-bio">Short Bio / Introduction:</label>
+          <textarea id="${category}-bio" name="bio" rows="3" required></textarea>
+
+          <label for="${category}-sample">Showcase Your Talent:</label>
+          <input type="file" id="${category}-sample" name="sample" multiple>
+          <small>Upload audio, images, video, or documents (optional)</small>
+
+          <label for="${category}-link">Portfolio or Content Link:</label>
+          <input type="url" id="${category}-link" name="link" placeholder="https://yourportfolio.com">
+
+          <button type="submit" class="cta-btn">Submit Audition</button>
+        </form>
+      `;
+      formDiv.style.display = 'block';
+    }
+  </script>
 </body>
 </html>

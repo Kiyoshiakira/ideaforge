@@ -1,0 +1,10 @@
+{
+  "name": "ideaforge",
+  "version": "1.0.0",
+  "description": "Where Art Meets Collaboration",
+  "scripts": {
+    "build": "echo 'No build step necessary for static site.'"
+  },
+  "author": "Kiyoshiakira",
+  "license": "MIT"
+}
