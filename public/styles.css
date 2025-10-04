@@ -27,7 +27,7 @@ nav {
 }
 
 nav a {
-  color: #fff; /* Changed from #e4d8f7 to white for better contrast */
+  color: #fff;
   text-decoration: none;
   margin: 0 18px;
   font-weight: 500;
@@ -68,7 +68,7 @@ section {
 
 h1, h2, h3 {
   font-family: 'Segoe UI', Arial, sans-serif;
-  color: #fff; /* Changed from #421e7c to white for better readability on dark backgrounds */
+  color: #421e7c; /* Use purple for headings in main content */
   font-weight: bold;
 }
 
@@ -105,12 +105,24 @@ p {
 .feature-card {
   flex: 1 1 270px;
   background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
-  color: #fff;
+  color: #fff; /* White text inside blue cards */
   border-radius: 20px;
   padding: 22px 18px;
   box-shadow: 0 2px 12px rgba(80,30,140,.10);
   transition: transform .13s;
   min-width: 220px;
+}
+
+.feature-card h2,
+.feature-card h3,
+.feature-card h4,
+.feature-card h5,
+.feature-card h6,
+.feature-card p,
+.feature-card li,
+.feature-card span,
+.feature-card div {
+  color: #fff !important;
 }
 
 .feature-card:hover {
