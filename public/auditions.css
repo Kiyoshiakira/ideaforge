@@ -1,0 +1,90 @@
+.auditions-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+  align-items: flex-end;
+}
+.auditions-search-bar input,
+.auditions-search-bar select {
+  padding: 8px 14px;
+  border: 1px solid #d1c4e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #faf7ff;
+}
+.auditions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.audition-card {
+  background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(80,30,140,0.10);
+  padding: 28px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .13s;
+}
+.audition-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+.audition-project {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+.audition-role {
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+.audition-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-bottom: 8px;
+}
+.audition-tag {
+  background: #ffd86b;
+  color: #421e7c;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 2px 12px;
+  font-size: 0.92rem;
+  margin-right: 6px;
+  display: inline-block;
+}
+.audition-creator {
+  font-size: 0.97rem;
+  opacity: 0.85;
+}
+.audition-desc {
+  margin: 6px 0 12px 0;
+  font-size: 1.03rem;
+  color: #fff;
+}
+.audition-apply-btn {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #ffd86b 0%, #ffb44d 100%);
+  color: #421e7c;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 22px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255,216,107,0.17);
+  transition: background 0.15s;
+}
+.audition-apply-btn:hover {
+  background: linear-gradient(90deg, #ffb44d 0%, #ffd86b 100%);
+}
+@media (max-width: 650px) {
+  .audition-card { padding: 16px 9px 12px 9px; }
+  .auditions-list { gap: 16px; }
+}
