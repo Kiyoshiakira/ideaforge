@@ -2,24 +2,26 @@
 
 **Where Art Meets Collaboration**
 
-IdeaForge is an open, collaborative creative suite designed for artists, writers, filmmakers, animators, game designers, and anyone with a passion for storytelling. Our goal is to provide a real-time, role-based platform for teams to create, manage, and showcase projects—whether it's a script, animation, game, or multimedia production.
+IdeaForge is an open, collaborative creative suite designed for artists, writers, filmmakers, animators, game designers, musicians, sound designers, audio engineers, voice actors, actors, and anyone with a passion for storytelling. Our goal is to provide a real-time, role-based platform for teams to create, manage, and showcase projects—whether it's a script, animation, game, music, sound project, performance, or multimedia production.
 
 ---
 
 ## 🌟 Features
 
 - **Real-Time Collaboration**  
-  Work together on scripts, notes, boards, and creative bibles with live multi-user editing.
+  Work together on scripts, notes, boards, creative bibles, music, audio, and performance projects with live multi-user editing.
 - **Role-Based Permissions**  
   Project owners control saves, history, and team management. Contributors can edit and suggest, with strong grief protection.
 - **Skill-Driven Teams**  
-  Showcase your creative skills, join projects that need your expertise, and build a meaningful portfolio.
+  Showcase your creative skills—art, animation, music, sound design, writing, audio engineering, voice acting, acting, and more. Join projects that need your expertise, and build a meaningful portfolio.
 - **Showcase & Portfolio**  
   Share your best work on your profile and in the global showcase.
+- **Auditions & Casting**  
+  Apply your acting or voice skills to projects, participate in auditions, and connect with creators seeking talent.
 - **AI-Powered Onboarding & Assistance**  
   Integrated AI bot to help new users, generate demo projects, and provide creative suggestions.
-- **Extensible for Animation, Games, Film, and Beyond**  
-  Modular project "bibles"—manage scripts, characters, worlds, assets, and more.
+- **Extensible for Animation, Games, Film, Audio, Performance, and Beyond**  
+  Modular project "bibles"—manage scripts, characters, worlds, assets, music, sound design, casting, and more.
 
 ---
 
@@ -52,6 +54,7 @@ See [`COLLAB-NEXT-STEPS.md`](COLLAB-NEXT-STEPS.md) for our current plans and pri
 - Project and user system foundations
 - Real-time editing and collaboration core
 - User profile and portfolio pages
+- Auditions and casting integration
 - AI bot integration and onboarding
 - Funding, community, and contributor outreach
 
@@ -59,7 +62,7 @@ See [`COLLAB-NEXT-STEPS.md`](COLLAB-NEXT-STEPS.md) for our current plans and pri
 
 ## 🤝 How to Contribute
 
-We welcome developers, designers, testers, artists, writers, and anyone interested in building creative tools!
+We welcome developers, designers, testers, artists, writers, musicians, sound designers, audio engineers, actors, voice actors—anyone interested in building creative tools!
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 - Check [open issues](https://github.com/Kiyoshiakira/ideaforge/issues)
@@ -69,7 +72,7 @@ We welcome developers, designers, testers, artists, writers, and anyone interest
 
 ## 🙌 Community & Credits
 
-- All contributors will be credited in the documentation and on the site.
+- All contributors will be credited in project documentation and on the site.
 - Major contributors & outstanding works will be highlighted in the global showcase.
 
 Questions? Suggestions? Open an [issue](https://github.com/Kiyoshiakira/ideaforge/issues) or join our community discussions!
@@ -82,4 +85,4 @@ Questions? Suggestions? Open an [issue](https://github.com/Kiyoshiakira/ideaforg
 
 ---
 
-**Let’s build a new home for collaborative creation. Welcome to IdeaForge!**
+**Let’s build a new home for collaborative creation—for art, story, music, sound, performance, and more. Welcome to IdeaForge!**
