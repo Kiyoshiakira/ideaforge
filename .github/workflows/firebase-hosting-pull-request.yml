@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BONNIE_LASS_FLORALS }}
-          projectId: bonnie-lass-florals
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_IDEAFORGE }}
+          projectId: ideaforge-e92ff
