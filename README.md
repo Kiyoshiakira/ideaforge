@@ -2,7 +2,7 @@
 
 **Where Art Meets Collaboration**
 
-IdeaForge is an open, collaborative creative suite designed for artists, writers, filmmakers, animators, game designers, musicians, sound designers, audio engineers, voice actors, actors, and anyone with a passion for storytelling. Our goal is to provide a real-time, role-based platform for teams to create, manage, and showcase projects—whether it's a script, animation, game, music, sound project, performance, or multimedia production.
+IdeaForge is an open-source collaborative suite that brings artists, writers, filmmakers, animators, game designers, musicians, and creative professionals together in real-time. Think Figma meets Notion, purpose-built for creative workflows.
 
 ---
 
