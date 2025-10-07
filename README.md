@@ -97,7 +97,7 @@ Please see [SECURITY.md](SECURITY.md) for how to report vulnerabilities or secur
 
 ## 📄 License
 
-*Add your license here (e.g. MIT, GPL, etc.)*
+AGPL-3.0
 
 ---
 
