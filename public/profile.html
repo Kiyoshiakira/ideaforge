@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | IdeaForge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="resources.html">Resources</a>
+            <a href="funding.html">Dream Funding</a>
+            <a href="showcase.html">Showcase</a>
+            <a href="forge.html">Forge</a>
+            <a href="auditions.html">Auditions</a>
+            <a href="adaptations.html">Adaptations</a>
+            <a href="partnerships.html">Partnerships</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="legal.html">Legal</a>
+        </nav>
+    </header>
+    <section>
+        <h1>My Profile</h1>
+        <div id="profile-content">
+            <p>Loading your profile...</p>
+        </div>
+        <div id="not-logged-in" style="display: none;">
+            <p>You need to be logged in to view your profile.</p>
+            <button class="cta-btn" onclick="openAuthModal()">Login / Sign Up</button>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 IdeaForge. All rights reserved.
+    </footer>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <!-- Authentication Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="header-inject.js"></script>
+    <script src="auth.js"></script>
+    
+    <script>
+        // Check if user is logged in and display profile
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                document.getElementById('not-logged-in').style.display = 'none';
+                document.getElementById('profile-content').innerHTML = `
+                    <div class="mission">
+                        <strong>Welcome, ${user.displayName || 'User'}!</strong>
+                    </div>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>User ID:</strong> ${user.uid}</p>
+                    <p><strong>Account Created:</strong> ${new Date(user.metadata.creationTime).toLocaleDateString()}</p>
+                    <p><strong>Last Sign In:</strong> ${new Date(user.metadata.lastSignInTime).toLocaleDateString()}</p>
+                    ${user.photoURL ? `<img src="${user.photoURL}" alt="Profile" style="max-width: 200px; border-radius: 50%;">` : ''}
+                    <hr>
+                    <h2>Profile Settings</h2>
+                    <p><em>Profile editing features coming soon! You'll be able to update your display name, bio, skills, and showcase your best work.</em></p>
+                `;
+            } else {
+                document.getElementById('profile-content').style.display = 'none';
+                document.getElementById('not-logged-in').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
