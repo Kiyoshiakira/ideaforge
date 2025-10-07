@@ -122,6 +122,30 @@ p {
   min-width: 220px;
 }
 
+/* --- CONTRAST PATCH START --- */
+.preview-card, .feature-card, .adaptation-card, .audition-card {
+  color: #fff !important;
+  text-shadow: 0 1px 5px rgba(40,0,60,0.22);
+}
+.preview-card p, .feature-card p {
+  color: #fff !important;
+  text-shadow: 0 1px 6px rgba(40,0,60,0.15);
+}
+.preview-card strong, .feature-card strong {
+  color: #ffd86b !important;
+  font-weight: bold;
+  text-shadow: 0 1px 4px rgba(80,30,140,0.28);
+}
+.gallery-item .caption {
+  color: #421e7c;
+  background: #fffbe9;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-shadow: none;
+}
+/* --- CONTRAST PATCH END --- */
+
 .feature-card h2,
 .feature-card h3,
 .feature-card h4,
@@ -185,8 +209,7 @@ p {
 .gallery-item .caption {
   padding: 14px 14px 16px 14px;
   font-size: 1rem;
-  color: #421e7c;
-  font-weight: 500;
+  /* color overridden above for contrast patch */
 }
 
 .pricing-table {
