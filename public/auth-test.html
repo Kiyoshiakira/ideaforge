@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Test Page - IdeaForge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <style>
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5f0ff;
+            border-radius: 10px;
+            border: 2px solid #e4d8f7;
+        }
+        .test-btn {
+            margin: 5px;
+            padding: 10px 20px;
+            background: #6e33b7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .test-btn:hover {
+            background: #421e7c;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="auth-test.html" aria-current="page">Auth Test</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h1>🧪 Authentication System Test Page</h1>
+        
+        <div class="mission">
+            <strong>Purpose:</strong> This page helps you test the Firebase Authentication system.
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Current Status</h2>
+            <div id="auth-status" class="status info">
+                <strong>Loading authentication state...</strong>
+            </div>
+            <div id="user-info"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔑 Quick Actions</h2>
+            <button class="test-btn" onclick="openAuthModal('login')">Open Login Form</button>
+            <button class="test-btn" onclick="openAuthModal('signup')">Open Signup Form</button>
+            <button class="test-btn" onclick="testSignOut()">Sign Out</button>
+        </div>
+
+        <div class="test-section">
+            <h2>🔍 System Checks</h2>
+            <button class="test-btn" onclick="runSystemChecks()">Run All Checks</button>
+            <div id="system-checks"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>📝 Test Credentials</h2>
+            <p>For testing purposes, you can create a test account:</p>
+            <ul>
+                <li>Email: test@ideaforge.com</li>
+                <li>Password: test123456 (minimum 6 characters)</li>
+                <li>Display Name: Test User</li>
+            </ul>
+            <p><em>Note: These are examples. Create your own test account.</em></p>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 What to Test</h2>
+            <ol>
+                <li>✅ Click "Login / Sign Up" button in header</li>
+                <li>✅ Modal appears with login/signup tabs</li>
+                <li>✅ Switch between Login and Sign Up tabs</li>
+                <li>✅ Sign up with email/password</li>
+                <li>✅ Header updates with user menu</li>
+                <li>✅ Click user dropdown (▼)</li>
+                <li>✅ Visit Profile and My Projects pages</li>
+                <li>✅ Sign out</li>
+                <li>✅ Login again with same credentials</li>
+                <li>✅ Reload page - session persists</li>
+                <li>✅ Test on other pages (index.html, about.html, etc.)</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>🐛 Debugging Tips</h2>
+            <ul>
+                <li>Open browser console (F12) to see logs</li>
+                <li>Check for "Firebase not defined" errors</li>
+                <li>Verify firebase-config.js has your actual config</li>
+                <li>Check Network tab for failed script loads</li>
+                <li>Clear browser cache if styles don't update</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 IdeaForge. All rights reserved.
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <!-- Authentication Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="header-inject.js"></script>
+    <script src="auth.js"></script>
+
+    <script>
+        // Update authentication status display
+        if (typeof firebase !== 'undefined') {
+            firebase.auth().onAuthStateChanged((user) => {
+                const statusDiv = document.getElementById('auth-status');
+                const userInfoDiv = document.getElementById('user-info');
+                
+                if (user) {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = '<strong>✅ Authenticated!</strong>';
+                    
+                    userInfoDiv.innerHTML = `
+                        <h3>User Information:</h3>
+                        <ul>
+                            <li><strong>Display Name:</strong> ${user.displayName || 'Not set'}</li>
+                            <li><strong>Email:</strong> ${user.email}</li>
+                            <li><strong>User ID:</strong> ${user.uid}</li>
+                            <li><strong>Email Verified:</strong> ${user.emailVerified ? 'Yes' : 'No'}</li>
+                            <li><strong>Provider:</strong> ${user.providerData.map(p => p.providerId).join(', ')}</li>
+                            <li><strong>Created:</strong> ${new Date(user.metadata.creationTime).toLocaleString()}</li>
+                            <li><strong>Last Sign In:</strong> ${new Date(user.metadata.lastSignInTime).toLocaleString()}</li>
+                        </ul>
+                    `;
+                } else {
+                    statusDiv.className = 'status info';
+                    statusDiv.innerHTML = '<strong>ℹ️ Not authenticated</strong> - Click "Login / Sign Up" to get started';
+                    userInfoDiv.innerHTML = '';
+                }
+            });
+        }
+
+        async function testSignOut() {
+            const result = await signOut();
+            if (result.success) {
+                alert('✅ Signed out successfully!');
+            } else {
+                alert('❌ Error signing out: ' + result.error);
+            }
+        }
+
+        function runSystemChecks() {
+            const checksDiv = document.getElementById('system-checks');
+            let html = '<h3>System Check Results:</h3><ul>';
+            
+            // Check Firebase
+            if (typeof firebase !== 'undefined') {
+                html += '<li>✅ Firebase SDK loaded</li>';
+            } else {
+                html += '<li>❌ Firebase SDK not loaded</li>';
+            }
+            
+            // Check Auth Container
+            if (document.getElementById('auth-container')) {
+                html += '<li>✅ Auth container injected</li>';
+            } else {
+                html += '<li>❌ Auth container not found</li>';
+            }
+            
+            // Check Auth Modal
+            if (document.getElementById('auth-modal')) {
+                html += '<li>✅ Auth modal injected</li>';
+            } else {
+                html += '<li>❌ Auth modal not found</li>';
+            }
+            
+            // Check Functions
+            if (typeof openAuthModal === 'function') {
+                html += '<li>✅ openAuthModal function available</li>';
+            } else {
+                html += '<li>❌ openAuthModal function not available</li>';
+            }
+            
+            if (typeof signOut === 'function') {
+                html += '<li>✅ signOut function available</li>';
+            } else {
+                html += '<li>❌ signOut function not available</li>';
+            }
+            
+            // Check CSS
+            const authModal = document.getElementById('auth-modal');
+            if (authModal) {
+                const styles = window.getComputedStyle(authModal);
+                if (styles.display === 'none') {
+                    html += '<li>✅ Auth modal properly hidden</li>';
+                } else {
+                    html += '<li>⚠️ Auth modal display: ' + styles.display + '</li>';
+                }
+            }
+            
+            html += '</ul>';
+            checksDiv.innerHTML = html;
+        }
+
+        // Auto-run checks on page load
+        setTimeout(() => {
+            runSystemChecks();
+        }, 1000);
+    </script>
+</body>
+</html>
