@@ -25,6 +25,23 @@ IdeaForge is an open-source collaborative suite that brings artists, writers, fi
 
 ---
 
+## 🗺️ Roadmap
+
+We’re building IdeaForge in public and tracking progress transparently. Here’s our current roadmap:
+
+| Quarter    | Milestone                                                |
+|------------|----------------------------------------------------------|
+| Q4 2025    | Core collaboration engine, basic project workspace       |
+| Q1 2026    | Real-time sync, role-based permissions                   |
+| Q2 2026    | AI assistance, plugin system                             |
+| Q3 2026    | Mobile support, advanced integrations                    |
+
+👉 **See our [GitHub Milestones](https://github.com/Kiyoshiakira/ideaforge/milestones) for details and live progress.**
+
+Check [`COLLAB-NEXT-STEPS.md`](COLLAB-NEXT-STEPS.md) for a detailed step-by-step build plan, open questions, and ideas.
+
+---
+
 ## 🚀 Getting Started
 
 Interested in contributing? See [CONTRIBUTING.md](CONTRIBUTING.md) for how you can join!
@@ -48,18 +65,6 @@ Interested in contributing? See [CONTRIBUTING.md](CONTRIBUTING.md) for how you c
 
 ---
 
-## 💡 Roadmap
-
-See [`COLLAB-NEXT-STEPS.md`](COLLAB-NEXT-STEPS.md) for our current plans and priorities, including:
-- Project and user system foundations
-- Real-time editing and collaboration core
-- User profile and portfolio pages
-- Auditions and casting integration
-- AI bot integration and onboarding
-- Funding, community, and contributor outreach
-
----
-
 ## 🤝 How to Contribute
 
 We welcome developers, designers, testers, artists, writers, musicians, sound designers, audio engineers, actors, voice actors—anyone interested in building creative tools!
@@ -67,6 +72,12 @@ We welcome developers, designers, testers, artists, writers, musicians, sound de
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 - Check [open issues](https://github.com/Kiyoshiakira/ideaforge/issues)
 - Introduce yourself and claim a task, or propose new ideas
+- Look for issues labeled [`good first issue`](https://github.com/Kiyoshiakira/ideaforge/labels/good%20first%20issue) and [`help wanted`](https://github.com/Kiyoshiakira/ideaforge/labels/help%20wanted)
+
+**Bangarang for Contributors:**  
+- All contributors are credited and celebrated.  
+- Major contributors & outstanding works are featured in our global showcase.  
+- We support pairing up, code review, and learning together—your growth matters here!
 
 ---
 
@@ -74,8 +85,13 @@ We welcome developers, designers, testers, artists, writers, musicians, sound de
 
 - All contributors will be credited in project documentation and on the site.
 - Major contributors & outstanding works will be highlighted in the global showcase.
+- Join the conversation—open an [issue](https://github.com/Kiyoshiakira/ideaforge/issues) or check out Discussions (coming soon).
 
-Questions? Suggestions? Open an [issue](https://github.com/Kiyoshiakira/ideaforge/issues) or join our community discussions!
+---
+
+## 🔒 Security Policy
+
+Please see [SECURITY.md](SECURITY.md) for how to report vulnerabilities or security concerns.
 
 ---
 
