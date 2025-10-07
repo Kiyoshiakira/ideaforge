@@ -318,3 +318,13 @@ footer a {
     padding: 10px 2vw;
   }
 }
+
+/* Authentication Container in Header */
+#auth-container {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+#auth-container .cta-btn {
+    margin: 0;
+}
