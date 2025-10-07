@@ -25,6 +25,25 @@ IdeaForge is an open-source collaborative suite that brings artists, writers, fi
 
 ---
 
+## 🌙 Dark Mode
+
+IdeaForge features a comprehensive dark mode designed for creative professionals who work long hours.
+
+- **WCAG 2.1 AA Compliant** - All colors meet accessibility standards
+- **Smooth Transitions** - Seamless switching between light and dark themes
+- **Persistent Preferences** - Remembers your choice across sessions
+- **System Aware** - Respects your OS theme preference
+- **Keyboard Accessible** - Toggle with `Ctrl/Cmd + Shift + D`
+
+**📚 Documentation:**
+- [Dark Mode Design Guide](DARK_MODE_DESIGN.md) - Complete color specifications
+- [Quick Start Guide](DARK_MODE_QUICK_START.md) - Implementation for developers
+- [Visual Examples](docs/DARK_MODE_VISUALS.md) - Screenshots and comparisons
+
+**🎨 Try it now:** Open [`public/dark-mode-showcase.html`](public/dark-mode-showcase.html) to see all colors and components in action!
+
+---
+
 ## 🗺️ Roadmap
 
 We’re building IdeaForge in public and tracking progress transparently. Here’s our current roadmap:
