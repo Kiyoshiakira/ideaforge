@@ -1,10 +1,20 @@
-body {
+/* GLOBAL RESETS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, ul, ol, p {
   margin: 0;
+  padding: 0;
+}
+
+/* BODY & STRUCTURE */
+body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f5f7fa;
   color: #222;
 }
 
+/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(90deg, #421e7c 0%, #6e33b7 100%);
   color: #fff;
@@ -13,7 +23,6 @@ header {
   position: relative;
   box-shadow: 0 2px 8px rgba(80,30,140,.06);
 }
-
 header .logo {
   font-size: 2.5rem;
   font-weight: bold;
@@ -21,11 +30,9 @@ header .logo {
   color: #fff;
   text-shadow: 0 2px 8px rgba(80,30,140,.18);
 }
-
 nav {
   margin: 20px 0 0 0;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
@@ -34,36 +41,39 @@ nav a {
   font-size: 1.05rem;
   transition: color .25s;
 }
-
 nav a[aria-current="page"] {
   color: #ffb44d;
   font-weight: 700;
-  text-decoration: none;
 }
-
 nav a:hover {
   color: #ffd86b;
 }
 
-/* Call-to-Action Button Styles */
-.cta-btn {
+/* CTA BUTTONS */
+.cta-btn, .hero-btn {
   background: linear-gradient(90deg, #ffd86b 0%, #ffb44d 100%);
   color: #421e7c;
   border: none;
-  padding: 10px 28px;
   border-radius: 24px;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
-  margin-left: 18px;
   box-shadow: 0 2px 8px rgba(255, 216, 107, 0.14);
-  transition: background .18s;
+  transition: background .18s, color .13s;
+  padding: 10px 28px;
 }
-.cta-btn:hover {
+.hero-btn {
+  font-size: 1.17rem;
+  padding: 13px 38px;
+  color: #ffd86b;
+  background: linear-gradient(90deg, #421e7c 0%, #6e33b7 100%);
+}
+.cta-btn:hover, .hero-btn:hover {
   background: linear-gradient(90deg, #ffb44d 0%, #ffd86b 100%);
+  color: #421e7c;
 }
 
-/* Main Section Box Styles for Centered White Boxes */
+/* MAIN SECTION BOX (WHITE BOXES) */
 .main-section {
   max-width: 1100px;
   margin: 64px auto 0 auto;
@@ -71,10 +81,9 @@ nav a:hover {
   border-radius: 26px;
   box-shadow: 0 8px 40px rgba(80,30,140,.07);
   padding: 54px 34px;
-  box-sizing: border-box;
 }
 
-/* HERO Section Styles */
+/* HERO SECTION */
 .hero {
   background: linear-gradient(120deg, #ffd86b 0%, #6e33b7 90%);
   color: #fff;
@@ -100,22 +109,6 @@ nav a:hover {
   font-weight: 500;
   text-shadow: 0 1px 8px #421e7c77;
 }
-.hero-btn {
-  background: linear-gradient(90deg, #421e7c 0%, #6e33b7 100%);
-  color: #ffd86b;
-  font-size: 1.17rem;
-  padding: 13px 38px;
-  border: none;
-  border-radius: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(110,51,183,0.11);
-  transition: background .15s, color .13s;
-}
-.hero-btn:hover {
-  background: linear-gradient(90deg, #ffd86b 0%, #ffb44d 100%);
-  color: #421e7c;
-}
 .flare-bg {
   position: absolute;
   right: -70px;
@@ -129,6 +122,7 @@ nav a:hover {
   z-index: 0;
 }
 
+/* FEATURE CARDS (HOME, ETC) */
 .features-preview {
   display: flex;
   gap: 32px;
@@ -136,9 +130,9 @@ nav a:hover {
   justify-content: center;
   margin: 30px 0 34px 0;
 }
-.preview-card {
+.preview-card, .feature-card, .adaptation-card, .audition-card {
   background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
-  color: #fff;
+  color: #fff !important;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(80,30,140,.09);
   padding: 28px 22px 22px 22px;
@@ -150,24 +144,24 @@ nav a:hover {
   position: relative;
   text-shadow: 0 1px 5px #2a003a55;
 }
-.preview-card i {
+.preview-card i, .feature-card i {
   font-size: 2.3rem;
   margin-bottom: 10px;
   display: block;
   color: #ffd86b;
   text-shadow: 0 2px 8px #421e7c55;
 }
-.preview-card strong {
+.preview-card strong, .feature-card strong {
   color: #ffd86b !important;
   font-weight: bold;
   text-shadow: 0 1px 4px #421e7c88;
 }
-.preview-card p {
-  color: #fff;
+.preview-card p, .feature-card p {
+  color: #fff !important;
   text-shadow: 0 1px 6px #421e7c55;
 }
 
-/* "How it works" styles */
+/* HOW IT WORKS */
 .how-it-works {
   margin: 0;
   text-align: center;
@@ -207,7 +201,7 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(255,216,107,.11);
 }
 
-/* Showcase preview and community invite */
+/* SHOWCASE & COMMUNITY */
 .showcase-preview {
   margin: 0;
 }
@@ -222,7 +216,7 @@ nav a:hover {
   margin-top: 16px;
 }
 
-/* Gallery grid for showcase section */
+/* GALLERY GRID */
 .gallery-grid {
   display: flex;
   gap: 16px;
@@ -256,7 +250,33 @@ nav a:hover {
   margin: 0 6px 12px 6px;
 }
 
-/* Responsive tweaks */
+/* FOOTER */
+footer {
+  background: #421e7c;
+  color: #fff;
+  text-align: center;
+  padding: 29px 0 22px 0;
+  margin-top: 90px;
+  border-radius: 24px 24px 0 0;
+  font-size: 1.08rem;
+  letter-spacing: .2px;
+  box-shadow: 0 -2px 13px rgba(80,30,140,.10);
+}
+footer a {
+  color: #ffd86b;
+  text-decoration: underline;
+}
+
+/* AUTH CONTAINER */
+#auth-container {
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+#auth-container .cta-btn {
+  margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   .features-preview, .hiw-steps { flex-direction: column; gap: 15px; }
   .preview-card, .hiw-step { max-width: 100%; min-width: unset; }
@@ -288,58 +308,8 @@ nav a:hover {
   .features-preview, .hiw-steps { flex-direction: column; }
 }
 @media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  .main-section,
-  section {
-    padding: 10px 2vw;
-  }
-  .gallery-grid {
-    gap: 12px;
-  }
-}
-
-/* --- CONTRAST PATCH START (keep as before) --- */
-.preview-card, .feature-card, .adaptation-card, .audition-card {
-  color: #fff !important;
-  text-shadow: 0 1px 5px rgba(40,0,60,0.22);
-}
-.preview-card p, .feature-card p {
-  color: #fff !important;
-  text-shadow: 0 1px 6px rgba(40,0,60,0.15);
-}
-.preview-card strong, .feature-card strong {
-  color: #ffd86b !important;
-  font-weight: bold;
-  text-shadow: 0 1px 4px rgba(80,30,140,0.28);
-}
-/* --- CONTRAST PATCH END --- */
-
-footer {
-  background: #421e7c;
-  color: #fff;
-  text-align: center;
-  padding: 29px 0 22px 0;
-  margin-top: 90px;
-  border-radius: 24px 24px 0 0;
-  font-size: 1.08rem;
-  letter-spacing: .2px;
-  box-shadow: 0 -2px 13px rgba(80,30,140,.10);
-}
-footer a {
-  color: #ffd86b;
-  text-decoration: underline;
-}
-
-/* Authentication Container in Header */
-#auth-container {
-    margin-top: 15px;
-    padding-bottom: 10px;
-}
-#auth-container .cta-btn {
-    margin: 0;
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.25rem; }
+  .main-section, section { padding: 10px 2vw; }
+  .gallery-grid { gap: 12px; }
 }
