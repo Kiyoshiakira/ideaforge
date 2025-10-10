@@ -651,3 +651,13 @@ button {
     color: black;
   }
 }
+
+:root[data-theme="dark"] .about-section,
+:root[data-theme="dark"] .feature-blurb,
+:root[data-theme="dark"] .about-section h2,
+:root[data-theme="dark"] .about-section p,
+:root[data-theme="dark"] .about-section li,
+:root[data-theme="dark"] .feature-blurb strong,
+:root[data-theme="dark"] .value-card {
+  color: #fff !important;
+}
