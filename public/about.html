@@ -6,6 +6,80 @@
     <title>About - IdeaForge</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
+    <style>
+      .about-section {
+        margin-bottom: 46px;
+      }
+      .about-section h2 {
+        margin-top: 36px;
+        margin-bottom: 10px;
+        color: #6e33b7;
+        font-size: 2rem;
+      }
+      .about-section p, .about-section ul, .about-section li {
+        font-size: 1.13rem;
+        color: #444;
+      }
+      .about-section ul {
+        margin: 10px 0 20px 25px;
+        padding: 0;
+      }
+      .about-list {
+        margin-top: 10px;
+        margin-bottom: 24px;
+        list-style-type: disc;
+      }
+      .about-feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 25px 0 30px 0;
+      }
+      .feature-blurb {
+        background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(80,30,140,.09);
+        padding: 22px 20px 20px 20px;
+        min-width: 220px;
+        max-width: 300px;
+        flex: 1 1 220px;
+        margin-bottom: 18px;
+      }
+      .feature-blurb i {
+        font-size: 2em;
+        color: #ffd86b;
+        margin-bottom: 4px;
+        display: block;
+      }
+      .feature-blurb strong {
+        color: #ffd86b !important;
+        font-weight: bold;
+      }
+      .about-values-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 16px;
+      }
+      .value-card {
+        background: #ffd86b;
+        color: #421e7c;
+        border-radius: 14px;
+        padding: 18px 18px 13px 18px;
+        font-size: 1.13rem;
+        box-shadow: 0 2px 12px rgba(110,51,183,.09);
+        flex: 1 1 180px;
+        min-width: 170px;
+        max-width: 300px;
+        margin-bottom: 7px;
+        font-weight: 500;
+      }
+      @media (max-width: 900px) {
+        .about-feature-list, .about-values-list { flex-direction: column; gap: 12px; }
+        .feature-blurb, .value-card { max-width: 100%; min-width: unset; }
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -17,33 +91,150 @@
             <a href="explore.html">Explore</a>
         </nav>
     </header>
-    <section>
+    <main>
+      <section class="about-section">
         <h1>About IdeaForge</h1>
-        <div class="mission">
-            <strong>Our Mission:</strong>
-            <span>
-                We believe in making positive change by helping one another, valuing each person's creativity, and working together. Here, you'll never have to create alone—let's have fun and inspire each other along the way!
-            </span>
+        <p>
+          <strong>IdeaForge is where art meets collaboration.</strong> We are an open, global platform for creators of all backgrounds—artists, writers, filmmakers, musicians, game designers, animators, and dreamers—to work together, share ideas, and bring creative visions to life.
+        </p>
+        <p>
+          Our mission is to make creativity accessible, collaborative, and rewarding for everyone. Whether you're a professional, a hobbyist, or just starting out, IdeaForge is your creative home.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>🚀 Our Vision</h2>
+        <p>
+          <strong>Creative projects often stall not for lack of ideas, but for lack of the right collaborators.</strong> Maybe you’re a writer who can picture a world, but can’t draw the landscapes. Maybe you’re a musician who wants to score a film, or an artist who dreams of seeing your characters animated. What if you could connect with the right partners, anywhere in the world, and build something bigger—together?
+        </p>
+        <p>
+          <strong>IdeaForge is more than a tool. It’s a new creative ecosystem.</strong> Post your work, invite others to adapt or remix it, set your own terms for credit and royalties, and watch projects become a multiverse of creative possibilities.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>🌟 Key Features</h2>
+        <div class="about-feature-list">
+          <div class="feature-blurb">
+            <i>🛠️</i>
+            <strong>Real-Time Collaboration</strong>
+            <p>Work together live on scripts, art, music, and more. No version chaos. No waiting for email replies. See your creative vision grow with every contribution.</p>
+          </div>
+          <div class="feature-blurb">
+            <i>🤝</i>
+            <strong>Skill-Driven Teams & Open Community</strong>
+            <p>Find the perfect team—writers, artists, musicians, performers, and more. Build your portfolio, join projects, or assemble your dream crew from anywhere in the world.</p>
+          </div>
+          <div class="feature-blurb">
+            <i>💡</i>
+            <strong>AI Assistance</strong>
+            <p>AI-powered onboarding, creative prompts, and project suggestions help you get started and stay inspired.</p>
+          </div>
+          <div class="feature-blurb">
+            <i>🏆</i>
+            <strong>Showcase, Portfolios & Auditions</strong>
+            <p>Display your best work, participate in global auditions, and get discovered by new collaborators and fans.</p>
+          </div>
+          <div class="feature-blurb">
+            <i>💸</i>
+            <strong>Flexible Rights & Revenue</strong>
+            <p>Control how your work is used: allow adaptations with royalties, offer buyout rights, or donate to the public domain. Every adaptation is credited and tracked automatically.</p>
+          </div>
+          <div class="feature-blurb">
+            <i>🌐</i>
+            <strong>Creative Multiverse</strong>
+            <p>One story can become dozens of artworks, animations, games—even VR experiences. See your idea spark a whole universe of creative projects.</p>
+          </div>
         </div>
-        <p>
-            IdeaForge is a creative collaboration platform where artists, writers, voice actors, musicians, and innovators come together to bring ideas to life. 
-            Our mission is to empower creators of all backgrounds to share, adapt, and grow their talents through project-based opportunities and a supportive community.
-        </p>
-        <h2>Our Vision</h2>
-        <p>
-            We believe that creativity thrives in community. By connecting creators from different disciplines and skill levels, we foster an environment where everyone can showcase their work, learn from others, and build something bigger together.
-        </p>
-        <h2>How It Works</h2>
-        <ul>
-            <li>Discover original scripts, stories, and projects.</li>
-            <li>Browse auditions or adapt existing works into new creative forms.</li>
-            <li>Collaborate, share feedback, and grow your skills.</li>
+      </section>
+
+      <section class="about-section">
+        <h2>🧩 How It Works</h2>
+        <ul class="about-list">
+          <li><strong>Sign Up & Set Your Skills:</strong> Tell us what you love—art, writing, music, animation, etc.—and build your creative profile.</li>
+          <li><strong>Explore Projects:</strong> Browse original scripts, stories, audio, and works-in-progress. See where your talents could make a difference.</li>
+          <li><strong>Join Teams or Start Your Own:</strong> Collaborate with others, contribute your skills, or lead a project as a director or showrunner.</li>
+          <li><strong>Showcase & Audition:</strong> Share your portfolio, audition for roles, or recruit talent for your team.</li>
+          <li><strong>Remix & Adapt:</strong> Adapt others’ work (with their blessing), create spin-offs, or build on top of existing worlds and characters.</li>
+          <li><strong>Rights & Revenue:</strong> Creators set how their work can be used—public domain, royalty-paid adaptations, or full buyout.</li>
+          <li><strong>Get Noticed:</strong> Be featured in the global showcase, build followers, and grow your creative reputation!</li>
         </ul>
-        <h2>Join Us</h2>
+      </section>
+
+      <section class="about-section">
+        <h2>❤️ Our Values</h2>
+        <div class="about-values-list">
+          <div class="value-card">
+            <strong>Collaboration First</strong>
+            <div>Creativity thrives when we work together. Every voice matters.</div>
+          </div>
+          <div class="value-card">
+            <strong>Credit & Fairness</strong>
+            <div>All contributors are credited. Royalties and rights are respected and transparent.</div>
+          </div>
+          <div class="value-card">
+            <strong>Diversity & Inclusion</strong>
+            <div>All backgrounds, skill levels, and voices are welcome. We rise by lifting each other.</div>
+          </div>
+          <div class="value-card">
+            <strong>Openness & Learning</strong>
+            <div>Learn from others, share skills, and grow as a creator—at any stage of your journey.</div>
+          </div>
+          <div class="value-card">
+            <strong>Accessibility</strong>
+            <div>Accessible design, dark mode, and UX that works for everyone—because everyone deserves to create.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>🌙 Dark Mode & Accessibility</h2>
         <p>
-            Whether you're a seasoned professional or just getting started, IdeaForge welcomes you. Explore projects, participate in auditions, or create your own adaptations—there's a place for every creative voice here!
+          Work in comfort with our accessible, WCAG-compliant dark mode—built for creators burning the midnight oil. Keyboard shortcuts and screen reader support included.
         </p>
-    </section>
+      </section>
+
+      <section class="about-section">
+        <h2>🗺️ Roadmap</h2>
+        <ul class="about-list">
+          <li><strong>Q4 2025:</strong> Core collaboration engine, project workspace</li>
+          <li><strong>Q1 2026:</strong> Real-time sync, permissions & roles, global showcase</li>
+          <li><strong>Q2 2026:</strong> AI creative tools, adaptation/remix workflows, plugin system</li>
+          <li><strong>Q3 2026:</strong> Mobile support, advanced integrations</li>
+        </ul>
+        <p>
+          <a href="https://github.com/Kiyoshiakira/ideaforge/milestones" target="_blank">See live progress & milestones on GitHub &rarr;</a>
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>🙌 Community & Contribution</h2>
+        <p>
+          IdeaForge is open source and built in public. We welcome developers, designers, artists, writers, musicians, voice actors, and anyone passionate about collaborative creation.
+        </p>
+        <ul class="about-list">
+          <li>Check out our <a href="https://github.com/Kiyoshiakira/ideaforge" target="_blank">GitHub repo</a> for issues, documentation, and how to contribute.</li>
+          <li>All contributors are credited—major works are featured in the global showcase.</li>
+          <li>Join the conversation: open an issue, suggest a feature, or help shape the future of creative collaboration.</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>🔒 Security & Privacy</h2>
+        <ul class="about-list">
+          <li>We value your privacy and never share your data without consent.</li>
+          <li>All authentication and project data are protected with modern standards.</li>
+          <li>For vulnerabilities or security concerns, see our <a href="../SECURITY.md" target="_blank">Security Policy</a>.</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>📄 License</h2>
+        <p>
+          IdeaForge is licensed under the <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank">AGPL-3.0</a> license. Free to use, remix, and improve—just like the creative works we hope to inspire.
+        </p>
+      </section>
+    </main>
     <footer>
         &copy; 2025 IdeaForge. All rights reserved.
     </footer>
@@ -51,7 +242,6 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
