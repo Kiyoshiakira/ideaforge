@@ -101,8 +101,30 @@
     color: #fff;
     text-shadow: 0 1px 6px #421e7c55;
   }
+  /* Centered white background box for main sections */
+  .main-section {
+    max-width: 1100px;
+    margin: 64px auto 0 auto;
+    background: #fff;
+    border-radius: 26px;
+    box-shadow: 0 8px 40px rgba(80,30,140,.07);
+    padding: 54px 34px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 800px) {
+    .main-section {
+      padding: 18px 6vw;
+      margin-top: 36px;
+    }
+  }
+  @media (max-width: 480px) {
+    .main-section {
+      padding: 10px 2vw;
+    }
+  }
   .how-it-works {
-    margin: 46px 0 32px 0;
+    margin: 0;
     text-align: center;
   }
   .hiw-steps {
@@ -140,14 +162,14 @@
     box-shadow: 0 2px 8px rgba(255,216,107,.11);
   }
   .showcase-preview {
-    margin: 58px 0 40px 0;
+    margin: 0;
   }
   .showcase-preview .gallery-grid {
     gap: 16px;
   }
   .community-invite {
     text-align: center;
-    margin: 60px 0 0 0;
+    margin: 0;
   }
   .community-invite .cta-btn {
     margin-top: 16px;
@@ -222,8 +244,8 @@
         </div>
       </section>
       
-      <!-- HOW IT WORKS -->
-      <section class="how-it-works" role="region" aria-labelledby="hiw-heading">
+      <!-- HOW IT WORKS (centered white box) -->
+      <section class="how-it-works main-section" role="region" aria-labelledby="hiw-heading">
         <h2 id="hiw-heading">How It Works</h2>
         <div class="hiw-steps" role="list">
           <div class="hiw-step" role="listitem">
@@ -241,8 +263,8 @@
         </div>
       </section>
       
-      <!-- SHOWCASE PREVIEW -->
-      <section class="showcase-preview" role="region" aria-labelledby="showcase-heading">
+      <!-- SHOWCASE PREVIEW (centered white box) -->
+      <section class="showcase-preview main-section" role="region" aria-labelledby="showcase-heading">
         <h2 id="showcase-heading" style="text-align:center;">Featured Works from the Showcase</h2>
         <div class="gallery-grid" role="list">
           <div class="gallery-item" role="listitem">
@@ -263,8 +285,8 @@
         </div>
       </section>
       
-      <!-- COMMUNITY INVITE -->
-      <section class="community-invite" role="region" aria-labelledby="community-heading">
+      <!-- COMMUNITY INVITE (centered white box) -->
+      <section class="community-invite main-section" role="region" aria-labelledby="community-heading">
         <h2 id="community-heading">Ready to Join a Creative Revolution?</h2>
         <p>
           Whether you're an artist, writer, musician, voice actor, or supporter—IdeaForge is your home for collaboration, discovery, and growth.
