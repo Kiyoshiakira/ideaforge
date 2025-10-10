@@ -47,6 +47,12 @@ IdeaForge features a comprehensive dark mode designed for creative professionals
 - [Dark Mode Design Guide](DARK_MODE_DESIGN.md) - Complete color specifications
 - [Quick Start Guide](DARK_MODE_QUICK_START.md) - Implementation for developers
 - [Visual Examples](docs/DARK_MODE_VISUALS.md) - Screenshots and comparisons
+- [Authentication Quick Start](docs/authentication/QUICK_START_AUTH.md)
+- [Firebase Auth Developer Guide](docs/authentication/AUTH_DEVELOPER_GUIDE.md)
+- [Dark Mode Design](docs/dark_mode/DARK_MODE_DESIGN.md)
+- [Prompt Patterns (AI)](docs/ai/prompt_patterns.md)
+- [CI/CD & Development](docs/development/CI_CD_SETUP_SUMMARY.md)
+- [Collab Project Next Steps](docs/collab_next_steps.md)
 
 **🎨 Try it now:** Open [`public/dark-mode-showcase.html`](public/dark-mode-showcase.html) to see all colors and components in action!
 
