@@ -13,26 +13,7 @@ IdeaForge is an open-source collaborative suite that brings artists, writers, fi
 
 ---
 
-## 🌟 Features
-
-- **Real-Time Collaboration**  
-  Work together on scripts, notes, boards, creative bibles, music, audio, and performance projects with live multi-user editing.
-- **Role-Based Permissions**  
-  Project owners control saves, history, and team management. Contributors can edit and suggest, with strong grief protection.
-- **Skill-Driven Teams**  
-  Showcase your creative skills—art, animation, music, sound design, writing, audio engineering, voice acting, acting, and more. Join projects that need your expertise, and build a meaningful portfolio.
-- **Showcase & Portfolio**  
-  Share your best work on your profile and in the global showcase.
-- **Auditions & Casting**  
-  Apply your acting or voice skills to projects, participate in auditions, and connect with creators seeking talent.
-- **AI-Powered Onboarding & Assistance**  
-  Integrated AI bot to help new users, generate demo projects, and provide creative suggestions.
-- **Extensible for Animation, Games, Film, Audio, Performance, and Beyond**  
-  Modular project "bibles"—manage scripts, characters, worlds, assets, music, sound design, casting, and more.
-
----  
-
-  ## 🚀 Our Vision: A New Era of Collaborative Creation
+## 🚀 Our Vision: A New Era of Collaborative Creation
 
 Too often, creative projects stall—not because of a lack of ideas, but because creators don’t have access to the right collaborators. A screenwriter might imagine a character’s story, but need an artist to visualize them or a musician to bring a scene to life. What if the world’s creative talent could come together—across disciplines, geographies, and skill levels—to build something bigger than themselves?
 
@@ -54,6 +35,18 @@ Too often, creative projects stall—not because of a lack of ideas, but because
 
 Join us to help build the future of collaborative creation.  
 Let’s make creativity accessible, rewarding, and truly global.
+
+---
+
+## 🌟 Features
+
+- **Real-Time Collaboration:** Work together on scripts, notes, boards, creative bibles, music, audio, and performance projects with live multi-user editing.
+- **Role-Based Permissions:** Project owners control saves, history, and team management. Contributors can edit and suggest, with strong grief protection.
+- **Skill-Driven Teams:** Showcase your creative skills—art, animation, music, sound design, writing, audio engineering, voice acting, acting, and more. Join projects that need your expertise, and build a meaningful portfolio.
+- **Showcase & Portfolio:** Share your best work on your profile and in the global showcase.
+- **Auditions & Casting:** Apply your acting or voice skills to projects, participate in auditions, and connect with creators seeking talent.
+- **AI-Powered Onboarding & Assistance:** Integrated AI bot to help new users, generate demo projects, and provide creative suggestions.
+- **Extensible for Animation, Games, Film, Audio, Performance, and Beyond:** Modular project "bibles"—manage scripts, characters, worlds, assets, music, sound design, casting, and more.
 
 ---
 
