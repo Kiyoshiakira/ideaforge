@@ -303,3 +303,7 @@ Resources: High-res artifact photos, research database, basic video tools
 ---
 
 _Last updated: 2025-10-10 • Maintained by IdeaForge Team • License: AGPL-3.0_
+
+---
+
+**Special thanks and credit to [D0CT4](https://github.com/D0CT4) for research, prompt drafting, and foundational contributions to this guide.**
