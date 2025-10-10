@@ -3,12 +3,13 @@
 // Find these values in: Firebase Console > Project Settings > General > Your apps > SDK setup and configuration
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+      apiKey: "AIzaSyD4dVzjsGLI1znvU2-1zhZfLKFZLf8PXWU",
+      authDomain: "ideaforge-e92ff.firebaseapp.com",
+      projectId: "ideaforge-e92ff",
+      storageBucket: "ideaforge-e92ff.firebasestorage.app",
+      messagingSenderId: "700329776913",
+      appId: "1:700329776913:web:d912716f7df8ef698c9eb0",
+      measurementId: "G-2YX4CRP00G"
 };
 
 // Initialize Firebase
