@@ -6,6 +6,7 @@
     <title>IdeaForge - Where Art Meets Collaboration</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
+    <script src="main.js" defer></script>
     <style>
   /* Extra flair for hero section (add here to avoid changing main CSS) */
   .hero {
@@ -180,8 +181,8 @@
           Bring your creative ideas to life—together. Artists, writers, musicians, filmmakers, and dreamers unite in a suite built for real collaboration.
         </div>
         <button class="hero-btn" onclick="window.location.href='explore.html'" aria-describedby="hero-title">Explore IdeaForge</button>
-        <button aria-label="Submit your artwork">Submit</button>
-        <button aria-label="Open audition system">Audition</button>
+        <button aria-label="Submit your artwork" id="submit-btn">Submit</button>
+        <button aria-label="Open audition system" id="audition-btn">Audition</button>
       </section>
       
       <!-- WHY USE IDEA FORGE (UPDATED, 6 PANELS) -->
@@ -271,6 +272,15 @@
         </p>
         <button class="cta-btn" onclick="window.location.href='about.html'" aria-describedby="community-heading">Meet the Community</button>
       </section>
+      
+      <!-- MODALS (hidden by default) -->
+      <div id="modal-overlay" style="display:none;">
+        <div id="modal-content" role="dialog" aria-modal="true" tabindex="-1">
+          <button id="modal-close-btn" aria-label="Close modal">&times;</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+      <div id="toast" style="display:none;"></div>
     </main>
     
     <footer role="contentinfo">
@@ -280,7 +290,6 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
