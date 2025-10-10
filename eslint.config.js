@@ -39,10 +39,6 @@ export default [
     },
   },
   {
-    ignores: [
-      'node_modules/',
-      '.firebase/',
-      'public/firebase-config.js',
-    ],
+    ignores: ['node_modules/', '.firebase/', 'public/firebase-config.js'],
   },
 ];

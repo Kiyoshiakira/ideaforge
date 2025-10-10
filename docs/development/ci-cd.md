@@ -11,12 +11,14 @@ IdeaForge uses GitHub Actions for Continuous Integration and Continuous Deployme
 This workflow runs on every pull request and push to the `main` branch to ensure code quality.
 
 **Triggers:**
+
 - Pull requests to `main`
 - Pushes to `main`
 
 **Jobs:**
 
 #### Lint and Test
+
 - **Matrix Strategy:** Tests on Node.js versions 18.x and 20.x
 - **Steps:**
   1. Checkout code
@@ -28,6 +30,7 @@ This workflow runs on every pull request and push to the `main` branch to ensure
   7. Run build step
 
 #### Status Check
+
 - Aggregates results from all lint and test jobs
 - Provides a single status check for branch protection rules
 
@@ -38,36 +41,43 @@ This workflow runs on every pull request and push to the `main` branch to ensure
 Two workflows handle Firebase deployment:
 
 #### Deploy to Firebase Hosting on PR (`.github/workflows/firebase-hosting-pull-request.yml`)
+
 - Creates preview deployments for pull requests
 - Provides preview URLs in PR comments
 
 #### Deploy to Firebase Hosting on merge (`.github/workflows/firebase-hosting-merge.yml`)
+
 - Deploys to production when changes are merged to `main`
 
 ## Code Quality Tools
 
 ### ESLint
+
 JavaScript/HTML linter that enforces code quality standards.
 
 **Configuration:** `eslint.config.js`
 
 **Run locally:**
+
 ```bash
 npm run lint:js
 ```
 
 **Key Rules:**
+
 - Recommended ESLint rules
 - HTML script support via `eslint-plugin-html`
 - Warnings for unused variables
 - Custom globals for Firebase and app functions
 
 ### Prettier
+
 Code formatter for consistent styling across JavaScript, HTML, CSS, and Markdown files.
 
 **Configuration:** `.prettierrc.json`
 
 **Run locally:**
+
 ```bash
 # Check formatting
 npm run format:check
@@ -77,22 +87,26 @@ npm run format
 ```
 
 **Settings:**
+
 - Semicolons required
 - Single quotes
 - 2-space indentation
 - 100 character line width (120 for HTML)
 
 ### HTML Validate
+
 Validates HTML files for accessibility and semantic correctness.
 
 **Configuration:** `.htmlvalidate.json`
 
 **Run locally:**
+
 ```bash
 npm run lint:html
 ```
 
 **Rules:**
+
 - HTML5 standards compliance
 - Accessibility warnings (ARIA, lang attributes)
 - Semantic HTML recommendations
@@ -102,11 +116,13 @@ npm run lint:html
 ### Before Committing
 
 1. **Run linters:**
+
    ```bash
    npm run lint
    ```
 
 2. **Format code:**
+
    ```bash
    npm run format
    ```
@@ -137,7 +153,11 @@ npm run lint:html
 
 ## Branch Protection Rules
 
-To enable branch protection (requires admin access):
+⚠️ **Important:** Branch protection rules must be configured by a repository administrator.
+
+See [Branch Protection Setup Guide](branch-protection.md) for detailed instructions.
+
+**Quick Setup:**
 
 1. Go to repository **Settings** → **Branches**
 2. Add rule for `main` branch:
@@ -150,19 +170,24 @@ To enable branch protection (requires admin access):
    - ✅ Require linear history (recommended)
    - ✅ Do not allow bypassing the above settings
 
+For complete instructions, see [docs/development/branch-protection.md](branch-protection.md).
+
 ## Performance Optimizations
 
 ### Dependency Caching
+
 - Node modules are cached using `actions/setup-node@v4`
 - Cache key is based on `package-lock.json`
 - Reduces workflow time by ~1-2 minutes
 
 ### Matrix Strategy
+
 - Tests on multiple Node.js versions (18.x, 20.x)
 - Runs in parallel for faster feedback
 - Ensures compatibility across environments
 
 ### Fast Builds
+
 - Static site with no build step (echo only)
 - HTML validation uses minimal resources
 - ESLint and Prettier run efficiently
@@ -174,6 +199,7 @@ To enable branch protection (requires admin access):
 **Problem:** ESLint or HTML validation errors
 
 **Solution:**
+
 ```bash
 # Run linters locally
 npm run lint
@@ -190,6 +216,7 @@ npm run lint:html
 **Problem:** Code not formatted per Prettier rules
 
 **Solution:**
+
 ```bash
 # Auto-format all files
 npm run format
@@ -203,6 +230,7 @@ npm run format:check
 **Problem:** Push/PR doesn't trigger CI
 
 **Solution:**
+
 - Ensure workflow file is in `.github/workflows/`
 - Check workflow syntax is valid YAML
 - Verify branch names match triggers
@@ -213,6 +241,7 @@ npm run format:check
 **Problem:** `npm ci` fails in workflow
 
 **Solution:**
+
 - Ensure `package-lock.json` is committed
 - Run `npm install` locally and commit lockfile
 - Check for platform-specific dependencies
@@ -224,6 +253,7 @@ npm run format:check
 When unit/integration tests are added:
 
 1. Add test script to `package.json`:
+
    ```json
    "scripts": {
      "test:unit": "jest",
@@ -242,13 +272,14 @@ When unit/integration tests are added:
 To add dependency vulnerability scanning:
 
 1. Add Dependabot (`.github/dependabot.yml`):
+
    ```yaml
    version: 2
    updates:
-     - package-ecosystem: "npm"
-       directory: "/"
+     - package-ecosystem: 'npm'
+       directory: '/'
        schedule:
-         interval: "weekly"
+         interval: 'weekly'
    ```
 
 2. Add CodeQL analysis workflow from GitHub marketplace
@@ -286,6 +317,7 @@ The CI status badge is displayed in the README:
 ## Support
 
 For CI/CD issues:
+
 1. Check workflow run logs in GitHub Actions tab
 2. Review this documentation
 3. Open an issue with the `ci-cd` label

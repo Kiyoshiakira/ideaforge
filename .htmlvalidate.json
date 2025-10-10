@@ -11,7 +11,5 @@
     "no-raw-characters": "warn",
     "element-required-attributes": "warn"
   },
-  "elements": [
-    "html5"
-  ]
+  "elements": ["html5"]
 }
