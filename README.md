@@ -30,6 +30,31 @@ IdeaForge is an open-source collaborative suite that brings artists, writers, fi
 - **Extensible for Animation, Games, Film, Audio, Performance, and Beyond**  
   Modular project "bibles"—manage scripts, characters, worlds, assets, music, sound design, casting, and more.
 
+---  
+
+  ## 🚀 Our Vision: A New Era of Collaborative Creation
+
+Too often, creative projects stall—not because of a lack of ideas, but because creators don’t have access to the right collaborators. A screenwriter might imagine a character’s story, but need an artist to visualize them or a musician to bring a scene to life. What if the world’s creative talent could come together—across disciplines, geographies, and skill levels—to build something bigger than themselves?
+
+**IdeaForge is more than just a tool. It’s a new creative ecosystem:**
+
+- **Open Collaboration:** Writers, artists, musicians, filmmakers, animators, and more can post their work, invite others to contribute, and watch their ideas evolve in real time.
+- **Flexible Rights & Revenue:** Creators choose how their work is used:
+  - Allow and receive royalties on derivative works
+  - Sell royalty rights up front
+  - Or gift their work to the public domain
+- **All-in-One Platform:** No more scattered portfolios or chasing collaborators. Share, adapt, remix, and get paid—all in one place.
+- **Power for Everyone:** Whether you’re a stay-at-home artist, a hobbyist, or a pro, you can contribute, build your portfolio, and earn from anywhere.
+- **Creative “Multiverse”:** One script or story can become dozens of artworks, animations, games, or even VR experiences—each credited, each rewarding its contributors.
+
+**We believe in a world where:**
+- Creative barriers are broken down
+- Credit and revenue flow fairly
+- Anyone can help bring great stories to life—not just big studios
+
+Join us to help build the future of collaborative creation.  
+Let’s make creativity accessible, rewarding, and truly global.
+
 ---
 
 ## 🌙 Dark Mode
