@@ -6,6 +6,9 @@
 
 **Where Art Meets Collaboration**
 
+[![CI](https://github.com/Kiyoshiakira/ideaforge/workflows/CI%20-%20Continuous%20Integration/badge.svg)](https://github.com/Kiyoshiakira/ideaforge/actions/workflows/ci.yml)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](LICENSE)
+
 IdeaForge is an open-source collaborative suite that brings artists, writers, filmmakers, animators, game designers, musicians, and creative professionals together in real-time. Think Figma meets Notion, purpose-built for creative workflows.
 
 ---

@@ -1,0 +1,6 @@
+node_modules/
+.firebase/
+*.min.js
+*.min.css
+package-lock.json
+firebase-config.js
