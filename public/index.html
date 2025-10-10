@@ -6,7 +6,7 @@
     <title>IdeaForge - Where Art Meets Collaboration</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
-   <style>
+    <style>
   /* Extra flair for hero section (add here to avoid changing main CSS) */
   .hero {
     background: linear-gradient(120deg, #ffd86b 0%, #6e33b7 90%);
@@ -158,109 +158,124 @@
     .hero-title { font-size: 2.1rem; }
     .features-preview, .hiw-steps { flex-direction: column; }
   }
-</style>
+    </style>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="logo">
-            <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
+          <img src="images/banner.jpg" alt="Community artists showcased in colorful banner" />
+<img src="images/profile.png" alt="Artist profile photo of Alex Rivera" />
+<img src="images/music-note.svg" alt="Music note icon representing musician features" />
+
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Main site navigation">
             <a href="index.html" aria-current="page">Home</a>
             <a href="explore.html">Explore</a>
         </nav>
     </header>
-    <main>
+    
+    <main role="main">
       <!-- HERO SECTION -->
-      <section class="hero">
-        <div class="flare-bg"></div>
-        <div class="hero-title">Where Art Meets Collaboration</div>
+      <section class="hero" role="region" aria-labelledby="hero-title">
+        <div class="flare-bg" aria-hidden="true"></div>
+        <h1 class="hero-title" id="hero-title">Where Art Meets Collaboration</h1>
         <div class="hero-sub">
           Bring your creative ideas to life—together. Artists, writers, musicians, filmmakers, and dreamers unite in a suite built for real collaboration.
         </div>
-        <button class="hero-btn" onclick="window.location.href='explore.html'">Explore IdeaForge</button>
+        <button class="hero-btn" onclick="window.location.href='explore.html'" aria-describedby="hero-title">Explore IdeaForge</button>
+        <button aria-label="Submit your artwork">Submit</button>
+        <button aria-label="Open audition system">Audition</button>
+      
       </section>
-
+      
       <!-- FEATURE PREVIEW -->
-      <section>
-        <h2 style="text-align:center;">Why Use IdeaForge?</h2>
-        <div class="features-preview">
-          <div class="preview-card">
-            <i>🛠️</i>
+      <section aria-label="Featured Creators">
+  <!-- Featured artists, writers, musicians info -->
+</section>
+<section aria-label="Dream Funding Grant Program">
+  <!-- Funding info -->
+</section>
+
+      <section role="region" aria-labelledby="features-heading">
+        <h2 id="features-heading" style="text-align:center;">Why Use IdeaForge?</h2>
+        <div class="features-preview" role="list">
+          <div class="preview-card" role="listitem">
+            <i role="img" aria-label="Tools icon">🛠️</i>
             <strong>Real-Time Collaboration</strong>
             <p>Create, edit, and brainstorm live with teammates from around the globe.</p>
           </div>
-          <div class="preview-card">
-            <i>🎭</i>
-            <strong>Auditions & Opportunities</strong>
+          <div class="preview-card" role="listitem">
+            <i role="img" aria-label="Theater masks icon">🎭</i>
+            <strong>Auditions &amp; Opportunities</strong>
             <p>Showcase your talents or find the perfect fit for your creative project.</p>
           </div>
-          <div class="preview-card">
-            <i>💡</i>
+          <div class="preview-card" role="listitem">
+            <i role="img" aria-label="Light bulb icon">💡</i>
             <strong>AI-Powered Onboarding</strong>
             <p>Get guided by an integrated AI bot—project setup, tips, and demo projects for every skill level.</p>
           </div>
-          <div class="preview-card">
-            <i>🏆</i>
-            <strong>Showcase & Portfolios</strong>
+          <div class="preview-card" role="listitem">
+            <i role="img" aria-label="Trophy icon">🏆</i>
+            <strong>Showcase &amp; Portfolios</strong>
             <p>Share your best work, build a living portfolio, and get discovered in our global gallery.</p>
           </div>
         </div>
       </section>
-
+      
       <!-- HOW IT WORKS -->
-      <section class="how-it-works">
-        <h2>How It Works</h2>
-        <div class="hiw-steps">
-          <div class="hiw-step">
-            <div class="hiw-num">1</div>
-            <div>Sign Up & Set Your Skills</div>
+      <section class="how-it-works" role="region" aria-labelledby="hiw-heading">
+        <h2 id="hiw-heading">How It Works</h2>
+        <div class="hiw-steps" role="list">
+          <div class="hiw-step" role="listitem">
+            <div class="hiw-num" role="img" aria-label="Step 1">1</div>
+            <h3>Sign Up &amp; Set Your Skills</h3>
           </div>
-          <div class="hiw-step">
-            <div class="hiw-num">2</div>
-            <div>Explore Projects & Join Teams</div>
+          <div class="hiw-step" role="listitem">
+            <div class="hiw-num" role="img" aria-label="Step 2">2</div>
+            <h3>Explore Projects &amp; Join Teams</h3>
           </div>
-          <div class="hiw-step">
-            <div class="hiw-num">3</div>
-            <div>Collaborate, Create, & Shine</div>
+          <div class="hiw-step" role="listitem">
+            <div class="hiw-num" role="img" aria-label="Step 3">3</div>
+            <h3>Collaborate, Create, &amp; Shine</h3>
           </div>
         </div>
       </section>
-
+      
       <!-- SHOWCASE PREVIEW -->
-      <section class="showcase-preview">
-        <h2 style="text-align:center;">Featured Works from the Showcase</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-              <img src="https://placehold.co/400x300" alt="Artwork 1">
+      <section class="showcase-preview" role="region" aria-labelledby="showcase-heading">
+        <h2 id="showcase-heading" style="text-align:center;">Featured Works from the Showcase</h2>
+        <div class="gallery-grid" role="list">
+          <div class="gallery-item" role="listitem">
+              <img src="artwork1.jpg" alt="Sunrise Over Neon City - Digital artwork featuring a vibrant sunrise over a futuristic cityscape with neon lights and purple hues">
               <div class="caption">"Sunrise Over Neon City" by Alex Rivera</div>
           </div>
-          <div class="gallery-item">
-              <img src="https://placehold.co/400x300" alt="Artwork 2">
+          <div class="gallery-item" role="listitem">
+              <img src="artwork2.jpg" alt="Unheard Melodies - Abstract musical composition artwork with flowing waves and musical notes in blue and gold tones">
               <div class="caption">"Unheard Melodies" by Priya S.</div>
           </div>
-          <div class="gallery-item">
-              <img src="https://placehold.co/400x300" alt="Artwork 3">
+          <div class="gallery-item" role="listitem">
+              <img src="artwork3.jpg" alt="Fragments - Movie poster for experimental short film featuring fragmented geometric shapes and dramatic lighting">
               <div class="caption">"Fragments" Short Film by Studio 88</div>
           </div>
         </div>
         <div style="text-align: center; margin-top: 20px;">
-          <a class="cta-btn" href="showcase.html">See the Full Showcase</a>
+          <a class="cta-btn" href="showcase.html" role="button">See the Full Showcase</a>
         </div>
       </section>
-
+      
       <!-- COMMUNITY INVITE -->
-      <section class="community-invite">
-        <h2>Ready to Join a Creative Revolution?</h2>
+      <section class="community-invite" role="region" aria-labelledby="community-heading">
+        <h2 id="community-heading">Ready to Join a Creative Revolution?</h2>
         <p>
-          Whether you’re an artist, writer, musician, voice actor, or supporter—IdeaForge is your home for collaboration, discovery, and growth.<br>
-          <strong>Dive in, share your talent, and build something amazing—together!</strong>
+          Whether you're an artist, writer, musician, voice actor, or supporter—IdeaForge is your home for collaboration, discovery, and growth.
+          Dive in, share your talent, and build something amazing—together!
         </p>
-        <button class="cta-btn" onclick="window.location.href='about.html'">Meet the Community</button>
+        <button class="cta-btn" onclick="window.location.href='about.html'" aria-describedby="community-heading">Meet the Community</button>
       </section>
     </main>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
+    
+    <footer role="contentinfo">
+        <p>&copy; 2025 IdeaForge. All rights reserved.</p>
     </footer>
     
     <!-- Firebase SDK -->
