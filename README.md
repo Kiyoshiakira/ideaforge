@@ -1,3 +1,7 @@
+<p align="center">
+ <img src='public/img/logo.png' height='150' alt="IdeaForge Logo" />
+</p>
+
 # IdeaForge
 
 **Where Art Meets Collaboration**
@@ -36,6 +40,7 @@ IdeaForge features a comprehensive dark mode designed for creative professionals
 - **Keyboard Accessible** - Toggle with `Ctrl/Cmd + Shift + D`
 
 **📚 Documentation:**
+
 - [Dark Mode Design Guide](DARK_MODE_DESIGN.md) - Complete color specifications
 - [Quick Start Guide](DARK_MODE_QUICK_START.md) - Implementation for developers
 - [Visual Examples](docs/DARK_MODE_VISUALS.md) - Screenshots and comparisons
@@ -48,12 +53,12 @@ IdeaForge features a comprehensive dark mode designed for creative professionals
 
 We’re building IdeaForge in public and tracking progress transparently. Here’s our current roadmap:
 
-| Quarter    | Milestone                                                |
-|------------|----------------------------------------------------------|
-| Q4 2025    | Core collaboration engine, basic project workspace       |
-| Q1 2026    | Real-time sync, role-based permissions                   |
-| Q2 2026    | AI assistance, plugin system                             |
-| Q3 2026    | Mobile support, advanced integrations                    |
+| Quarter | Milestone                                          |
+| ------- | -------------------------------------------------- |
+| Q4 2025 | Core collaboration engine, basic project workspace |
+| Q1 2026 | Real-time sync, role-based permissions             |
+| Q2 2026 | AI assistance, plugin system                       |
+| Q3 2026 | Mobile support, advanced integrations              |
 
 👉 **See our [GitHub Milestones](https://github.com/Kiyoshiakira/ideaforge/milestones) for details and live progress.**
 
@@ -68,16 +73,17 @@ Interested in contributing? See [CONTRIBUTING.md](CONTRIBUTING.md) for how you c
 ### Local Development
 
 1. **Clone the repo:**
+
    ```bash
    git clone https://github.com/Kiyoshiakira/ideaforge.git
    cd ideaforge
    ```
 
 2. **Install dependencies:**  
-   *(Add your actual install instructions here: e.g. npm install, yarn install, etc.)*
+   _(Add your actual install instructions here: e.g. npm install, yarn install, etc.)_
 
 3. **Start the local server:**  
-   *(Add your actual start command here, e.g. npm start, yarn dev, etc.)*
+   _(Add your actual start command here, e.g. npm start, yarn dev, etc.)_
 
 4. **Open in your browser:**  
    Visit `http://localhost:3000` (or your configured port).
@@ -93,9 +99,10 @@ We welcome developers, designers, testers, artists, writers, musicians, sound de
 - Introduce yourself and claim a task, or propose new ideas
 - Look for issues labeled [`good first issue`](https://github.com/Kiyoshiakira/ideaforge/labels/good%20first%20issue) and [`help wanted`](https://github.com/Kiyoshiakira/ideaforge/labels/help%20wanted)
 
-**Bangarang for Contributors:**  
-- All contributors are credited and celebrated.  
-- Major contributors & outstanding works are featured in our global showcase.  
+**Bangarang for Contributors:**
+
+- All contributors are credited and celebrated.
+- Major contributors & outstanding works are featured in our global showcase.
 - We support pairing up, code review, and learning together—your growth matters here!
 
 ---
