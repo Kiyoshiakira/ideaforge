@@ -165,6 +165,84 @@
   color: #fff;
 }
 
+/* Auth container */
+.dark-mode #auth-container {
+  background: transparent;
+}
+.dark-mode #auth-container .cta-btn {
+  background: linear-gradient(90deg, #6d25d6 0%, #a943e9 100%);
+  color: #fff;
+}
+
+/* About Page Dark Mode */
+.dark-mode .about-section h2 {
+  color: #b39dff;
+}
+.dark-mode .about-section p,
+.dark-mode .about-section ul,
+.dark-mode .about-section li {
+  color: #d0d0d0;
+}
+.dark-mode .feature-blurb {
+  background: linear-gradient(90deg, #2a1559 0%, #381e5f 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(110,51,183,0.10);
+}
+.dark-mode .feature-blurb i {
+  color: #ffe48b;
+}
+.dark-mode .feature-blurb strong {
+  color: #ffe48b !important;
+}
+.dark-mode .value-card {
+  background: #8e66e6;
+  color: #18122b;
+  box-shadow: 0 2px 16px rgba(126, 106, 255, 0.18);
+}
+
+/* Auth Test Page Dark Mode */
+.dark-mode .test-section {
+  background: #271e42;
+  border-color: #3d2768;
+}
+.dark-mode .test-btn {
+  background: #6d25d6;
+}
+.dark-mode .test-btn:hover {
+  background: #8244e2;
+}
+.dark-mode .status.success {
+  background: #1b4332;
+  color: #95d5b2;
+}
+.dark-mode .status.error {
+  background: #4a1a1a;
+  color: #f8b4b4;
+}
+.dark-mode .status.info {
+  background: #1a3a4a;
+  color: #a0d6e8;
+}
+
+/* Explore Page Dark Mode */
+.dark-mode .explore-card {
+  background: linear-gradient(90deg, #2a1559 0%, #381e5f 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(110,51,183,0.15);
+}
+.dark-mode .explore-card h2 {
+  color: #ffe48b;
+}
+.dark-mode .explore-card a {
+  color: #6ee0ff;
+}
+.dark-mode .explore-card a:hover {
+  color: #ffe48b;
+}
+.dark-mode .explore-desc {
+  color: #ffd86b;
+}
+
 /* Responsive fixes (preserved from original) */
 @media (max-width: 1100px) {
   .dark-mode .hiw-steps {
