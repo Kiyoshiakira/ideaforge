@@ -1,127 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IdeaForge Auditions - Project Roles & Talent</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="auth.css">
-    <link rel="stylesheet" href="dark-theme.css">
-    <link rel="stylesheet" href="theme-toggle.css">
-    <link rel="stylesheet" href="auditions.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
+    <link rel="stylesheet" href="auditions.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-    <img src="img/logo.png" alt="IdeaForge Logo" class="logo-img">
-</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="explore.html">Explore</a>
-        </nav>
+      <div class="logo">
+        <img src="img/logo.png" alt="IdeaForge Logo" class="logo-img" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+      </nav>
     </header>
     <section>
-        <h1>Find Your Next Creative Gig</h1>
-        <p>Browse open auditions and creative roles. Use the filters to find opportunities that fit your talents!</p>
-        <form class="auditions-search-bar">
-            <input type="text" placeholder="Search by role, project, keywords..." name="search" />
-            <select name="type">
-                <option value="">All Types</option>
-                <option value="voice">Voice Acting</option>
-                <option value="art">Artist / Illustrator</option>
-                <option value="music">Music / Composer</option>
-                <option value="3d">3D Modeling</option>
-                <option value="animation">Animation</option>
-                <option value="writing">Writing</option>
-                <option value="coding">Coding</option>
-                <option value="other">Other</option>
-            </select>
-            <button type="submit" class="cta-btn">Search</button>
-        </form>
-        <div class="auditions-list">
-            <!-- Example audition card 1 -->
-            <div class="audition-card">
-                <div class="audition-project">Dragon's Tale</div>
-                <div class="audition-meta">
-                    <span class="audition-role">Role: Queen Seraphina (Lead)</span>
-                    <span class="audition-tag">Voice Acting</span>
-                    <span class="audition-creator">by MythicStudios</span>
-                </div>
-                <div class="audition-desc">
-                    Seeking a majestic, mature female voice for the wise dragon queen. Must convey authority and warmth. <br>
-                    <strong>Deadline:</strong> Oct 31, 2025
-                </div>
-                <button class="audition-apply-btn">Apply</button>
-            </div>
-            <!-- Example audition card 2 -->
-            <div class="audition-card">
-                <div class="audition-project">Dragon's Tale</div>
-                <div class="audition-meta">
-                    <span class="audition-role">Role: Creature Modeler</span>
-                    <span class="audition-tag">3D Modeling</span>
-                    <span class="audition-creator">by MythicStudios</span>
-                </div>
-                <div class="audition-desc">
-                    Design low-poly creature models for a fantasy game world. Portfolio or sample required. <br>
-                    <strong>Deadline:</strong> Nov 14, 2025
-                </div>
-                <button class="audition-apply-btn">Apply</button>
-            </div>
-            <!-- Example audition card 3 -->
-            <div class="audition-card">
-                <div class="audition-project">Pixel Quest</div>
-                <div class="audition-meta">
-                    <span class="audition-role">Role: Monster SFX Voice</span>
-                    <span class="audition-tag">Voice Acting</span>
-                    <span class="audition-creator">by Starbounders</span>
-                </div>
-                <div class="audition-desc">
-                    Seeking expressive creature and monster sounds for a retro RPG. All genders welcome! <br>
-                    <strong>Deadline:</strong> Nov 5, 2025
-                </div>
-                <button class="audition-apply-btn">Apply</button>
-            </div>
-            <!-- Example audition card 4 -->
-            <div class="audition-card">
-                <div class="audition-project">Celestial Canvas</div>
-                <div class="audition-meta">
-                    <span class="audition-role">Role: Background Painter</span>
-                    <span class="audition-tag">Artist / Illustrator</span>
-                    <span class="audition-creator">by LunaDreams</span>
-                </div>
-                <div class="audition-desc">
-                    Create dreamy, pastel-colored backgrounds for an animated short film.<br>
-                    <strong>Deadline:</strong> Oct 20, 2025
-                </div>
-                <button class="audition-apply-btn">Apply</button>
-            </div>
-            <!-- Example audition card 5 -->
-            <div class="audition-card">
-                <div class="audition-project">Starfall Symphony</div>
-                <div class="audition-meta">
-                    <span class="audition-role">Role: Orchestral Composer</span>
-                    <span class="audition-tag">Music / Composer</span>
-                    <span class="audition-creator">by HarmoniaWorks</span>
-                </div>
-                <div class="audition-desc">
-                    Compose a 2-minute orchestral piece for a sci-fi short. <br>
-                    <strong>Deadline:</strong> Nov 30, 2025
-                </div>
-                <button class="audition-apply-btn">Apply</button>
-            </div>
+      <h1>Find Your Next Creative Gig</h1>
+      <p>Browse open auditions and creative roles. Use the filters to find opportunities that fit your talents!</p>
+      <form class="auditions-search-bar">
+        <input type="text" placeholder="Search by role, project, keywords..." name="search" />
+        <select name="type">
+          <option value="">All Types</option>
+          <option value="voice">Voice Acting</option>
+          <option value="art">Artist / Illustrator</option>
+          <option value="music">Music / Composer</option>
+          <option value="3d">3D Modeling</option>
+          <option value="animation">Animation</option>
+          <option value="writing">Writing</option>
+          <option value="coding">Coding</option>
+          <option value="other">Other</option>
+        </select>
+        <button type="submit" class="cta-btn">Search</button>
+      </form>
+      <div class="auditions-list">
+        <!-- Example audition card 1 -->
+        <div class="audition-card">
+          <div class="audition-project">Dragon's Tale</div>
+          <div class="audition-meta">
+            <span class="audition-role">Role: Queen Seraphina (Lead)</span>
+            <span class="audition-tag">Voice Acting</span>
+            <span class="audition-creator">by MythicStudios</span>
+          </div>
+          <div class="audition-desc">
+            Seeking a majestic, mature female voice for the wise dragon queen. Must convey authority and warmth. <br />
+            <strong>Deadline:</strong> Oct 31, 2025
+          </div>
+          <button class="audition-apply-btn">Apply</button>
         </div>
+        <!-- Example audition card 2 -->
+        <div class="audition-card">
+          <div class="audition-project">Dragon's Tale</div>
+          <div class="audition-meta">
+            <span class="audition-role">Role: Creature Modeler</span>
+            <span class="audition-tag">3D Modeling</span>
+            <span class="audition-creator">by MythicStudios</span>
+          </div>
+          <div class="audition-desc">
+            Design low-poly creature models for a fantasy game world. Portfolio or sample required. <br />
+            <strong>Deadline:</strong> Nov 14, 2025
+          </div>
+          <button class="audition-apply-btn">Apply</button>
+        </div>
+        <!-- Example audition card 3 -->
+        <div class="audition-card">
+          <div class="audition-project">Pixel Quest</div>
+          <div class="audition-meta">
+            <span class="audition-role">Role: Monster SFX Voice</span>
+            <span class="audition-tag">Voice Acting</span>
+            <span class="audition-creator">by Starbounders</span>
+          </div>
+          <div class="audition-desc">
+            Seeking expressive creature and monster sounds for a retro RPG. All genders welcome! <br />
+            <strong>Deadline:</strong> Nov 5, 2025
+          </div>
+          <button class="audition-apply-btn">Apply</button>
+        </div>
+        <!-- Example audition card 4 -->
+        <div class="audition-card">
+          <div class="audition-project">Celestial Canvas</div>
+          <div class="audition-meta">
+            <span class="audition-role">Role: Background Painter</span>
+            <span class="audition-tag">Artist / Illustrator</span>
+            <span class="audition-creator">by LunaDreams</span>
+          </div>
+          <div class="audition-desc">
+            Create dreamy, pastel-colored backgrounds for an animated short film.<br />
+            <strong>Deadline:</strong> Oct 20, 2025
+          </div>
+          <button class="audition-apply-btn">Apply</button>
+        </div>
+        <!-- Example audition card 5 -->
+        <div class="audition-card">
+          <div class="audition-project">Starfall Symphony</div>
+          <div class="audition-meta">
+            <span class="audition-role">Role: Orchestral Composer</span>
+            <span class="audition-tag">Music / Composer</span>
+            <span class="audition-creator">by HarmoniaWorks</span>
+          </div>
+          <div class="audition-desc">
+            Compose a 2-minute orchestral piece for a sci-fi short. <br />
+            <strong>Deadline:</strong> Nov 30, 2025
+          </div>
+          <button class="audition-apply-btn">Apply</button>
+        </div>
+      </div>
     </section>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
-    </footer>
+    <footer>&copy; 2025 IdeaForge. All rights reserved.</footer>
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
+
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
     <script src="auth.js"></script>
     <script src="theme-toggle.js"></script>
-</body>
+  </body>
 </html>

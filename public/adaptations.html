@@ -1,126 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IdeaForge Adaptations - See & Create New Takes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="auth.css">
-    <link rel="stylesheet" href="dark-theme.css">
-    <link rel="stylesheet" href="theme-toggle.css">
-    <link rel="stylesheet" href="adaptations.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
+    <link rel="stylesheet" href="adaptations.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-    <img src="img/logo.png" alt="IdeaForge Logo" class="logo-img">
-</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="explore.html">Explore</a>
-        </nav>
+      <div class="logo">
+        <img src="img/logo.png" alt="IdeaForge Logo" class="logo-img" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+      </nav>
     </header>
     <section>
-        <h1>Project: Dragon's Tale</h1>
-        <div class="original-work">
-            <h2>Original Work</h2>
-            <p>
-                <strong>By MythicStudios:</strong> <br>
-                <em>Once upon a time, in a kingdom ruled by dragons, Queen Seraphina faced her greatest challenge...</em>
-            </p>
-            <button class="cta-btn" onclick="window.location.href='#adapt-form'">Adapt this Work</button>
+      <h1>Project: Dragon's Tale</h1>
+      <div class="original-work">
+        <h2>Original Work</h2>
+        <p>
+          <strong>By MythicStudios:</strong> <br />
+          <em>Once upon a time, in a kingdom ruled by dragons, Queen Seraphina faced her greatest challenge...</em>
+        </p>
+        <button class="cta-btn" onclick="window.location.href='#adapt-form'">Adapt this Work</button>
+      </div>
+      <hr />
+      <h2>Adaptations</h2>
+      <div class="adaptations-grid">
+        <!-- Example Adaptation Card 1 -->
+        <div class="adaptation-card">
+          <div class="adaptation-preview">
+            <img src="https://placehold.co/200x120/d4c2fc/ffffff?text=Art+Preview" alt="Art Adaptation Preview" />
+          </div>
+          <div class="adaptation-type">Art</div>
+          <div class="adaptation-creator">by <a href="#">ArtisticAlex</a></div>
+          <div class="adaptation-desc">Watercolor illustration of Queen Seraphina in her throne room.</div>
         </div>
-        <hr>
-        <h2>Adaptations</h2>
-        <div class="adaptations-grid">
-            <!-- Example Adaptation Card 1 -->
-            <div class="adaptation-card">
-                <div class="adaptation-preview">
-                    <img src="https://placehold.co/200x120/d4c2fc/ffffff?text=Art+Preview" alt="Art Adaptation Preview">
-                </div>
-                <div class="adaptation-type">Art</div>
-                <div class="adaptation-creator">by <a href="#">ArtisticAlex</a></div>
-                <div class="adaptation-desc">
-                    Watercolor illustration of Queen Seraphina in her throne room.
-                </div>
-            </div>
-            <!-- Example Adaptation Card 2 -->
-            <div class="adaptation-card">
-                <div class="adaptation-preview">
-                    <audio controls src="audio-demo.mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="adaptation-type">Voice Acting</div>
-                <div class="adaptation-creator">by <a href="#">VocalVera</a></div>
-                <div class="adaptation-desc">
-                    Dramatic reading of the opening monologue.
-                </div>
-            </div>
-            <!-- Example Adaptation Card 3 -->
-            <div class="adaptation-card">
-                <div class="adaptation-preview">
-                    <img src="https://placehold.co/200x120/337cb7/fff?text=Comic+Panel" alt="Comic Adaptation Preview">
-                </div>
-                <div class="adaptation-type">Comic</div>
-                <div class="adaptation-creator">by <a href="#">PanelPro</a></div>
-                <div class="adaptation-desc">
-                    Comic panel: the queen confronting the villain.
-                </div>
-            </div>
-            <!-- Example Adaptation Card 4 -->
-            <div class="adaptation-card">
-                <div class="adaptation-preview">
-                    <img src="https://placehold.co/200x120/ffd86b/421e7c?text=Animation+Preview" alt="Animation Adaptation Preview">
-                </div>
-                <div class="adaptation-type">Animation</div>
-                <div class="adaptation-creator">by <a href="#">Animaster</a></div>
-                <div class="adaptation-desc">
-                    Short animated sequence: Seraphina takes flight at dawn.
-                </div>
-            </div>
+        <!-- Example Adaptation Card 2 -->
+        <div class="adaptation-card">
+          <div class="adaptation-preview">
+            <audio controls src="audio-demo.mp3">Your browser does not support the audio element.</audio>
+          </div>
+          <div class="adaptation-type">Voice Acting</div>
+          <div class="adaptation-creator">by <a href="#">VocalVera</a></div>
+          <div class="adaptation-desc">Dramatic reading of the opening monologue.</div>
         </div>
-        <hr>
-        <h2 id="adapt-form">Submit Your Adaptation</h2>
-        <form class="adaptation-form">
-            <label>
-                Adaptation Type:
-                <select required>
-                    <option value="">Select type</option>
-                    <option value="art">Art</option>
-                    <option value="voice">Voice Acting</option>
-                    <option value="music">Music</option>
-                    <option value="comic">Comic</option>
-                    <option value="animation">Animation</option>
-                    <option value="other">Other</option>
-                </select>
-            </label>
-            <label>
-                Title/Short Description:
-                <input type="text" required maxlength="100" placeholder="e.g. 'Queen Seraphina - Watercolor Portrait'">
-            </label>
-            <label>
-                File Upload:
-                <input type="file" required>
-            </label>
-            <label>
-                Additional Notes:<br>
-                <textarea maxlength="300" placeholder="Tell us more about your adaptation..."></textarea>
-            </label>
-            <button class="cta-btn" type="submit">Submit Adaptation</button>
-        </form>
+        <!-- Example Adaptation Card 3 -->
+        <div class="adaptation-card">
+          <div class="adaptation-preview">
+            <img src="https://placehold.co/200x120/337cb7/fff?text=Comic+Panel" alt="Comic Adaptation Preview" />
+          </div>
+          <div class="adaptation-type">Comic</div>
+          <div class="adaptation-creator">by <a href="#">PanelPro</a></div>
+          <div class="adaptation-desc">Comic panel: the queen confronting the villain.</div>
+        </div>
+        <!-- Example Adaptation Card 4 -->
+        <div class="adaptation-card">
+          <div class="adaptation-preview">
+            <img
+              src="https://placehold.co/200x120/ffd86b/421e7c?text=Animation+Preview"
+              alt="Animation Adaptation Preview"
+            />
+          </div>
+          <div class="adaptation-type">Animation</div>
+          <div class="adaptation-creator">by <a href="#">Animaster</a></div>
+          <div class="adaptation-desc">Short animated sequence: Seraphina takes flight at dawn.</div>
+        </div>
+      </div>
+      <hr />
+      <h2 id="adapt-form">Submit Your Adaptation</h2>
+      <form class="adaptation-form">
+        <label>
+          Adaptation Type:
+          <select required>
+            <option value="">Select type</option>
+            <option value="art">Art</option>
+            <option value="voice">Voice Acting</option>
+            <option value="music">Music</option>
+            <option value="comic">Comic</option>
+            <option value="animation">Animation</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>
+          Title/Short Description:
+          <input type="text" required maxlength="100" placeholder="e.g. 'Queen Seraphina - Watercolor Portrait'" />
+        </label>
+        <label>
+          File Upload:
+          <input type="file" required />
+        </label>
+        <label>
+          Additional Notes:<br />
+          <textarea maxlength="300" placeholder="Tell us more about your adaptation..."></textarea>
+        </label>
+        <button class="cta-btn" type="submit">Submit Adaptation</button>
+      </form>
     </section>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
-    </footer>
+    <footer>&copy; 2025 IdeaForge. All rights reserved.</footer>
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
+
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
     <script src="auth.js"></script>
     <script src="theme-toggle.js"></script>
-</body>
+  </body>
 </html>
