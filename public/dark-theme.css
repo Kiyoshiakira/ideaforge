@@ -193,10 +193,14 @@ button {
 }
 
 /* Main Content Sections */
-:root[data-theme="dark"] section {
+:root[data-theme="dark"] .main-section {
   background: var(--surface-1);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-subtle);
+}
+
+:root[data-theme="dark"] section {
+  background: transparent;
 }
 
 /* Headings */

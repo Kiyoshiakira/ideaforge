@@ -32,6 +32,11 @@ header .logo {
 }
 nav {
   margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 nav a {
   color: #fff;
@@ -40,6 +45,8 @@ nav a {
   font-weight: 500;
   font-size: 1.05rem;
   transition: color .25s;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 nav a[aria-current="page"] {
   color: #ffb44d;
@@ -47,6 +54,10 @@ nav a[aria-current="page"] {
 }
 nav a:hover {
   color: #ffd86b;
+}
+nav a:focus {
+  outline: 2px solid #ffd86b;
+  outline-offset: 2px;
 }
 
 /* CTA BUTTONS */
@@ -59,7 +70,7 @@ nav a:hover {
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(255, 216, 107, 0.14);
-  transition: background .18s, color .13s;
+  transition: background .18s, color .13s, transform .15s;
   padding: 10px 28px;
 }
 .hero-btn {
@@ -71,6 +82,14 @@ nav a:hover {
 .cta-btn:hover, .hero-btn:hover {
   background: linear-gradient(90deg, #ffb44d 0%, #ffd86b 100%);
   color: #421e7c;
+  transform: translateY(-2px);
+}
+.cta-btn:focus, .hero-btn:focus {
+  outline: 3px solid #ffd86b;
+  outline-offset: 3px;
+}
+.cta-btn:active, .hero-btn:active {
+  transform: translateY(0);
 }
 
 /* MAIN SECTION BOX (WHITE BOXES) */
@@ -83,6 +102,12 @@ nav a:hover {
   padding: 54px 34px;
 }
 
+/* HERO SECTION CONTAINER */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+}
+
 /* HERO SECTION */
 .hero {
   background: linear-gradient(120deg, #ffd86b 0%, #6e33b7 90%);
@@ -90,7 +115,6 @@ nav a:hover {
   border-radius: 26px;
   box-shadow: 0 8px 44px rgba(110,51,183,.10);
   padding: 54px 38px 40px 38px;
-  margin-bottom: 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -143,6 +167,11 @@ nav a:hover {
   margin-bottom: 18px;
   position: relative;
   text-shadow: 0 1px 5px #2a003a55;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.preview-card:hover, .feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(80,30,140,.15);
 }
 .preview-card i, .feature-card i {
   font-size: 2.3rem;
@@ -233,6 +262,11 @@ nav a:hover {
   max-width: 320px;
   flex: 1 1 250px;
   margin-bottom: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(80,30,140,0.12);
 }
 .gallery-item img {
   width: 100%;
@@ -278,38 +312,105 @@ footer a {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
-  .features-preview, .hiw-steps { flex-direction: column; gap: 15px; }
-  .preview-card, .hiw-step { max-width: 100%; min-width: unset; }
-  .gallery-grid { flex-direction: column; }
+  .features-preview, .hiw-steps { 
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  .preview-card, .hiw-step { 
+    max-width: 100%; 
+    min-width: unset; 
+  }
+  .gallery-grid { 
+    flex-direction: column; 
+  }
 }
+
 @media (max-width: 800px) {
   .main-section {
-    padding: 18px 6vw;
+    padding: 32px 24px;
     margin-top: 36px;
   }
-  section {
-    padding: 18px 6vw;
-    margin-top: 36px;
+  
+  .hero {
+    padding: 40px 24px 32px 24px;
   }
+  
   header {
     padding: 20px 0 6px 0;
   }
+  
+  header .logo img {
+    height: 96px !important;
+  }
+  
   .features, .pricing-table {
     flex-direction: column;
     gap: 18px;
   }
+  
   .gallery-grid {
     gap: 14px;
   }
 }
+
 @media (max-width: 600px) {
-  .hero { padding: 18vw 3vw 10vw 3vw; font-size: 1.1rem; }
-  .hero-title { font-size: 2.1rem; }
-  .features-preview, .hiw-steps { flex-direction: column; }
+  .hero { 
+    padding: 36px 20px 28px 20px; 
+    font-size: 1rem; 
+  }
+  
+  .hero-title { 
+    font-size: 2rem; 
+  }
+  
+  .hero-sub {
+    font-size: 1.1rem;
+  }
+  
+  .features-preview, .hiw-steps { 
+    flex-direction: column; 
+  }
+  
+  .main-section {
+    padding: 24px 16px;
+  }
 }
+
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.25rem; }
-  .main-section, section { padding: 10px 2vw; }
-  .gallery-grid { gap: 12px; }
+  h1 { 
+    font-size: 1.75rem; 
+  }
+  
+  h2 { 
+    font-size: 1.25rem; 
+  }
+  
+  .main-section { 
+    padding: 20px 12px; 
+  }
+  
+  .hero {
+    padding: 28px 16px 24px 16px;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+  }
+  
+  .gallery-grid { 
+    gap: 12px; 
+  }
+  
+  header .logo img {
+    height: 80px !important;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95rem;
+  }
 }
