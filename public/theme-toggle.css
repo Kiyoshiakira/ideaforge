@@ -85,6 +85,24 @@
   .theme-icon {
     font-size: 1.4rem;
   }
+  
+  .theme-toggle-container {
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle-btn {
+    padding: 6px 10px;
+  }
+  
+  .theme-icon {
+    font-size: 1.2rem;
+  }
+  
+  .theme-toggle-container {
+    margin-left: 4px;
+  }
 }
 
 /* Alternative: Compact Toggle (Icon Only) */
