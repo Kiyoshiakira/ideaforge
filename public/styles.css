@@ -48,6 +48,11 @@ nav a[aria-current="page"] {
 nav a:hover {
   color: #ffd86b;
 }
+nav a:focus {
+  outline: 2px solid #ffd86b;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
 /* CTA BUTTONS */
 .cta-btn, .hero-btn {
@@ -72,9 +77,13 @@ nav a:hover {
   background: linear-gradient(90deg, #ffb44d 0%, #ffd86b 100%);
   color: #421e7c;
 }
+.cta-btn:focus, .hero-btn:focus {
+  outline: 3px solid #6e33b7;
+  outline-offset: 2px;
+}
 
 /* MAIN SECTION BOX (WHITE BOXES) */
-.main-section {
+.main-section, section {
   max-width: 1100px;
   margin: 64px auto 0 auto;
   background: #fff;
@@ -83,14 +92,20 @@ nav a:hover {
   padding: 54px 34px;
 }
 
+/* Hero section gets full width */
+.hero {
+  max-width: 1200px;
+}
+
 /* HERO SECTION */
 .hero {
+  max-width: 1200px;
   background: linear-gradient(120deg, #ffd86b 0%, #6e33b7 90%);
   color: #fff;
   border-radius: 26px;
   box-shadow: 0 8px 44px rgba(110,51,183,.10);
   padding: 54px 38px 40px 38px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -278,18 +293,28 @@ footer a {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
-  .features-preview, .hiw-steps { flex-direction: column; gap: 15px; }
-  .preview-card, .hiw-step { max-width: 100%; min-width: unset; }
-  .gallery-grid { flex-direction: column; }
+  .features-preview, .hiw-steps { 
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  .preview-card, .hiw-step { 
+    max-width: 100%; 
+    min-width: unset; 
+  }
+  .gallery-grid { 
+    flex-direction: column; 
+  }
 }
 @media (max-width: 800px) {
-  .main-section {
-    padding: 18px 6vw;
+  .main-section, section {
+    padding: 28px 5vw;
     margin-top: 36px;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
-  section {
-    padding: 18px 6vw;
-    margin-top: 36px;
+  .hero {
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
   header {
     padding: 20px 0 6px 0;
@@ -303,13 +328,43 @@ footer a {
   }
 }
 @media (max-width: 600px) {
-  .hero { padding: 18vw 3vw 10vw 3vw; font-size: 1.1rem; }
-  .hero-title { font-size: 2.1rem; }
-  .features-preview, .hiw-steps { flex-direction: column; }
+  .hero { 
+    padding: 40px 5vw 30px 5vw; 
+    font-size: 1.1rem; 
+  }
+  .hero-title { 
+    font-size: 2.1rem; 
+  }
+  .features-preview, .hiw-steps { 
+    flex-direction: column; 
+  }
+  nav a {
+    font-size: 0.95rem;
+    margin: 0 10px;
+  }
 }
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.25rem; }
-  .main-section, section { padding: 10px 2vw; }
-  .gallery-grid { gap: 12px; }
+  h1 { 
+    font-size: 2rem; 
+  }
+  h2 { 
+    font-size: 1.25rem; 
+  }
+  .main-section, section { 
+    padding: 20px 4vw; 
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  .hero {
+    padding: 30px 4vw 25px 4vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  .gallery-grid { 
+    gap: 12px; 
+  }
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
 }

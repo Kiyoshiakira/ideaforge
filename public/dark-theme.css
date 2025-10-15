@@ -192,7 +192,17 @@ button {
   color: var(--accent-gold-dark);
 }
 
+:root[data-theme="dark"] nav a:focus {
+  outline-color: var(--accent-gold);
+}
+
+:root[data-theme="dark"] .cta-btn:focus,
+:root[data-theme="dark"] .hero-btn:focus {
+  outline-color: var(--primary-purple);
+}
+
 /* Main Content Sections */
+:root[data-theme="dark"] .main-section,
 :root[data-theme="dark"] section {
   background: var(--surface-1);
   box-shadow: var(--shadow-md);
