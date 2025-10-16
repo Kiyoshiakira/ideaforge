@@ -207,9 +207,9 @@ nav a:focus {
   text-shadow: 0 1px 6px #421e7c55;
 }
 
-/* HOW IT WORKS - IMPROVED ALIGNMENT AND STYLING */
+/* HOW IT WORKS */
 .how-it-works {
-  margin: 0;
+  margin: 0 auto; /* FIX: Added auto for centering */
   text-align: center;
 }
 .hiw-steps {
@@ -264,14 +264,14 @@ nav a:focus {
 
 /* SHOWCASE & COMMUNITY */
 .showcase-preview {
-  margin: 0;
+  margin: 0 auto; /* FIX: Added auto for centering */
 }
 .showcase-preview .gallery-grid {
   gap: 16px;
 }
 .community-invite {
   text-align: center;
-  margin: 0;
+  margin: 0 auto; /* FIX: Added auto for centering */
 }
 .community-invite .cta-btn {
   margin-top: 16px;
