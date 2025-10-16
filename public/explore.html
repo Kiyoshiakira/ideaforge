@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="dark-theme.css">
     <link rel="stylesheet" href="theme-toggle.css">
     <style>
+      .explore-intro {
+        max-width: 900px;
+        margin: 48px auto 0 auto;
+        background: #fff;
+        border-radius: 26px;
+        box-shadow: 0 8px 40px rgba(80,30,140,.07);
+        padding: 44px 34px;
+        text-align: center;
+      }
+      .explore-intro h1 {
+        color: #421e7c;
+        font-size: 2.2rem;
+        margin-bottom: 16px;
+        font-weight: bold;
+      }
+      .explore-intro p {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0;
+      }
       .explore-cards {
         display: flex;
         flex-wrap: wrap;
@@ -58,6 +79,37 @@
         margin-bottom: 6px;
         margin-top: 2px;
       }
+      @media (max-width: 1200px) {
+        .explore-intro {
+          max-width: 98vw;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      @media (max-width: 800px) {
+        .explore-intro {
+          padding: 32px 16px;
+          margin-top: 36px;
+        }
+        .explore-intro h1 {
+          font-size: 1.8rem;
+        }
+        .explore-intro p {
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .explore-intro {
+          padding: 24px 12px;
+          margin-top: 28px;
+        }
+        .explore-intro h1 {
+          font-size: 1.5rem;
+        }
+        .explore-intro p {
+          font-size: 0.95rem;
+        }
+      }
     </style>
 </head>
 <body>
@@ -72,8 +124,10 @@
         </nav>
     </header>
     <section>
-        <h1>Explore All Sections</h1>
-        <p>Browse the main areas of IdeaForge. Click a box to see the tools and opportunities in each category.</p>
+        <div class="explore-intro">
+            <h1>Explore All Sections</h1>
+            <p>Browse the main areas of IdeaForge. Click a box to see the tools and opportunities in each category.</p>
+        </div>
         <div class="explore-cards">
             <div class="explore-card">
                 <h2>About & Features</h2>
