@@ -169,9 +169,17 @@
       .info-card li {
         margin-bottom: 8px;
       }
+      .primary-link {
+        color: #6e33b7;
+        font-weight: 600;
+      }
+      .centered-text {
+        text-align: center;
+        margin-top: 20px;
+      }
       @media (max-width: 900px) {
-        .about-feature-list, .about-values-list, .about-steps-list, .about-roadmap-list { flex-direction: column; gap: 12px; }
-        .feature-blurb, .value-card, .step-card, .roadmap-card { max-width: 100%; min-width: unset; }
+        .about-feature-list, .about-values-list, .about-steps-list, .about-roadmap-list, .about-info-grid { flex-direction: column; gap: 12px; }
+        .feature-blurb, .value-card, .step-card, .roadmap-card, .info-card { max-width: 100%; min-width: unset; }
       }
     </style>
 </head>
@@ -334,8 +342,8 @@
             <div>Mobile support, advanced integrations</div>
           </li>
         </ul>
-        <p style="text-align: center; margin-top: 20px;">
-          <a href="https://github.com/Kiyoshiakira/ideaforge/milestones" target="_blank" style="color: #6e33b7; font-weight: 600;">See live progress &amp; milestones on GitHub &rarr;</a>
+        <p class="centered-text">
+          <a href="https://github.com/Kiyoshiakira/ideaforge/milestones" target="_blank" class="primary-link">See live progress &amp; milestones on GitHub &rarr;</a>
         </p>
       </section>
 
@@ -347,7 +355,7 @@
               IdeaForge is open source and built in public. We welcome developers, designers, artists, writers, musicians, voice actors, and anyone passionate about collaborative creation.
             </p>
             <ul>
-              <li>Check out our <a href="https://github.com/Kiyoshiakira/ideaforge" target="_blank" style="color: #6e33b7; font-weight: 600;">GitHub repo</a> for issues, documentation, and how to contribute.</li>
+              <li>Check out our <a href="https://github.com/Kiyoshiakira/ideaforge" target="_blank" class="primary-link">GitHub repo</a> for issues, documentation, and how to contribute.</li>
               <li>All contributors are credited—major works are featured in the global showcase.</li>
               <li>Join the conversation: open an issue, suggest a feature, or help shape the future of creative collaboration.</li>
             </ul>
@@ -362,7 +370,7 @@
             <ul>
               <li>We value your privacy and never share your data without consent.</li>
               <li>All authentication and project data are protected with modern standards.</li>
-              <li>For vulnerabilities or security concerns, see our <a href="../SECURITY.md" target="_blank" style="color: #6e33b7; font-weight: 600;">Security Policy</a>.</li>
+              <li>For vulnerabilities or security concerns, see our <a href="../SECURITY.md" target="_blank" class="primary-link">Security Policy</a>.</li>
             </ul>
           </div>
         </div>
@@ -373,7 +381,7 @@
         <div class="about-info-grid">
           <div class="info-card">
             <p>
-              IdeaForge is licensed under the <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank" style="color: #6e33b7; font-weight: 600;">AGPL-3.0</a> license. Free to use, remix, and improve—just like the creative works we hope to inspire.
+              IdeaForge is licensed under the <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank" class="primary-link">AGPL-3.0</a> license. Free to use, remix, and improve—just like the creative works we hope to inspire.
             </p>
           </div>
         </div>
