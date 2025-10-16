@@ -77,9 +77,101 @@
         margin-bottom: 7px;
         font-weight: 500;
       }
+      .about-steps-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 16px;
+        list-style: none;
+        padding: 0;
+      }
+      .step-card {
+        background: #fff;
+        color: #421e7c;
+        border: 2px solid #6e33b7;
+        border-radius: 14px;
+        padding: 18px 18px 13px 18px;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 12px rgba(110,51,183,.09);
+        flex: 1 1 280px;
+        min-width: 260px;
+        max-width: 360px;
+        margin-bottom: 7px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(110,51,183,.15);
+      }
+      .step-card strong {
+        color: #6e33b7;
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1.15rem;
+      }
+      .about-roadmap-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 16px;
+        list-style: none;
+        padding: 0;
+      }
+      .roadmap-card {
+        background: linear-gradient(135deg, #6e33b7 0%, #421e7c 100%);
+        color: #fff;
+        border-radius: 14px;
+        padding: 18px 18px 13px 18px;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 12px rgba(110,51,183,.12);
+        flex: 1 1 220px;
+        min-width: 200px;
+        max-width: 280px;
+        margin-bottom: 7px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .roadmap-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(110,51,183,.2);
+      }
+      .roadmap-card strong {
+        color: #ffd86b;
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1.15rem;
+      }
+      .about-info-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 16px;
+      }
+      .info-card {
+        background: #f9f5ff;
+        color: #421e7c;
+        border-left: 4px solid #6e33b7;
+        border-radius: 10px;
+        padding: 18px 18px 13px 18px;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 8px rgba(110,51,183,.08);
+        flex: 1 1 100%;
+        margin-bottom: 7px;
+      }
+      .info-card h3 {
+        color: #6e33b7;
+        margin: 0 0 10px 0;
+        font-size: 1.2rem;
+      }
+      .info-card ul {
+        margin: 8px 0 0 20px;
+        padding: 0;
+      }
+      .info-card li {
+        margin-bottom: 8px;
+      }
       @media (max-width: 900px) {
-        .about-feature-list, .about-values-list { flex-direction: column; gap: 12px; }
-        .feature-blurb, .value-card { max-width: 100%; min-width: unset; }
+        .about-feature-list, .about-values-list, .about-steps-list, .about-roadmap-list { flex-direction: column; gap: 12px; }
+        .feature-blurb, .value-card, .step-card, .roadmap-card { max-width: 100%; min-width: unset; }
       }
     </style>
 </head>
@@ -153,14 +245,35 @@
 
       <section class="about-section">
         <h2>🧩 How It Works</h2>
-        <ul class="about-list">
-          <li><strong>Sign Up & Set Your Skills:</strong> Tell us what you love—art, writing, music, animation, etc.—and build your creative profile.</li>
-          <li><strong>Explore Projects:</strong> Browse original scripts, stories, audio, and works-in-progress. See where your talents could make a difference.</li>
-          <li><strong>Join Teams or Start Your Own:</strong> Collaborate with others, contribute your skills, or lead a project as a director or showrunner.</li>
-          <li><strong>Showcase & Audition:</strong> Share your portfolio, audition for roles, or recruit talent for your team.</li>
-          <li><strong>Remix & Adapt:</strong> Adapt others’ work (with their blessing), create spin-offs, or build on top of existing worlds and characters.</li>
-          <li><strong>Rights & Revenue:</strong> Creators set how their work can be used—public domain, royalty-paid adaptations, or full buyout.</li>
-          <li><strong>Get Noticed:</strong> Be featured in the global showcase, build followers, and grow your creative reputation!</li>
+        <ul class="about-steps-list">
+          <li class="step-card">
+            <strong>Sign Up &amp; Set Your Skills:</strong>
+            <div>Tell us what you love—art, writing, music, animation, etc.—and build your creative profile.</div>
+          </li>
+          <li class="step-card">
+            <strong>Explore Projects:</strong>
+            <div>Browse original scripts, stories, audio, and works-in-progress. See where your talents could make a difference.</div>
+          </li>
+          <li class="step-card">
+            <strong>Join Teams or Start Your Own:</strong>
+            <div>Collaborate with others, contribute your skills, or lead a project as a director or showrunner.</div>
+          </li>
+          <li class="step-card">
+            <strong>Showcase &amp; Audition:</strong>
+            <div>Share your portfolio, audition for roles, or recruit talent for your team.</div>
+          </li>
+          <li class="step-card">
+            <strong>Remix &amp; Adapt:</strong>
+            <div>Adapt others' work (with their blessing), create spin-offs, or build on top of existing worlds and characters.</div>
+          </li>
+          <li class="step-card">
+            <strong>Rights &amp; Revenue:</strong>
+            <div>Creators set how their work can be used—public domain, royalty-paid adaptations, or full buyout.</div>
+          </li>
+          <li class="step-card">
+            <strong>Get Noticed:</strong>
+            <div>Be featured in the global showcase, build followers, and grow your creative reputation!</div>
+          </li>
         </ul>
       </section>
 
@@ -191,51 +304,79 @@
       </section>
 
       <section class="about-section">
-        <h2>🌙 Dark Mode & Accessibility</h2>
-        <p>
-          Work in comfort with our accessible, WCAG-compliant dark mode—built for creators burning the midnight oil. Keyboard shortcuts and screen reader support included.
-        </p>
+        <h2>🌙 Dark Mode &amp; Accessibility</h2>
+        <div class="about-info-grid">
+          <div class="info-card">
+            <p>
+              Work in comfort with our accessible, WCAG-compliant dark mode—built for creators burning the midnight oil. Keyboard shortcuts and screen reader support included.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="about-section">
         <h2>🗺️ Roadmap</h2>
-        <ul class="about-list">
-          <li><strong>Q4 2025:</strong> Core collaboration engine, project workspace</li>
-          <li><strong>Q1 2026:</strong> Real-time sync, permissions & roles, global showcase</li>
-          <li><strong>Q2 2026:</strong> AI creative tools, adaptation/remix workflows, plugin system</li>
-          <li><strong>Q3 2026:</strong> Mobile support, advanced integrations</li>
+        <ul class="about-roadmap-list">
+          <li class="roadmap-card">
+            <strong>Q4 2025:</strong>
+            <div>Core collaboration engine, project workspace</div>
+          </li>
+          <li class="roadmap-card">
+            <strong>Q1 2026:</strong>
+            <div>Real-time sync, permissions &amp; roles, global showcase</div>
+          </li>
+          <li class="roadmap-card">
+            <strong>Q2 2026:</strong>
+            <div>AI creative tools, adaptation/remix workflows, plugin system</div>
+          </li>
+          <li class="roadmap-card">
+            <strong>Q3 2026:</strong>
+            <div>Mobile support, advanced integrations</div>
+          </li>
         </ul>
-        <p>
-          <a href="https://github.com/Kiyoshiakira/ideaforge/milestones" target="_blank">See live progress & milestones on GitHub &rarr;</a>
+        <p style="text-align: center; margin-top: 20px;">
+          <a href="https://github.com/Kiyoshiakira/ideaforge/milestones" target="_blank" style="color: #6e33b7; font-weight: 600;">See live progress &amp; milestones on GitHub &rarr;</a>
         </p>
       </section>
 
       <section class="about-section">
-        <h2>🙌 Community & Contribution</h2>
-        <p>
-          IdeaForge is open source and built in public. We welcome developers, designers, artists, writers, musicians, voice actors, and anyone passionate about collaborative creation.
-        </p>
-        <ul class="about-list">
-          <li>Check out our <a href="https://github.com/Kiyoshiakira/ideaforge" target="_blank">GitHub repo</a> for issues, documentation, and how to contribute.</li>
-          <li>All contributors are credited—major works are featured in the global showcase.</li>
-          <li>Join the conversation: open an issue, suggest a feature, or help shape the future of creative collaboration.</li>
-        </ul>
+        <h2>🙌 Community &amp; Contribution</h2>
+        <div class="about-info-grid">
+          <div class="info-card">
+            <p style="margin-bottom: 12px;">
+              IdeaForge is open source and built in public. We welcome developers, designers, artists, writers, musicians, voice actors, and anyone passionate about collaborative creation.
+            </p>
+            <ul>
+              <li>Check out our <a href="https://github.com/Kiyoshiakira/ideaforge" target="_blank" style="color: #6e33b7; font-weight: 600;">GitHub repo</a> for issues, documentation, and how to contribute.</li>
+              <li>All contributors are credited—major works are featured in the global showcase.</li>
+              <li>Join the conversation: open an issue, suggest a feature, or help shape the future of creative collaboration.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="about-section">
-        <h2>🔒 Security & Privacy</h2>
-        <ul class="about-list">
-          <li>We value your privacy and never share your data without consent.</li>
-          <li>All authentication and project data are protected with modern standards.</li>
-          <li>For vulnerabilities or security concerns, see our <a href="../SECURITY.md" target="_blank">Security Policy</a>.</li>
-        </ul>
+        <h2>🔒 Security &amp; Privacy</h2>
+        <div class="about-info-grid">
+          <div class="info-card">
+            <ul>
+              <li>We value your privacy and never share your data without consent.</li>
+              <li>All authentication and project data are protected with modern standards.</li>
+              <li>For vulnerabilities or security concerns, see our <a href="../SECURITY.md" target="_blank" style="color: #6e33b7; font-weight: 600;">Security Policy</a>.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="about-section">
         <h2>📄 License</h2>
-        <p>
-          IdeaForge is licensed under the <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank">AGPL-3.0</a> license. Free to use, remix, and improve—just like the creative works we hope to inspire.
-        </p>
+        <div class="about-info-grid">
+          <div class="info-card">
+            <p>
+              IdeaForge is licensed under the <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank" style="color: #6e33b7; font-weight: 600;">AGPL-3.0</a> license. Free to use, remix, and improve—just like the creative works we hope to inspire.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
