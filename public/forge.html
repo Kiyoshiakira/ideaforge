@@ -10,32 +10,58 @@
     <link rel="stylesheet" href="theme-toggle.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="logo">
-    <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
-</div>
-        <nav>
+            <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
+        </div>
+        <nav role="navigation" aria-label="Main site navigation">
             <a href="index.html">Home</a>
             <a href="explore.html">Explore</a>
             <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
         </nav>
     </header>
-    <section>
-        <h1>The Forge</h1>
-        <p>
-            Collaborate, brainstorm, and create! Start a new project, join existing teams, or find collaborators for your next big idea.
-        </p>
-        <button class="cta-btn">Start a Project</button>
-        <h2>Active Projects</h2>
-        <ul>
-            <li>🎬 Indie Short Film Collaboration</li>
-            <li>🎵 Global Music Mashup</li>
-            <li>🖼️ Community Art Wall</li>
-        </ul>
-    </section>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
+    
+    <main role="main">
+        <!-- HERO SECTION -->
+        <section class="hero" role="region" aria-labelledby="forge-title">
+            <div class="flare-bg" aria-hidden="true"></div>
+            <h1 class="hero-title" id="forge-title">The Forge</h1>
+            <div class="hero-sub">
+                Collaborate, brainstorm, and create! Start a new project, join existing teams, or find collaborators for your next big idea.
+            </div>
+            <button class="hero-btn" aria-describedby="forge-title">Start a Project</button>
+        </section>
+        
+        <!-- ACTIVE PROJECTS SECTION -->
+        <section class="main-section" role="region" aria-labelledby="active-projects-heading">
+            <h2 id="active-projects-heading" style="text-align:center;">Active Projects</h2>
+            <div class="features-preview" role="list">
+                <div class="preview-card" role="listitem">
+                    <i role="img" aria-label="Film icon">🎬</i>
+                    <strong>Indie Short Film Collaboration</strong>
+                    <p>Join a team of filmmakers creating an experimental short film. Looking for writers, editors, and voice actors.</p>
+                </div>
+                <div class="preview-card" role="listitem">
+                    <i role="img" aria-label="Music icon">🎵</i>
+                    <strong>Global Music Mashup</strong>
+                    <p>Collaborate with musicians from around the world to create a unique fusion track blending different genres and cultures.</p>
+                </div>
+                <div class="preview-card" role="listitem">
+                    <i role="img" aria-label="Art icon">🖼️</i>
+                    <strong>Community Art Wall</strong>
+                    <p>Contribute to a collaborative digital art piece where artists add their unique style to create a unified masterpiece.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="cta-btn" href="explore.html" role="button">Explore More Projects</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo">
+        <p>&amp;copy; 2025 IdeaForge. All rights reserved.</p>
     </footer>
+    
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
