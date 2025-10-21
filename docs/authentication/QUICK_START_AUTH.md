@@ -14,10 +14,10 @@ This guide will help you set up and test the Firebase Authentication system in I
 
 ```javascript
 const firebaseConfig = {
-    apiKey: "AIza...",  // Your actual values
-    authDomain: "ideaforge.firebaseapp.com",
-    projectId: "ideaforge",
-    // ... rest of config
+  apiKey: 'AIza...', // Your actual values
+  authDomain: 'ideaforge.firebaseapp.com',
+  projectId: 'ideaforge',
+  // ... rest of config
 };
 ```
 
@@ -31,6 +31,7 @@ const firebaseConfig = {
 ### Step 3: Test It!
 
 1. Deploy to Firebase Hosting or test locally:
+
    ```bash
    firebase serve
    # or
@@ -48,11 +49,13 @@ const firebaseConfig = {
 ## 🎨 What You Get
 
 ### For Visitors (Not Logged In)
+
 - Clean "Login / Sign Up" button in the header
 - Beautiful modal with login and signup forms
 - Social login options (after setup)
 
 ### For Authenticated Users
+
 - User menu in header with avatar (if available)
 - Dropdown menu with:
   - Profile
@@ -76,6 +79,7 @@ const firebaseConfig = {
 See `FIREBASE_AUTH_SETUP.md` for detailed Facebook setup instructions.
 
 Quick summary:
+
 1. Create Facebook App at developers.facebook.com
 2. Add "Facebook Login" product
 3. Copy App ID and Secret to Firebase
@@ -86,6 +90,7 @@ Quick summary:
 See `FIREBASE_AUTH_SETUP.md` for detailed GitHub setup instructions.
 
 Quick summary:
+
 1. Create GitHub OAuth App at github.com/settings/developers
 2. Copy Client ID and Secret to Firebase
 3. Add Firebase OAuth redirect URI to GitHub app
@@ -125,25 +130,30 @@ After basic authentication is working, you can:
 ## 🐛 Troubleshooting
 
 ### "Firebase not defined" error
+
 - Check that Firebase SDK scripts are loaded before `auth.js`
 - Look at browser console for errors
 - Verify `firebase-config.js` has correct configuration
 
 ### "auth/configuration-not-found" error
+
 - You haven't updated `firebase-config.js` with your actual Firebase config
 - Get config from Firebase Console → Project Settings
 
 ### Modal doesn't open
+
 - Check browser console for JavaScript errors
 - Verify `header-inject.js` and `auth.js` are loaded
 - Try hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
 
 ### Social login doesn't work
+
 - Make sure the provider is enabled in Firebase Console
 - Check that you've configured OAuth redirect URIs correctly
 - Allow popups in your browser for the site
 
 ### User menu doesn't show after login
+
 - Check browser console for errors
 - Verify `auth.js` is loaded after `firebase-config.js`
 - Try signing out and back in
@@ -160,6 +170,6 @@ After basic authentication is working, you can:
 
 ## 🎉 Success!
 
-Once you see the user menu with your name in the header, you've successfully set up authentication! 
+Once you see the user menu with your name in the header, you've successfully set up authentication!
 
 Welcome to the authenticated IdeaForge experience. Now the real fun begins! 🚀

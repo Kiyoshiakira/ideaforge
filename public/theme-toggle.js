@@ -3,7 +3,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.getElementById('theme-toggle-btn'); // Use your button's actual ID
   // Optionally: support for saving preference
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const prefersDark =
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const saved = localStorage.getItem('theme');
   if (saved === 'dark' || (!saved && prefersDark)) {
     document.body.classList.add('dark-mode');

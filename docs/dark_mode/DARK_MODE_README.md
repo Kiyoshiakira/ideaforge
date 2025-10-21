@@ -23,9 +23,9 @@ A comprehensive, accessible dark mode color palette and implementation for IdeaF
 
 ```html
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="dark-theme.css">
-  <link rel="stylesheet" href="theme-toggle.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dark-theme.css" />
+  <link rel="stylesheet" href="theme-toggle.css" />
 </head>
 ```
 
@@ -45,26 +45,29 @@ The theme toggle button will automatically appear in your navigation. Users can 
 ## 📚 Documentation
 
 ### For Designers
+
 - **[DARK_MODE_DESIGN.md](DARK_MODE_DESIGN.md)** - Complete design documentation with color palettes, usage guidelines, and accessibility information
 
-### For Developers  
+### For Developers
+
 - **[DARK_MODE_QUICK_START.md](DARK_MODE_QUICK_START.md)** - Implementation guide with code examples and troubleshooting
 
 ### Live Example
+
 - **[dark-mode-showcase.html](public/dark-mode-showcase.html)** - Interactive showcase of all colors and components
 
 ## 🎨 Color Palette Overview
 
 ### Light Mode → Dark Mode
 
-| Element | Light Mode | Dark Mode |
-|---------|-----------|-----------|
-| Background | `#f5f7fa` | `#121212` |
-| Surface | `#ffffff` | `#1e1e1e` |
-| Primary | `#6e33b7` | `#7c4dff` |
-| Accent | `#ffd86b` | `#ffd86b` |
-| Text | `#222222` | `#e8e8e8` |
-| Borders | `#e4d8f7` | `#3a3a3a` |
+| Element    | Light Mode | Dark Mode |
+| ---------- | ---------- | --------- |
+| Background | `#f5f7fa`  | `#121212` |
+| Surface    | `#ffffff`  | `#1e1e1e` |
+| Primary    | `#6e33b7`  | `#7c4dff` |
+| Accent     | `#ffd86b`  | `#ffd86b` |
+| Text       | `#222222`  | `#e8e8e8` |
+| Borders    | `#e4d8f7`  | `#3a3a3a` |
 
 ### Surface Elevation (Dark Mode)
 
@@ -102,7 +105,7 @@ Higher elevation = Lighter color
 ### Dark Mode Specific Styles
 
 ```css
-:root[data-theme="dark"] .special-element {
+:root[data-theme='dark'] .special-element {
   background: var(--surface-2);
   box-shadow: var(--shadow-lg);
 }
@@ -128,8 +131,9 @@ const theme = document.documentElement.getAttribute('data-theme');
 ### WCAG 2.1 Compliance
 
 ✅ **AA Level** - All color combinations meet minimum standards:
+
 - Normal text: 4.5:1 contrast ratio
-- Large text: 3:1 contrast ratio  
+- Large text: 3:1 contrast ratio
 - UI components: 3:1 contrast ratio
 
 ### Tested With
@@ -162,7 +166,7 @@ const theme = document.documentElement.getAttribute('data-theme');
 Edit `public/dark-theme.css`:
 
 ```css
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --primary-purple-dark: #your-color;
   --accent-gold: #your-color;
   /* ... */
@@ -216,12 +220,14 @@ pa11y http://localhost:8000/dark-mode-showcase.html
 ### Contrast Testing
 
 Use these tools:
+
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Coolors Contrast Checker](https://coolors.co/contrast-checker/)
 
 ### Color Blindness Testing
 
 Use simulators:
+
 - [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 - Chrome DevTools → Rendering → Emulate vision deficiencies
 
@@ -230,12 +236,14 @@ Use simulators:
 ### Theme Not Switching?
 
 1. Check file order in HTML:
+
    ```html
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="dark-theme.css"> <!-- After styles.css -->
+   <link rel="stylesheet" href="styles.css" /> <link rel="stylesheet" href="dark-theme.css" />
+   <!-- After styles.css -->
    ```
 
 2. Verify JavaScript is loaded:
+
    ```html
    <script src="theme-toggle.js"></script>
    ```
@@ -272,16 +280,19 @@ MIT License - see [LICENSE](LICENSE) for details
 ## 🔗 Resources
 
 ### Design References
+
 - [Material Design Dark Theme](https://material.io/design/color/dark-theme.html)
 - [Refactoring UI Dark Mode](https://www.refactoringui.com/)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ### Implementation Guides
+
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ### Testing Tools
+
 - [axe DevTools](https://www.deque.com/axe/devtools/)
 - [WAVE](https://wave.webaim.org/)
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
@@ -299,6 +310,7 @@ MIT License - see [LICENSE](LICENSE) for details
 Designed and implemented for IdeaForge by the design team.
 
 Special thanks to:
+
 - Material Design team for dark theme guidelines
 - WebAIM for accessibility resources
 - The open source community

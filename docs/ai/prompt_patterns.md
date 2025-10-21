@@ -8,7 +8,8 @@ Welcome to your all-in-one resource for using, designing, and extending creative
 
 Prompt engineering is the art and science of designing effective instructions for AI models to generate creative outputs—stories, scripts, characters, art directions, music, and more. This guide is model-agnostic and works with GPT-family models, Claude, Llama, and others.
 
-**Inspiration from:**  
+**Inspiration from:**
+
 - [LangChain](https://python.langchain.com/docs/modules/model_io/prompts/) (structured templates, chaining)
 - [Promptify](https://github.com/promptslab/Promptify) (task-focused, reusable)
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
@@ -35,6 +36,7 @@ Prompt engineering is the art and science of designing effective instructions fo
 ## 🧩 15 Essential Prompt Templates
 
 ### 1. Creative Brainstorming
+
 ```
 Generate [NUMBER] creative [CONCEPT_TYPE] ideas for [PROJECT/THEME].
 Context: [BACKGROUND]
@@ -48,6 +50,7 @@ For each idea, provide:
 ```
 
 ### 2. Character Development
+
 ```
 Create a detailed character profile:
 Role: [CHARACTER_ROLE]
@@ -63,6 +66,7 @@ Provide:
 ```
 
 ### 3. World-building Framework
+
 ```
 Design a [SETTING_TYPE] for [GENRE] story:
 Core concept: [CENTRAL_IDEA]
@@ -78,6 +82,7 @@ Develop:
 ```
 
 ### 4. Style Transfer
+
 ```
 Rewrite the following content in [TARGET_STYLE]:
 [ORIGINAL_CONTENT]
@@ -86,6 +91,7 @@ Adapt: vocabulary, tone, references, format
 ```
 
 ### 5. Story Structure Generator
+
 ```
 Create a [STORY_LENGTH] story outline:
 Genre: [GENRE], Theme: [CENTRAL_THEME], Protagonist: [MAIN_CHARACTER], Conflict type: [CONFLICT_NATURE]
@@ -93,6 +99,7 @@ Structure: Hook, Rising action (3-5 events), Climax, Resolution, Growth arc
 ```
 
 ### 6. Creative Writing Starter
+
 ```
 Write a [FORMAT] about [SUBJECT]:
 Style: [WRITING_STYLE], Length: [TARGET_LENGTH], Audience: [INTENDED_READERS], Mood: [EMOTIONAL_TONE]
@@ -100,6 +107,7 @@ Include: Compelling opening, vivid imagery, [SPECIFIC_ELEMENTS], conclusion
 ```
 
 ### 7. Visual Art Direction
+
 ```
 Create a visual description for [ART_TYPE]:
 Subject: [MAIN_SUBJECT], Style: [STYLE], Mood: [ATMOSPHERE], Color palette: [SCHEME]
@@ -107,6 +115,7 @@ Describe: Composition, lighting, textures, symbols, technical notes
 ```
 
 ### 8. Music Composition Guide
+
 ```
 Compose [MUSIC_TYPE] with:
 Genre: [GENRE], Theme: [LYRICAL_THEME], Mood: [FEEL], Instrumentation: [INSTRUMENTS]
@@ -114,6 +123,7 @@ Provide: Lyrics/concept, chords, rhythm, structure, production notes
 ```
 
 ### 9. Content Adaptation
+
 ```
 Adapt for [NEW_FORMAT]:
 [ORIGINAL_CONTENT]
@@ -122,6 +132,7 @@ Modify: Length, language, visuals, call-to-action, platform needs
 ```
 
 ### 10. Creative Problem Solving
+
 ```
 Solve: [PROBLEM_STATEMENT]
 Constraints: [LIMITATIONS], Resources: [TOOLS], Success: [GOALS]
@@ -129,6 +140,7 @@ Give: 3 conventional + 3 unconventional + hybrid solutions, risks, recommendatio
 ```
 
 ### 11. Dialogue Generation
+
 ```
 Write dialogue between [CHARACTER_A] and [CHARACTER_B]:
 Situation: [SETTING], Conflict: [TENSION], Objective: [SCENE_GOAL]
@@ -137,6 +149,7 @@ Ensure: Distinct voices, flow, subtext, scene progress
 ```
 
 ### 12. Creative Critique
+
 ```
 Give constructive feedback on [CREATIVE_WORK]:
 [WORK]
@@ -146,6 +159,7 @@ Tone: Supportive but honest
 ```
 
 ### 13. Concept Fusion
+
 ```
 Fuse these concepts:
 A: [IDEA_ONE], B: [IDEA_TWO], Medium: [MEDIUM], Constraint: [LIMIT]
@@ -153,6 +167,7 @@ Deliver: Fusion description, integration, value, execution, variations
 ```
 
 ### 14. Inspiration Catalyst
+
 ```
 Generate inspiration from [SOURCE_MATERIAL]:
 Goal: [OUTPUT], Style: [DIRECTION], Emotion: [FEELING]
@@ -160,6 +175,7 @@ Extract: Inspiring elements, principles, patterns, themes, uses
 ```
 
 ### 15. Prompt Chain Template
+
 ```
 Step 1: [INITIAL_TASK]
 Step 2: Refine by [CRITERIA]
@@ -203,7 +219,8 @@ Step 5: Plan implementation
 
 **Character Development Example**
 
-*Input:*
+_Input:_
+
 ```
 Create a detailed character profile:
 Role: Mentor figure
@@ -211,8 +228,9 @@ Genre: Urban fantasy
 Key traits: Mysterious past, reluctant teacher, hidden power
 ```
 
-*Output:*
-- **Character:** Elena Voss  
+_Output:_
+
+- **Character:** Elena Voss
   - **Physical:** Mid-50s, silver-streaked black hair in a bun, vintage leather jacket, scar on left jawline.
   - **Personality:** Sardonic wit, deep empathy, values knowledge over power.
   - **Background:** Ex-Council enforcer, bookshop owner, left magical politics after betrayal, now trains young mages.
@@ -221,14 +239,16 @@ Key traits: Mysterious past, reluctant teacher, hidden power
 
 **Creative Problem Solving Example**
 
-*Input:*
+_Input:_
+
 ```
 Solve this creative challenge: Design engaging social media content for a museum's ancient artifact collection that appeals to Gen Z
 Constraints: Limited budget, historical accuracy required
 Resources: High-res artifact photos, research database, basic video tools
 ```
 
-*Output:*
+_Output:_
+
 - **Conventional:** Carousel fact posts, virtual tours, timeline infographics.
 - **Unconventional:** “Artifacts React” social profiles, “If Ancient People Had TikTok” skits, “Museum Mystery” interactive stories.
 - **Hybrid Recommendation:** Weekly “Case Files” where artifacts “testify” in modern slang, with followers voting on theories.

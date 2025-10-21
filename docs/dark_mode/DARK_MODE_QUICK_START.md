@@ -7,9 +7,9 @@
 Add these lines to your `<head>` section:
 
 ```html
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="dark-theme.css">
-<link rel="stylesheet" href="theme-toggle.css">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="dark-theme.css" />
+<link rel="stylesheet" href="theme-toggle.css" />
 ```
 
 ### Step 2: Add JavaScript
@@ -23,6 +23,7 @@ Add this before closing `</body>`:
 ### Step 3: Done! 🎉
 
 The theme toggle will automatically appear in your header navigation. Users can switch themes with:
+
 - Click the toggle button
 - Keyboard shortcut: `Ctrl/Cmd + Shift + D`
 - System preference is auto-detected
@@ -45,6 +46,7 @@ The theme toggle will automatically appear in your header navigation. Users can 
 ### Available Variables
 
 #### Colors
+
 ```css
 --color-background      /* App background */
 --color-surface          /* Card/panel background */
@@ -57,6 +59,7 @@ The theme toggle will automatically appear in your header navigation. Users can 
 ```
 
 #### Dark Mode Specific
+
 ```css
 --primary-purple-dark    /* #7c4dff */
 --accent-gold            /* #ffd86b */
@@ -67,6 +70,7 @@ The theme toggle will automatically appear in your header navigation. Users can 
 ```
 
 #### Gradients
+
 ```css
 --gradient-header        /* Header background */
 --gradient-card          /* Feature cards */
@@ -124,7 +128,9 @@ The theme toggle will automatically appear in your header navigation. Users can 
 ### 3. Forms
 
 ```css
-input, textarea, select {
+input,
+textarea,
+select {
   background: var(--surface-2);
   border: 1px solid var(--border-default);
   color: var(--text-primary);
@@ -219,12 +225,14 @@ pa11y http://localhost:8000/dark-mode-showcase.html
 ### Color Contrast
 
 Use online tools:
+
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Coolors Contrast Checker](https://coolors.co/contrast-checker)
 
 ### Color Blindness
 
 Test with simulators:
+
 - [Coblis Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 - Chrome DevTools > Rendering > Emulate vision deficiencies
 
@@ -237,7 +245,7 @@ Test with simulators:
 Edit `dark-theme.css`:
 
 ```css
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --primary-purple-dark: #your-color;
   --accent-gold: #your-color;
   /* ... */
@@ -249,14 +257,16 @@ Edit `dark-theme.css`:
 The theme toggle comes in 3 styles:
 
 1. **Default Button** (current)
+
    ```html
    <!-- Automatically injected -->
    ```
 
 2. **Switch Style**
+
    ```html
    <label class="theme-toggle-switch">
-     <input type="checkbox" onclick="toggleTheme()">
+     <input type="checkbox" onclick="toggleTheme()" />
      <span class="theme-toggle-slider"></span>
    </label>
    ```
@@ -275,12 +285,14 @@ The theme toggle comes in 3 styles:
 ### Theme Not Applying?
 
 1. Check CSS file order:
+
    ```html
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="dark-theme.css"> <!-- Must be after -->
+   <link rel="stylesheet" href="styles.css" /> <link rel="stylesheet" href="dark-theme.css" />
+   <!-- Must be after -->
    ```
 
 2. Verify JavaScript is loaded:
+
    ```html
    <script src="theme-toggle.js"></script>
    ```
@@ -290,6 +302,7 @@ The theme toggle comes in 3 styles:
 ### Colors Look Wrong?
 
 1. Check `data-theme` attribute:
+
    ```javascript
    console.log(document.documentElement.getAttribute('data-theme'));
    ```
@@ -331,16 +344,19 @@ document.addEventListener('DOMContentLoaded', () => {
 ## Resources
 
 ### Documentation
+
 - [DARK_MODE_DESIGN.md](../DARK_MODE_DESIGN.md) - Complete design specs
 - [dark-theme.css](dark-theme.css) - CSS implementation
 - [theme-toggle.js](theme-toggle.js) - JavaScript logic
 
 ### Tools
+
 - [Material Design Dark Theme](https://material.io/design/color/dark-theme.html)
 - [WCAG Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ### Examples
+
 - [dark-mode-showcase.html](dark-mode-showcase.html) - Live examples
 
 ---
@@ -348,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ## Support
 
 For issues or questions:
+
 1. Check [DARK_MODE_DESIGN.md](../DARK_MODE_DESIGN.md)
 2. See examples in [dark-mode-showcase.html](dark-mode-showcase.html)
 3. Open an issue on GitHub

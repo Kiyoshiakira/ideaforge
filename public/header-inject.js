@@ -1,59 +1,59 @@
 // Header Injection Script
 // This script injects the authentication UI (modal and auth container) into all pages
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    // Wait for DOM to be ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeAuth);
-    } else {
-        initializeAuth();
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeAuth);
+  } else {
+    initializeAuth();
+  }
+
+  function initializeAuth() {
+    injectAuthContainer();
+    injectAuthModal();
+  }
+
+  // ===========================
+  // Inject Auth Container into Header
+  // ===========================
+
+  function injectAuthContainer() {
+    const nav = document.querySelector('header nav');
+    if (!nav) {
+      console.warn('Navigation element not found');
+      return;
     }
 
-    function initializeAuth() {
-        injectAuthContainer();
-        injectAuthModal();
-    }
+    // Create auth container if it doesn't exist
+    let authContainer = document.getElementById('auth-container');
+    if (!authContainer) {
+      authContainer = document.createElement('div');
+      authContainer.id = 'auth-container';
 
-    // ===========================
-    // Inject Auth Container into Header
-    // ===========================
-    
-    function injectAuthContainer() {
-        const nav = document.querySelector('header nav');
-        if (!nav) {
-            console.warn('Navigation element not found');
-            return;
-        }
-
-        // Create auth container if it doesn't exist
-        let authContainer = document.getElementById('auth-container');
-        if (!authContainer) {
-            authContainer = document.createElement('div');
-            authContainer.id = 'auth-container';
-            
-            // Initially show login button (will be updated by auth state listener)
-            authContainer.innerHTML = `
+      // Initially show login button (will be updated by auth state listener)
+      authContainer.innerHTML = `
                 <button class="cta-btn auth-btn" onclick="openAuthModal()">Login / Sign Up</button>
             `;
-            
-            // Insert after navigation
-            nav.parentNode.insertBefore(authContainer, nav.nextSibling);
-        }
+
+      // Insert after navigation
+      nav.parentNode.insertBefore(authContainer, nav.nextSibling);
+    }
+  }
+
+  // ===========================
+  // Inject Auth Modal
+  // ===========================
+
+  function injectAuthModal() {
+    // Check if modal already exists
+    if (document.getElementById('auth-modal')) {
+      return;
     }
 
-    // ===========================
-    // Inject Auth Modal
-    // ===========================
-    
-    function injectAuthModal() {
-        // Check if modal already exists
-        if (document.getElementById('auth-modal')) {
-            return;
-        }
-
-        const modalHTML = `
+    const modalHTML = `
             <div id="auth-modal" class="auth-modal">
                 <div class="auth-modal-content">
                     <button class="close-modal" onclick="closeAuthModal()">&times;</button>
@@ -159,16 +159,15 @@
             </div>
         `;
 
-        // Insert modal at the end of body
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
+    // Insert modal at the end of body
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-        // Close modal when clicking outside of it
-        const modal = document.getElementById('auth-modal');
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeAuthModal();
-            }
-        });
-    }
-
+    // Close modal when clicking outside of it
+    const modal = document.getElementById('auth-modal');
+    modal.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        closeAuthModal();
+      }
+    });
+  }
 })();

@@ -11,18 +11,18 @@ This security policy applies to all current and future versions of IdeaForge, un
 If you discover a security vulnerability in IdeaForge, **please do not report it publicly**. Instead:
 
 1. **Contact the Maintainers Privately:**
-    - Open a [GitHub Security Advisory](https://github.com/Kiyoshiakira/ideaforge/security/advisories/new) (preferred).
-    - Or email the maintainers at: [add your security contact email here].
-    - Or, if neither is possible, open a private GitHub issue and mark it as security-related.
+   - Open a [GitHub Security Advisory](https://github.com/Kiyoshiakira/ideaforge/security/advisories/new) (preferred).
+   - Or email the maintainers at: [add your security contact email here].
+   - Or, if neither is possible, open a private GitHub issue and mark it as security-related.
 
 2. **Provide Details:**
-    - Describe the vulnerability and the affected area(s) of the code or deployment.
-    - Include steps to reproduce, if possible.
-    - If you have a proposed fix, you may suggest it, but please do not submit a public pull request until contacted by maintainers.
+   - Describe the vulnerability and the affected area(s) of the code or deployment.
+   - Include steps to reproduce, if possible.
+   - If you have a proposed fix, you may suggest it, but please do not submit a public pull request until contacted by maintainers.
 
 3. **Responsible Disclosure:**
-    - Please do not disclose the vulnerability publicly until we have had a reasonable chance to address it.
-    - We will coordinate with you to disclose responsibly and give credit as appropriate.
+   - Please do not disclose the vulnerability publicly until we have had a reasonable chance to address it.
+   - We will coordinate with you to disclose responsibly and give credit as appropriate.
 
 ---
 
