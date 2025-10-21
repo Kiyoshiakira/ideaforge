@@ -1,9 +1,21 @@
+.project-header {
+  max-width: 800px;
+  margin: 0 auto 28px auto;
+  text-align: center;
+}
+
+.project-header h1 {
+  margin-bottom: 24px;
+  color: #421e7c;
+}
+
 .original-work {
   background: #f9f6ff;
   border: 1.5px solid #e4d8f7;
   padding: 20px 18px;
   border-radius: 15px;
-  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(80, 30, 140, 0.06);
 }
 
 .adaptations-grid {
@@ -18,13 +30,13 @@
   color: #fff;
   border-radius: 16px;
   padding: 17px 14px 14px 14px;
-  box-shadow: 0 2px 12px rgba(80,30,140,.10);
+  box-shadow: 0 2px 12px rgba(80, 30, 140, 0.1);
   width: 220px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   min-width: 180px;
-  transition: transform .12s;
+  transition: transform 0.12s;
 }
 .adaptation-card:hover {
   transform: translateY(-5px) scale(1.025);
@@ -81,7 +93,7 @@
   margin-bottom: 4px;
   font-weight: 500;
 }
-.adaptation-form input[type="text"],
+.adaptation-form input[type='text'],
 .adaptation-form select,
 .adaptation-form textarea {
   width: 100%;
@@ -94,7 +106,7 @@
   margin-bottom: 5px;
 }
 
-.adaptation-form input[type="file"] {
+.adaptation-form input[type='file'] {
   font-size: 1.01rem;
   margin: 4px 0 6px 0;
 }
@@ -112,5 +124,9 @@
   .adaptation-card {
     width: 100%;
     min-width: unset;
+  }
+  .project-header {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
