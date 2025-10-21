@@ -14,8 +14,8 @@
   background: #faf7ff;
 }
 .auditions-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 .audition-card {
@@ -87,4 +87,10 @@
 @media (max-width: 650px) {
   .audition-card { padding: 16px 9px 12px 9px; }
   .auditions-list { gap: 16px; }
+}
+/* Tablet breakpoint - single column layout */
+@media (max-width: 1024px) {
+  .auditions-list {
+    grid-template-columns: 1fr;
+  }
 }
