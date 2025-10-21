@@ -8,6 +8,60 @@
     <link rel="stylesheet" href="auth.css" />
     <link rel="stylesheet" href="dark-theme.css" />
     <link rel="stylesheet" href="theme-toggle.css" />
+    <style>
+      .info-box {
+        margin-top: 50px;
+        padding: 30px;
+        background: #f9f5ff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(110, 51, 183, 0.08);
+      }
+      .features-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .feature-item {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+      }
+      .faq-section {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .faq-content {
+        max-width: 700px;
+        margin: 20px auto;
+        text-align: left;
+      }
+      .faq-item {
+        background: #fff;
+        border-left: 4px solid #6e33b7;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(110, 51, 183, 0.08);
+      }
+      .faq-item h3 {
+        color: #6e33b7;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+      .faq-item p {
+        color: #444;
+        line-height: 1.6;
+      }
+      @media (max-width: 768px) {
+        .features-grid {
+          flex-direction: column;
+        }
+        .feature-item {
+          min-width: unset;
+        }
+      }
+    </style>
   </head>
   <body>
     <header role="banner">
@@ -72,20 +126,20 @@
           </div>
         </div>
 
-        <div style="margin-top: 50px; padding: 30px; background: #f9f5ff; border-radius: 10px">
+        <div class="info-box">
           <h2 style="text-align: center; color: #6e33b7; margin-bottom: 15px">All Plans Include</h2>
-          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
-            <div style="flex: 1; min-width: 200px; text-align: center">
+          <div class="features-grid">
+            <div class="feature-item">
               <i role="img" aria-label="Community icon">🤝</i>
               <p><strong>Global Community</strong></p>
               <p>Connect with creators worldwide</p>
             </div>
-            <div style="flex: 1; min-width: 200px; text-align: center">
+            <div class="feature-item">
               <i role="img" aria-label="Credit icon">💳</i>
               <p><strong>Fair Credit System</strong></p>
               <p>Every contribution is tracked &amp; credited</p>
             </div>
-            <div style="flex: 1; min-width: 200px; text-align: center">
+            <div class="feature-item">
               <i role="img" aria-label="Update icon">🔄</i>
               <p><strong>Regular Updates</strong></p>
               <p>New features added continuously</p>
@@ -93,17 +147,23 @@
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 40px">
+        <div class="faq-section">
           <h2>Frequently Asked Questions</h2>
-          <div style="max-width: 700px; margin: 20px auto; text-align: left">
-            <h3 style="color: #6e33b7">Can I change plans later?</h3>
-            <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+          <div class="faq-content">
+            <div class="faq-item">
+              <h3>Can I change plans later?</h3>
+              <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+            </div>
 
-            <h3 style="color: #6e33b7; margin-top: 25px">Is there a free trial for Pro?</h3>
-            <p>All accounts start with Starter features. You can explore the platform before upgrading to Pro.</p>
+            <div class="faq-item">
+              <h3>Is there a free trial for Pro?</h3>
+              <p>All accounts start with Starter features. You can explore the platform before upgrading to Pro.</p>
+            </div>
 
-            <h3 style="color: #6e33b7; margin-top: 25px">What payment methods do you accept?</h3>
-            <p>We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.</p>
+            <div class="faq-item">
+              <h3>What payment methods do you accept?</h3>
+              <p>We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.</p>
+            </div>
           </div>
         </div>
       </section>
