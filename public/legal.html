@@ -8,6 +8,88 @@
     <link rel="stylesheet" href="auth.css" />
     <link rel="stylesheet" href="dark-theme.css" />
     <link rel="stylesheet" href="theme-toggle.css" />
+    <style>
+      .legal-intro {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .key-policies-box {
+        background: #f9f5ff;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(110, 51, 183, 0.08);
+      }
+      .key-policies-box h2 {
+        color: #6e33b7;
+        margin-top: 0;
+        text-align: center;
+      }
+      .key-policies-box ul {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        list-style: none;
+        padding: 0;
+      }
+      .key-policies-box li {
+        margin-bottom: 12px;
+      }
+      .legal-article {
+        background: #fff;
+        border-left: 4px solid #6e33b7;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(110, 51, 183, 0.08);
+      }
+      .legal-article h2 {
+        color: #6e33b7;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+      .legal-article h3 {
+        color: #421e7c;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .legal-article ul {
+        margin: 10px 0 15px 20px;
+        line-height: 1.7;
+      }
+      .legal-article li {
+        margin-bottom: 8px;
+      }
+      .legal-article p {
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+      .legal-article em {
+        color: #666;
+        font-size: 0.95rem;
+      }
+      .contact-box {
+        background: linear-gradient(135deg, #6e33b7 0%, #421e7c 100%);
+        color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 30px;
+        box-shadow: 0 4px 12px rgba(110, 51, 183, 0.15);
+      }
+      .contact-box h2 {
+        color: #ffd86b;
+        margin-top: 0;
+      }
+      .contact-box a {
+        color: #ffd86b;
+      }
+    </style>
   </head>
   <body>
     <header role="banner">
@@ -24,14 +106,14 @@
     <main role="main">
       <section class="main-section" role="region" aria-labelledby="legal-heading">
         <h1 id="legal-heading">Legal Information</h1>
-        <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px">
+        <p class="legal-intro">
           By using IdeaForge, you agree to our terms and conditions, privacy policy, and community guidelines. Please
           review these documents to understand your rights and responsibilities.
         </p>
 
-        <div style="background: #f9f5ff; padding: 25px; border-radius: 10px; margin-bottom: 30px">
-          <h2 style="color: #6e33b7; margin-top: 0">Key Policies</h2>
-          <ul style="font-size: 1.05rem; line-height: 1.8">
+        <div class="key-policies-box">
+          <h2>Key Policies</h2>
+          <ul>
             <li>
               <strong><a href="#terms" style="color: #6e33b7">Terms of Service</a></strong> - Legal agreement for using
               IdeaForge
@@ -55,8 +137,8 @@
           </ul>
         </div>
 
-        <article id="terms" style="margin-bottom: 40px">
-          <h2 style="color: #6e33b7">Terms of Service</h2>
+        <article id="terms" class="legal-article">
+          <h2>Terms of Service</h2>
           <p>
             The IdeaForge Terms of Service govern your use of our platform. By creating an account or using our
             services, you agree to:
@@ -71,20 +153,20 @@
           <p><em>Last updated: January 2025</em></p>
         </article>
 
-        <article id="privacy" style="margin-bottom: 40px">
-          <h2 style="color: #6e33b7">Privacy Policy</h2>
+        <article id="privacy" class="legal-article">
+          <h2>Privacy Policy</h2>
           <p>
             We take your privacy seriously. IdeaForge collects and processes personal data in accordance with GDPR and
             other applicable privacy laws.
           </p>
-          <h3 style="color: #421e7c; font-size: 1.2rem">Information We Collect:</h3>
+          <h3>Information We Collect:</h3>
           <ul>
             <li>Account information (name, email, username)</li>
             <li>Creative content and project data you upload</li>
             <li>Usage analytics and interaction data</li>
             <li>Communication preferences and history</li>
           </ul>
-          <h3 style="color: #421e7c; font-size: 1.2rem">How We Use Your Data:</h3>
+          <h3>How We Use Your Data:</h3>
           <ul>
             <li>Provide and improve our collaboration platform</li>
             <li>Connect you with other creators and projects</li>
@@ -95,8 +177,8 @@
           <p><em>Last updated: January 2025</em></p>
         </article>
 
-        <article id="community" style="margin-bottom: 40px">
-          <h2 style="color: #6e33b7">Community Guidelines</h2>
+        <article id="community" class="legal-article">
+          <h2>Community Guidelines</h2>
           <p>IdeaForge is a creative community built on collaboration, respect, and inclusivity. All members must:</p>
           <ul>
             <li>Treat all community members with respect and professionalism</li>
@@ -112,13 +194,13 @@
           </p>
         </article>
 
-        <article id="copyright" style="margin-bottom: 40px">
-          <h2 style="color: #6e33b7">Copyright &amp; Intellectual Property</h2>
+        <article id="copyright" class="legal-article">
+          <h2>Copyright &amp; Intellectual Property</h2>
           <p>
             IdeaForge respects intellectual property rights. Users retain copyright to their original works but grant
             IdeaForge a license to display and distribute content on the platform.
           </p>
-          <h3 style="color: #421e7c; font-size: 1.2rem">Key Points:</h3>
+          <h3>Key Points:</h3>
           <ul>
             <li>You own the copyright to your original creative works</li>
             <li>You grant IdeaForge a license to host and display your content</li>
@@ -128,8 +210,8 @@
           </ul>
         </article>
 
-        <article id="license" style="margin-bottom: 40px">
-          <h2 style="color: #6e33b7">Open Source License</h2>
+        <article id="license" class="legal-article">
+          <h2>Open Source License</h2>
           <p>
             IdeaForge is open source software licensed under the
             <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/LICENSE" target="_blank" rel="noopener">
@@ -149,29 +231,19 @@
           </p>
         </article>
 
-        <div
-          style="
-            background: linear-gradient(135deg, #6e33b7 0%, #421e7c 100%);
-            color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-          "
-        >
-          <h2 style="color: #ffd86b; margin-top: 0">Questions or Concerns?</h2>
+        <div class="contact-box">
+          <h2>Questions or Concerns?</h2>
           <p style="font-size: 1.1rem; margin-bottom: 20px">
             For legal inquiries, data protection requests, or to report policy violations, please contact our legal
             team.
           </p>
           <p style="font-size: 1.2rem">
             <strong>Email:</strong>
-            <a href="mailto:legal@ideaforge.com" style="color: #ffd86b">legal@ideaforge.com</a>
+            <a href="mailto:legal@ideaforge.com">legal@ideaforge.com</a>
           </p>
           <p style="margin-top: 20px; font-size: 0.95rem">
             For security vulnerabilities, please review our
-            <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/SECURITY.md" style="color: #ffd86b">
-              Security Policy</a
-            >
+            <a href="https://github.com/Kiyoshiakira/ideaforge/blob/main/SECURITY.md">Security Policy</a>
           </p>
         </div>
       </section>
