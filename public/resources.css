@@ -1,0 +1,55 @@
+/* Resources Page Specific Styles */
+
+/* Brighter links in feature cards */
+.feature-card a {
+  color: #ffd86b !important;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.feature-card a:hover {
+  color: #ffe48b !important;
+  text-decoration: underline;
+}
+
+/* Better text sizing in cards */
+.feature-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #ffd86b !important;
+  text-align: center;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-card li {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  padding-left: 0;
+}
+
+/* Better card spacing and sizing */
+.feature-card {
+  max-width: 340px;
+  min-height: 200px;
+  padding: 32px 24px;
+}
+
+/* Dark mode adjustments */
+.dark-mode .feature-card a {
+  color: #ffe48b !important;
+}
+
+.dark-mode .feature-card a:hover {
+  color: #fff !important;
+}
+
+.dark-mode .feature-card h2 {
+  color: #ffe48b !important;
+}
