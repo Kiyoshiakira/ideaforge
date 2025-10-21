@@ -9,7 +9,8 @@
     "no-redundant-role": "off",
     "prefer-native-element": "off",
     "no-raw-characters": "warn",
-    "element-required-attributes": "warn"
+    "element-required-attributes": "warn",
+    "doctype-style": "off"
   },
   "elements": ["html5"]
 }
