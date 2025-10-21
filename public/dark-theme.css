@@ -9,7 +9,7 @@
 .dark-mode header {
   background: linear-gradient(90deg, #2b0a4f 0%, #381e5f 100%);
   color: #ffd86b;
-  box-shadow: 0 2px 8px rgba(80,30,140,.10);
+  box-shadow: 0 2px 8px rgba(80, 30, 140, 0.1);
 }
 .dark-mode header .logo {
   color: #ffd86b;
@@ -17,10 +17,10 @@
 .dark-mode nav a {
   color: #ffd86b;
 }
-.dark-mode nav a[aria-current="page"] {
+.dark-mode nav a[aria-current='page'] {
   color: #ffe48b;
 }
-.dark-mode nav a:hover, 
+.dark-mode nav a:hover,
 .dark-mode nav a:focus {
   color: #fff;
   outline-color: #ffe48b;
@@ -30,18 +30,20 @@
 .dark-mode .main-section {
   background: #201a36;
   color: #eee;
-  box-shadow: 0 8px 32px 0 rgba(44, 30, 80, 0.20);
+  box-shadow: 0 8px 32px 0 rgba(44, 30, 80, 0.2);
 }
 
 /* Hero section */
 .dark-mode .hero {
   background: linear-gradient(120deg, #44217e 0%, #222 90%);
   color: #ffd86b;
-  box-shadow: 0 8px 44px rgba(110,51,183,.20);
+  box-shadow: 0 8px 44px rgba(110, 51, 183, 0.2);
 }
 .dark-mode .hero-title {
   color: #ffe48b;
-  text-shadow: 0 2px 16px #0d061eCC, 0 1px 0 #ffe48b;
+  text-shadow:
+    0 2px 16px #0d061ecc,
+    0 1px 0 #ffe48b;
 }
 .dark-mode .hero-sub {
   color: #ffd86b;
@@ -53,40 +55,42 @@
 }
 
 /* CTA Buttons */
-.dark-mode .cta-btn, .dark-mode .hero-btn {
+.dark-mode .cta-btn,
+.dark-mode .hero-btn {
   background: linear-gradient(90deg, #6d25d6 0%, #a943e9 100%);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(110,51,183,0.18);
+  box-shadow: 0 2px 8px rgba(110, 51, 183, 0.18);
 }
-.dark-mode .cta-btn:hover, .dark-mode .hero-btn:hover {
+.dark-mode .cta-btn:hover,
+.dark-mode .hero-btn:hover {
   background: linear-gradient(90deg, #8244e2 0%, #b86bf7 100%);
   color: #ffd86b;
 }
 
 /* Features cards, gallery, etc */
-.dark-mode .features-preview, 
+.dark-mode .features-preview,
 .dark-mode .gallery-grid {
   background: transparent;
 }
-.dark-mode .preview-card, 
-.dark-mode .feature-card, 
-.dark-mode .adaptation-card, 
+.dark-mode .preview-card,
+.dark-mode .feature-card,
+.dark-mode .adaptation-card,
 .dark-mode .audition-card {
   background: linear-gradient(90deg, #2a1559 0%, #381e5f 100%);
   color: #ffe48b;
-  box-shadow: 0 2px 16px rgba(110,51,183,0.10);
+  box-shadow: 0 2px 16px rgba(110, 51, 183, 0.1);
 }
-.dark-mode .preview-card i, 
-.dark-mode .feature-card i, 
-.dark-mode .adaptation-card i, 
+.dark-mode .preview-card i,
+.dark-mode .feature-card i,
+.dark-mode .adaptation-card i,
 .dark-mode .audition-card i {
   color: #ffe48b;
 }
-.dark-mode .preview-card strong, 
+.dark-mode .preview-card strong,
 .dark-mode .feature-card strong {
   color: #ffe48b;
 }
-.dark-mode .preview-card p, 
+.dark-mode .preview-card p,
 .dark-mode .feature-card p {
   color: #fff;
 }
@@ -150,7 +154,7 @@
 .dark-mode footer {
   background: #2b0a4f;
   color: #ffe48b;
-  box-shadow: 0 -2px 13px rgba(110,51,183,0.15);
+  box-shadow: 0 -2px 13px rgba(110, 51, 183, 0.15);
 }
 .dark-mode footer a {
   color: #ffe48b;

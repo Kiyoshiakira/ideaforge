@@ -22,12 +22,12 @@ This document provides step-by-step instructions for setting up Firebase Authent
 
 ```javascript
 const firebaseConfig = {
-    apiKey: "YOUR_ACTUAL_API_KEY",
-    authDomain: "your-project-id.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project-id.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: 'YOUR_ACTUAL_API_KEY',
+  authDomain: 'your-project-id.firebaseapp.com',
+  projectId: 'your-project-id',
+  storageBucket: 'your-project-id.appspot.com',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: 'YOUR_APP_ID',
 };
 ```
 
@@ -134,6 +134,7 @@ const firebaseConfig = {
 ## Part 4: Test Authentication
 
 1. Deploy your site to Firebase Hosting:
+
    ```bash
    firebase deploy
    ```
@@ -151,20 +152,24 @@ const firebaseConfig = {
 ### Common Issues
 
 **"auth/unauthorized-domain" Error:**
+
 - Make sure your domain is added to Authorized domains in Firebase Console
 - For local testing, ensure `localhost` is in the list
 
 **Facebook Login Issues:**
+
 - Verify OAuth redirect URI matches exactly between Firebase and Facebook
 - Ensure Facebook app is in "Live" mode for production use
 - Check that Facebook Login product is added to your app
 
 **GitHub Login Issues:**
+
 - Verify callback URL matches exactly between Firebase and GitHub
 - Ensure Client ID and Client Secret are correctly copied
 - Check that the OAuth App is active
 
 **"auth/popup-blocked" Error:**
+
 - Browser is blocking the popup window
 - Allow popups for your site or use redirect-based sign-in instead
 
@@ -197,6 +202,7 @@ const firebaseConfig = {
 ## Next Steps
 
 After authentication is set up:
+
 - Create profile pages for users
 - Add permission checks for project creation
 - Implement user-specific features (My Projects, etc.)

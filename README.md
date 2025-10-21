@@ -29,6 +29,7 @@ Too often, creative projects stall—not because of a lack of ideas, but because
 - **Creative “Multiverse”:** One script or story can become dozens of artworks, animations, games, or even VR experiences—each credited, each rewarding its contributors.
 
 **We believe in a world where:**
+
 - Creative barriers are broken down
 - Credit and revenue flow fairly
 - Anyone can help bring great stories to life—not just big studios
@@ -174,16 +175,16 @@ Interested in contributing? See [CONTRIBUTING.md](CONTRIBUTING.md) for how you c
    ```bash
    # Using Python 3
    python3 -m http.server 8000 --directory public
-   
+
    # Or using Node.js http-server (install globally: npm install -g http-server)
    http-server public -p 8000
-   
+
    # Or using Firebase emulators
    firebase serve
    ```
 
 4. **Open in your browser:**
-   
+
    Visit `http://localhost:8000` (or your configured port).
 
 5. **Run linting and formatting:**
@@ -191,10 +192,10 @@ Interested in contributing? See [CONTRIBUTING.md](CONTRIBUTING.md) for how you c
    ```bash
    # Run linting
    npm run lint
-   
+
    # Check code formatting
    npm run format:check
-   
+
    # Auto-format code
    npm run format
    ```

@@ -7,16 +7,19 @@ This guide explains how to integrate the dark mode color palette into existing I
 The dark mode design is complete and ready to use:
 
 ### ✅ Design Files
+
 - **[DARK_MODE_DESIGN.md](DARK_MODE_DESIGN.md)** - Complete design specification
 - **[DARK_MODE_README.md](DARK_MODE_README.md)** - Feature overview
 - **[DARK_MODE_QUICK_START.md](DARK_MODE_QUICK_START.md)** - Developer guide
 
 ### ✅ Implementation Files
+
 - **[public/dark-theme.css](public/dark-theme.css)** - Dark mode CSS with variables
 - **[public/theme-toggle.css](public/theme-toggle.css)** - Toggle button styles
 - **[public/theme-toggle.js](public/theme-toggle.js)** - Theme switching logic
 
 ### ✅ Demo Page
+
 - **[public/dark-mode-showcase.html](public/dark-mode-showcase.html)** - Live demonstration
 
 ## 🚀 How to Integrate
@@ -27,12 +30,12 @@ Add these lines to the `<head>` section of any HTML page:
 
 ```html
 <!-- Existing styles -->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="auth.css">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="auth.css" />
 
 <!-- Add dark mode support -->
-<link rel="stylesheet" href="dark-theme.css">
-<link rel="stylesheet" href="theme-toggle.css">
+<link rel="stylesheet" href="dark-theme.css" />
+<link rel="stylesheet" href="theme-toggle.css" />
 ```
 
 Add this before closing `</body>`:
@@ -132,6 +135,7 @@ pa11y http://localhost:8000/explore.html
 ### 3. Browser Testing
 
 Test in:
+
 - [ ] Chrome/Edge
 - [ ] Firefox
 - [ ] Safari
@@ -151,14 +155,16 @@ Test in:
 ### Issue: Theme Not Applying
 
 **Solution:** Ensure CSS files are in correct order:
+
 ```html
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="dark-theme.css"> <!-- Must be after styles.css -->
+<link rel="stylesheet" href="styles.css" /> <link rel="stylesheet" href="dark-theme.css" />
+<!-- Must be after styles.css -->
 ```
 
 ### Issue: Toggle Button Missing
 
 **Solution:** Ensure JavaScript is loaded and page has `<nav>` element in header:
+
 ```html
 <header>
   <nav>
@@ -170,12 +176,13 @@ Test in:
 ### Issue: Colors Look Wrong
 
 **Solution:** Check for inline styles or hard-coded colors:
+
 ```html
 <!-- Bad -->
 <div style="background: #fff; color: #222;">
-
-<!-- Good -->
-<div style="background: var(--color-surface); color: var(--color-text-primary);">
+  <!-- Good -->
+  <div style="background: var(--color-surface); color: var(--color-text-primary);"></div>
+</div>
 ```
 
 ### Issue: Flash of Unstyled Content
@@ -192,11 +199,13 @@ Test in:
 ### Optimization Tips:
 
 1. **Combine CSS files** (optional):
+
    ```bash
    cat styles.css dark-theme.css > combined.css
    ```
 
 2. **Minify in production**:
+
    ```bash
    npm install -g clean-css-cli
    cleancss -o dark-theme.min.css dark-theme.css
@@ -204,7 +213,7 @@ Test in:
 
 3. **Preload critical CSS**:
    ```html
-   <link rel="preload" href="dark-theme.css" as="style">
+   <link rel="preload" href="dark-theme.css" as="style" />
    ```
 
 ## 🎯 Quick Win: Start with One Page
@@ -233,11 +242,11 @@ Here's what to change in `index.html`:
 
 ```diff
     </footer>
-    
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
+
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
@@ -251,6 +260,7 @@ Here's what to change in `index.html`:
 After basic integration, consider:
 
 1. **Auto Dark Mode** - Based on time of day
+
    ```javascript
    const hour = new Date().getHours();
    if (hour >= 20 || hour <= 6) {
@@ -259,6 +269,7 @@ After basic integration, consider:
    ```
 
 2. **Smooth Page Transitions** - Add to CSS:
+
    ```css
    @media (prefers-reduced-motion: no-preference) {
      :root {

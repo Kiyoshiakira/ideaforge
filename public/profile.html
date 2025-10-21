@@ -1,72 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Profile | IdeaForge</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="auth.css">
-    <link rel="stylesheet" href="dark-theme.css">
-    <link rel="stylesheet" href="theme-toggle.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
-        </div>
-        <nav role="navigation" aria-label="Main site navigation">
-            <a href="index.html">Home</a>
-            <a href="explore.html">Explore</a>
-            <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
-        </nav>
+      <div class="logo">
+        <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle" />
+      </div>
+      <nav role="navigation" aria-label="Main site navigation">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
+      </nav>
     </header>
-    <section>
+
+    <div id="profile-content" style="display: none">
+      <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div id="profile-avatar-container"></div>
+          <div class="profile-info">
+            <h1 class="profile-name" id="profile-name">User Profile</h1>
+            <div class="profile-email" id="profile-email"></div>
+            <div class="profile-meta">
+              <div class="profile-meta-item">
+                <span>📅</span>
+                <span>Joined <span id="profile-joined"></span></span>
+              </div>
+              <div class="profile-meta-item">
+                <span>🔄</span>
+                <span>Last active <span id="profile-last-active"></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Customization -->
+        <div class="profile-customization">
+          <h2>🎨 Customize Your Profile</h2>
+          <div class="customization-controls">
+            <div class="customization-group">
+              <label for="bg-color-picker">Background Color</label>
+              <input type="color" id="bg-color-picker" class="color-picker" value="#f5f7fa" />
+            </div>
+            <div class="customization-group">
+              <label>Theme</label>
+              <div class="theme-selector">
+                <div class="theme-option theme-default selected" data-theme="default" title="Default"></div>
+                <div class="theme-option theme-purple" data-theme="purple" title="Purple Dream"></div>
+                <div class="theme-option theme-blue" data-theme="blue" title="Ocean Blue"></div>
+                <div class="theme-option theme-green" data-theme="green" title="Fresh Green"></div>
+                <div class="theme-option theme-sunset" data-theme="sunset" title="Sunset Pink"></div>
+              </div>
+            </div>
+            <button class="cta-btn" onclick="resetCustomization()">Reset to Default</button>
+          </div>
+        </div>
+
+        <!-- User Bio Section -->
+        <div class="profile-section">
+          <h2><span class="emoji">👤</span> About Me</h2>
+          <div id="bio-display" class="profile-bio">
+            <em>No bio yet. Click edit to add one!</em>
+          </div>
+          <div id="skills-display" class="profile-skills"></div>
+          <button class="edit-profile-btn" onclick="editProfile()">✏️ Edit Profile</button>
+        </div>
+
+        <!-- User's Projects Section -->
+        <div class="profile-section">
+          <h2><span class="emoji">🎨</span> My Projects</h2>
+          <div id="projects-grid" class="content-grid">
+            <div class="empty-state">
+              <div class="empty-state-icon">📂</div>
+              <div class="empty-state-text">No projects yet</div>
+              <button class="cta-btn" onclick="window.location.href='my-projects.html'">
+                Create Your First Project
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- User's Auditions Section -->
+        <div class="profile-section">
+          <h2><span class="emoji">🎭</span> My Auditions</h2>
+          <div id="auditions-grid" class="content-grid">
+            <div class="empty-state">
+              <div class="empty-state-icon">🎬</div>
+              <div class="empty-state-text">No auditions submitted yet</div>
+              <button class="cta-btn" onclick="window.location.href='auditions.html'">Browse Auditions</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- User's Adaptations Section -->
+        <div class="profile-section">
+          <h2><span class="emoji">🎪</span> My Adaptations</h2>
+          <div id="adaptations-grid" class="content-grid">
+            <div class="empty-state">
+              <div class="empty-state-icon">🎨</div>
+              <div class="empty-state-text">No adaptations created yet</div>
+              <button class="cta-btn" onclick="window.location.href='adaptations.html'">Explore Adaptations</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="not-logged-in" style="display: none">
+      <section>
         <h1>My Profile</h1>
-        <div id="profile-content">
-            <p>Loading your profile...</p>
-        </div>
-        <div id="not-logged-in" style="display: none;">
-            <p>You need to be logged in to view your profile.</p>
-            <button class="cta-btn" onclick="openAuthModal()">Login / Sign Up</button>
-        </div>
-    </section>
-    <footer>
-        &copy; 2025 IdeaForge. All rights reserved.
-    </footer>
-    
+        <p>You need to be logged in to view your profile.</p>
+        <button class="cta-btn" onclick="openAuthModal()">Login / Sign Up</button>
+      </section>
+    </div>
+
+    <footer>&copy; 2025 IdeaForge. All rights reserved.</footer>
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    
+
     <!-- Authentication Scripts -->
     <script src="firebase-config.js"></script>
     <script src="header-inject.js"></script>
     <script src="auth.js"></script>
     <script src="theme-toggle.js"></script>
-    
-    <script>
-        // Check if user is logged in and display profile
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                document.getElementById('not-logged-in').style.display = 'none';
-                document.getElementById('profile-content').innerHTML = `
-                    <div class="mission">
-                        <strong>Welcome, ${user.displayName || 'User'}!</strong>
-                    </div>
-                    <p><strong>Email:</strong> ${user.email}</p>
-                    <p><strong>User ID:</strong> ${user.uid}</p>
-                    <p><strong>Account Created:</strong> ${new Date(user.metadata.creationTime).toLocaleDateString()}</p>
-                    <p><strong>Last Sign In:</strong> ${new Date(user.metadata.lastSignInTime).toLocaleDateString()}</p>
-                    ${user.photoURL ? `<img src="${user.photoURL}" alt="Profile" style="max-width: 200px; border-radius: 50%;">` : ''}
-                    <hr>
-                    <h2>Profile Settings</h2>
-                    <p><em>Profile editing features coming soon! You'll be able to update your display name, bio, skills, and showcase your best work.</em></p>
-                `;
-            } else {
-                document.getElementById('profile-content').style.display = 'none';
-                document.getElementById('not-logged-in').style.display = 'block';
-            }
-        });
-    </script>
-</body>
+
+    <script src="profile.js"></script>
+  </body>
 </html>

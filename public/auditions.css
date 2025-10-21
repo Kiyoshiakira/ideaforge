@@ -22,12 +22,12 @@
   background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
   color: #fff;
   border-radius: 20px;
-  box-shadow: 0 2px 12px rgba(80,30,140,0.10);
+  box-shadow: 0 2px 12px rgba(80, 30, 140, 0.1);
   padding: 28px 24px 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: transform .13s;
+  transition: transform 0.13s;
 }
 .audition-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -78,15 +78,19 @@
   font-weight: bold;
   font-size: 1.05rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(255,216,107,0.17);
+  box-shadow: 0 2px 8px rgba(255, 216, 107, 0.17);
   transition: background 0.15s;
 }
 .audition-apply-btn:hover {
   background: linear-gradient(90deg, #ffb44d 0%, #ffd86b 100%);
 }
 @media (max-width: 650px) {
-  .audition-card { padding: 16px 9px 12px 9px; }
-  .auditions-list { gap: 16px; }
+  .audition-card {
+    padding: 16px 9px 12px 9px;
+  }
+  .auditions-list {
+    gap: 16px;
+  }
 }
 /* Tablet breakpoint - single column layout */
 @media (max-width: 1024px) {

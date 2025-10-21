@@ -11,14 +11,16 @@ The dark mode provides a comfortable viewing experience for long work sessions w
 ## 🎨 Color Showcase Page
 
 ### Light Mode
+
 ![Dark Mode Showcase - Light Mode](screenshots/dark-mode-showcase-light.png)
 
-*The showcase page in light mode displays all color swatches, gradients, and components with the original color palette.*
+_The showcase page in light mode displays all color swatches, gradients, and components with the original color palette._
 
 ### Dark Mode
+
 ![Dark Mode Showcase - Dark Mode](screenshots/dark-mode-showcase-dark.png)
 
-*The same page in dark mode shows the complete transformation with proper contrast ratios and surface elevations.*
+_The same page in dark mode shows the complete transformation with proper contrast ratios and surface elevations._
 
 ### Key Features Visible:
 
@@ -33,7 +35,7 @@ The dark mode provides a comfortable viewing experience for long work sessions w
 
 ![Index Page - Dark Mode](screenshots/index-dark-mode.png)
 
-*The IdeaForge home page with dark mode applied shows the hero section, feature cards, and call-to-action buttons.*
+_The IdeaForge home page with dark mode applied shows the hero section, feature cards, and call-to-action buttons._
 
 ### Dark Mode Features:
 
@@ -47,27 +49,30 @@ The dark mode provides a comfortable viewing experience for long work sessions w
 
 ### Color Transformations
 
-| Element | Light Mode | Dark Mode | Change |
-|---------|-----------|-----------|--------|
-| Background | `#f5f7fa` | `#121212` | Soft gray → Near black |
-| Cards | `#ffffff` | `#1e1e1e` | White → Dark gray |
-| Primary Purple | `#6e33b7` | `#7c4dff` | Darker → Brighter |
-| Text | `#222222` | `#e8e8e8` | Near black → Light gray |
-| Borders | `#e4d8f7` | `#3a3a3a` | Light purple → Dark gray |
+| Element        | Light Mode | Dark Mode | Change                   |
+| -------------- | ---------- | --------- | ------------------------ |
+| Background     | `#f5f7fa`  | `#121212` | Soft gray → Near black   |
+| Cards          | `#ffffff`  | `#1e1e1e` | White → Dark gray        |
+| Primary Purple | `#6e33b7`  | `#7c4dff` | Darker → Brighter        |
+| Text           | `#222222`  | `#e8e8e8` | Near black → Light gray  |
+| Borders        | `#e4d8f7`  | `#3a3a3a` | Light purple → Dark gray |
 
 ### Accessibility Wins
 
 ✅ **WCAG AA Compliant**
+
 - All text meets 4.5:1 contrast minimum
 - Interactive elements have 3:1 contrast
 - Focus indicators clearly visible
 
 ✅ **Visual Comfort**
+
 - No pure black (#121212 reduces eye strain)
 - Elevation system creates clear hierarchy
 - Smooth 0.3s transitions prevent jarring changes
 
 ✅ **Brand Consistency**
+
 - Gold accent (#ffd86b) maintained
 - Purple gradient adapted, not removed
 - Recognizable IdeaForge identity
@@ -80,6 +85,7 @@ The theme toggle button appears in the navigation:
 **Dark Mode:** ☀️ Light Mode
 
 ### Toggle Features:
+
 - **Click to switch** - Instant theme change
 - **Keyboard shortcut** - Ctrl/Cmd + Shift + D
 - **Persistent** - Saved in localStorage
@@ -96,15 +102,18 @@ The dark mode is fully responsive and works on all screen sizes:
 ## 🎨 Color Swatches in Action
 
 ### Primary Purple Variations
+
 - **#7c4dff** - Primary actions, links
 - **#9575ff** - Hover states
 - **#b39dff** - Disabled states
 
 ### Accent Gold (Unchanged)
+
 - **#ffd86b** - Primary CTA
 - **#ffb44d** - Hover state
 
 ### Surface Elevations
+
 - **#121212** - Base background (0dp)
 - **#1e1e1e** - Cards (1dp)
 - **#252525** - Elevated cards (2dp)
@@ -124,12 +133,14 @@ To see the dark mode in action:
 ## 📊 Impact Analysis
 
 ### Visual Improvements
+
 - ✅ **Reduced Eye Strain** - Dark backgrounds for long sessions
 - ✅ **Better Focus** - Higher contrast on important elements
 - ✅ **Professional Look** - Modern dark UI expected by users
 - ✅ **Energy Saving** - Dark pixels use less power on OLED screens
 
 ### Technical Benefits
+
 - ✅ **CSS Variables** - Easy to maintain and customize
 - ✅ **No Breaking Changes** - Works alongside light mode
 - ✅ **Performance** - ~22KB total added assets
@@ -157,6 +168,7 @@ To see the dark mode in action:
 ### Future Enhancements
 
 Potential additions:
+
 - [ ] Multiple color schemes (purple, blue, green)
 - [ ] Auto theme based on time of day
 - [ ] Granular control (dark header, light content)
@@ -173,6 +185,7 @@ Potential additions:
 ## 📸 Screenshot Details
 
 All screenshots taken at:
+
 - **Resolution:** 1920x1080 (desktop)
 - **Browser:** Chrome/Chromium
 - **Date:** 2025-01-07

@@ -1,75 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IdeaForge - Where Art Meets Collaboration</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="auth.css">
-    <link rel="stylesheet" href="dark-theme.css">
-    <link rel="stylesheet" href="theme-toggle.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header role="banner">
-        <div class="logo">
-          <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle;">
-        </div>
-        <nav role="navigation" aria-label="Main site navigation">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="explore.html">Explore</a>
-            <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
-        </nav>
+      <div class="logo">
+        <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle" />
+      </div>
+      <nav role="navigation" aria-label="Main site navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="explore.html">Explore</a>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
+      </nav>
     </header>
-    
+
     <main role="main">
       <!-- HERO SECTION -->
       <section class="hero" role="region" aria-labelledby="hero-title">
         <div class="flare-bg" aria-hidden="true"></div>
         <h1 class="hero-title" id="hero-title">Where Art Meets Collaboration</h1>
         <div class="hero-sub">
-          Bring your creative ideas to life—together. Artists, writers, musicians, filmmakers, and dreamers unite in a suite built for real collaboration.
+          Bring your creative ideas to life—together. Artists, writers, musicians, filmmakers, and dreamers unite in a
+          suite built for real collaboration.
         </div>
-        <button class="hero-btn" onclick="window.location.href='explore.html'" aria-describedby="hero-title">Explore IdeaForge</button>
+        <button class="hero-btn" onclick="window.location.href='explore.html'" aria-describedby="hero-title">
+          Explore IdeaForge
+        </button>
       </section>
-      
+
       <!-- WHY USE IDEA FORGE (centered white background) -->
       <section class="main-section" role="region" aria-labelledby="features-heading">
-        <h2 id="features-heading" style="text-align:center;">Why Use IdeaForge?</h2>
+        <h2 id="features-heading" style="text-align: center">Why Use IdeaForge?</h2>
         <div class="features-preview" role="list">
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Tools icon">🛠️</i>
             <strong>Real-Time Collaboration</strong>
-            <p>Create, edit, and brainstorm live on scripts, art, music, and more—no more waiting for email chains or version confusion. Work together as if you’re in the same room, even when you're not.</p>
+            <p>
+              Create, edit, and brainstorm live on scripts, art, music, and more—no more waiting for email chains or
+              version confusion. Work together as if you’re in the same room, even when you're not.
+            </p>
           </div>
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Teamwork icon">🤝</i>
             <strong>Skill-Driven Teams & Open Community</strong>
-            <p>Find the perfect partners for your project—writers, artists, musicians, actors, animators, and beyond. Build your creative team or join others, regardless of your experience or location.</p>
+            <p>
+              Find the perfect partners for your project—writers, artists, musicians, actors, animators, and beyond.
+              Build your creative team or join others, regardless of your experience or location.
+            </p>
           </div>
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Light bulb icon">💡</i>
             <strong>AI-Powered Onboarding & Creative Assistance</strong>
-            <p>Get started fast with helpful AI suggestions, demo projects, and creative prompts tailored to your discipline. The built-in AI bot helps guide new users and keeps your inspiration flowing.</p>
+            <p>
+              Get started fast with helpful AI suggestions, demo projects, and creative prompts tailored to your
+              discipline. The built-in AI bot helps guide new users and keeps your inspiration flowing.
+            </p>
           </div>
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Trophy icon">🏆</i>
             <strong>Showcase, Portfolios & Auditions</strong>
-            <p>Share your best work in a global showcase, build a living portfolio, and audition or recruit for projects. Unlock opportunities, get discovered, and grow your creative reputation.</p>
+            <p>
+              Share your best work in a global showcase, build a living portfolio, and audition or recruit for projects.
+              Unlock opportunities, get discovered, and grow your creative reputation.
+            </p>
           </div>
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Royalty icon">💸</i>
             <strong>Flexible Rights & Revenue</strong>
-            <p>Choose how your work is used: allow derivatives with built-in royalties, set buyout rights, or release to the public domain. Every contribution is credited and (optionally) monetized—all tracked automatically.</p>
+            <p>
+              Choose how your work is used: allow derivatives with built-in royalties, set buyout rights, or release to
+              the public domain. Every contribution is credited and (optionally) monetized—all tracked automatically.
+            </p>
           </div>
           <div class="preview-card" role="listitem">
             <i role="img" aria-label="Universe icon">🌐</i>
             <strong>Creative Multiverse & Adaptations</strong>
-            <p>One story, endless possibilities! Watch your script spark multiple artworks, music pieces, games, or even VR—each adaptation connected, credited, and celebrated in a true creative ecosystem.</p>
+            <p>
+              One story, endless possibilities! Watch your script spark multiple artworks, music pieces, games, or even
+              VR—each adaptation connected, credited, and celebrated in a true creative ecosystem.
+            </p>
           </div>
         </div>
       </section>
-      
+
       <!-- HOW IT WORKS (centered white box) -->
       <section class="how-it-works main-section" role="region" aria-labelledby="hiw-heading">
         <h2 id="hiw-heading">How It Works</h2>
@@ -88,53 +109,64 @@
           </div>
         </div>
       </section>
-      
+
       <!-- SHOWCASE PREVIEW (centered white box) -->
       <section class="showcase-preview main-section" role="region" aria-labelledby="showcase-heading">
-        <h2 id="showcase-heading" style="text-align:center;">Featured Works from the Showcase</h2>
+        <h2 id="showcase-heading" style="text-align: center">Featured Works from the Showcase</h2>
         <div class="gallery-grid" role="list">
           <div class="gallery-item" role="listitem">
-              <img src="https://placehold.co/400x300?text=No+Artwork+Yet" alt="Sunrise Over Neon City - Digital artwork featuring a vibrant sunrise over a futuristic cityscape with neon lights and purple hues">
-              <div class="caption">"Sunrise Over Neon City" by Alex Rivera</div>
+            <img
+              src="https://placehold.co/400x300?text=No+Artwork+Yet"
+              alt="Sunrise Over Neon City - Digital artwork featuring a vibrant sunrise over a futuristic cityscape with neon lights and purple hues"
+            />
+            <div class="caption">"Sunrise Over Neon City" by Alex Rivera</div>
           </div>
           <div class="gallery-item" role="listitem">
-              <img src="https://placehold.co/400x300?text=No+Artwork+Yet" alt="Unheard Melodies - Abstract musical composition artwork with flowing waves and musical notes in blue and gold tones">
-              <div class="caption">"Unheard Melodies" by Priya S.</div>
+            <img
+              src="https://placehold.co/400x300?text=No+Artwork+Yet"
+              alt="Unheard Melodies - Abstract musical composition artwork with flowing waves and musical notes in blue and gold tones"
+            />
+            <div class="caption">"Unheard Melodies" by Priya S.</div>
           </div>
           <div class="gallery-item" role="listitem">
-              <img src="https://placehold.co/400x300?text=No+Artwork+Yet" alt="Fragments - Movie poster for experimental short film featuring fragmented geometric shapes and dramatic lighting">
-              <div class="caption">"Fragments" Short Film by Studio 88</div>
+            <img
+              src="https://placehold.co/400x300?text=No+Artwork+Yet"
+              alt="Fragments - Movie poster for experimental short film featuring fragmented geometric shapes and dramatic lighting"
+            />
+            <div class="caption">"Fragments" Short Film by Studio 88</div>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
+        <div style="text-align: center; margin-top: 20px">
           <a class="cta-btn" href="showcase.html" role="button">See the Full Showcase</a>
         </div>
       </section>
-      
+
       <!-- COMMUNITY INVITE (centered white box) -->
       <section class="community-invite main-section" role="region" aria-labelledby="community-heading">
         <h2 id="community-heading">Ready to Join a Creative Revolution?</h2>
         <p>
-          Whether you're an artist, writer, musician, voice actor, or supporter—IdeaForge is your home for collaboration, discovery, and growth.
-          Dive in, share your talent, and build something amazing—together!
+          Whether you're an artist, writer, musician, voice actor, or supporter—IdeaForge is your home for
+          collaboration, discovery, and growth. Dive in, share your talent, and build something amazing—together!
         </p>
-        <button class="cta-btn" onclick="window.location.href='about.html'" aria-describedby="community-heading">Meet the Community</button>
+        <button class="cta-btn" onclick="window.location.href='about.html'" aria-describedby="community-heading">
+          Meet the Community
+        </button>
       </section>
-      
+
       <!-- MODALS (hidden by default) -->
-      <div id="modal-overlay" style="display:none;">
+      <div id="modal-overlay" style="display: none">
         <div id="modal-content" role="dialog" aria-modal="true" tabindex="-1">
           <button id="modal-close-btn" aria-label="Close modal">&times;</button>
           <div id="modal-body"></div>
         </div>
       </div>
-      <div id="toast" style="display:none;"></div>
+      <div id="toast" style="display: none"></div>
     </main>
-    
+
     <footer role="contentinfo">
-        <p>&copy; 2025 IdeaForge. All rights reserved.</p>
+      <p>&copy; 2025 IdeaForge. All rights reserved.</p>
     </footer>
-    
+
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
@@ -143,5 +175,5 @@
     <script src="header-inject.js"></script>
     <script src="auth.js"></script>
     <script src="theme-toggle.js"></script>
-</body>
+  </body>
 </html>
