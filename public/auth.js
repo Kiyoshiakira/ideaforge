@@ -149,6 +149,7 @@
                 <button class="dropdown-toggle" onclick="toggleUserDropdown()">▼</button>
                 <div class="user-dropdown" id="user-dropdown">
                     <a href="profile.html">Profile</a>
+                    <a href="messages.html">Messages</a>
                     <a href="my-projects.html">My Projects</a>
                     <a href="#" onclick="signOut(); return false;">Sign Out</a>
                 </div>
