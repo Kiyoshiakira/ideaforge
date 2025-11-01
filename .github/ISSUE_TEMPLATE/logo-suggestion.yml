@@ -73,22 +73,19 @@ body:
     validations:
       required: true
       
-  - type: dropdown
+  - type: checkboxes
     id: file-formats
     attributes:
       label: Available File Formats
       description: What file formats can you provide? (Select all that apply)
-      multiple: true
       options:
-        - SVG (vector)
-        - PNG (transparent background)
-        - JPG/JPEG
-        - PDF
-        - Adobe Illustrator (.ai)
-        - Figma/Sketch file
-        - Other
-    validations:
-      required: false
+        - label: SVG (vector)
+        - label: PNG (transparent background)
+        - label: JPG/JPEG
+        - label: PDF
+        - label: Adobe Illustrator (.ai)
+        - label: Figma/Sketch file
+        - label: Other
       
   - type: textarea
     id: variations
