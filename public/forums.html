@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Forums | IdeaForge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
+    <style>
+      .forums-container {
+        max-width: 1200px;
+        margin: 48px auto;
+        padding: 0 20px;
+      }
+
+      .forums-header {
+        background: linear-gradient(90deg, #421e7c 0%, #6e33b7 100%);
+        color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        box-shadow: 0 8px 40px rgba(80, 30, 140, 0.15);
+      }
+
+      .forums-header h1 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .forums-header p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        margin: 0;
+      }
+
+      .forum-categories {
+        display: grid;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      .forum-category {
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 4px 20px rgba(80, 30, 140, 0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .forum-category:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(80, 30, 140, 0.15);
+      }
+
+      .category-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .category-icon {
+        font-size: 2.5rem;
+      }
+
+      .category-info {
+        flex: 1;
+      }
+
+      .category-title {
+        color: #421e7c;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .category-description {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .category-stats {
+        display: flex;
+        gap: 24px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #e0e0e0;
+        font-size: 0.95rem;
+        color: #777;
+      }
+
+      .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .stat-number {
+        font-weight: bold;
+        color: #421e7c;
+      }
+
+      .recent-topics {
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 4px 20px rgba(80, 30, 140, 0.08);
+      }
+
+      .recent-topics h2 {
+        color: #421e7c;
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+      }
+
+      .topic-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .topic-item {
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      .topic-item:hover {
+        border-color: #6e33b7;
+        background: #f9f5ff;
+      }
+
+      .topic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 10px;
+      }
+
+      .topic-title {
+        color: #421e7c;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .topic-meta {
+        display: flex;
+        gap: 20px;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      .topic-stats {
+        display: flex;
+        gap: 16px;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+      }
+
+      .empty-state-icon {
+        font-size: 4rem;
+        margin-bottom: 16px;
+      }
+
+      .new-topic-btn {
+        background: linear-gradient(90deg, #ffd86b 0%, #ffb44d 100%);
+        color: #421e7c;
+        border: none;
+        border-radius: 24px;
+        padding: 14px 32px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 20px;
+      }
+
+      .new-topic-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 180, 77, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <header role="banner">
+      <div class="logo">
+        <img src="img/logo.png" alt="IdeaForge Logo" style="height: 128px; vertical-align: middle" />
+      </div>
+      <nav role="navigation" aria-label="Main site navigation">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="forums.html" aria-current="page">Forums</a>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙 Dark Mode</button>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="forums-container">
+        <div class="forums-header">
+          <h1>💬 Community Forums</h1>
+          <p>Connect, discuss, and collaborate with fellow creators</p>
+        </div>
+
+        <div class="forum-categories">
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">🎨</div>
+              <div class="category-info">
+                <div class="category-title">Art &amp; Design</div>
+                <div class="category-description">
+                  Share your artwork, get feedback, discuss techniques, and find collaborators for visual projects
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">234</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">1,456</span> Posts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">✍️</div>
+              <div class="category-info">
+                <div class="category-title">Writing &amp; Scripts</div>
+                <div class="category-description">
+                  Discuss storytelling, share scripts, get writing tips, and connect with fellow writers
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">189</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">892</span> Posts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">🎵</div>
+              <div class="category-info">
+                <div class="category-title">Music &amp; Audio</div>
+                <div class="category-description">
+                  Share compositions, discuss production techniques, find musicians, and collaborate on soundtracks
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">156</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">723</span> Posts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">🎬</div>
+              <div class="category-info">
+                <div class="category-title">Film &amp; Animation</div>
+                <div class="category-description">
+                  Discuss filmmaking, animation techniques, share projects, and find crew members
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">201</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">1,102</span> Posts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">🤝</div>
+              <div class="category-info">
+                <div class="category-title">Collaboration Hub</div>
+                <div class="category-description">
+                  Find team members, pitch project ideas, discuss collaboration workflows, and build your creative network
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">312</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">1,834</span> Posts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forum-category">
+            <div class="category-header">
+              <div class="category-icon">💡</div>
+              <div class="category-info">
+                <div class="category-title">General Discussion</div>
+                <div class="category-description">
+                  Platform updates, feature requests, community events, and general creative discussions
+                </div>
+              </div>
+            </div>
+            <div class="category-stats">
+              <div class="stat-item">
+                <span>📝</span>
+                <span><span class="stat-number">445</span> Topics</span>
+              </div>
+              <div class="stat-item">
+                <span>💬</span>
+                <span><span class="stat-number">2,567</span> Posts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recent-topics">
+          <h2>🔥 Recent Topics</h2>
+          <div class="topic-list">
+            <div class="topic-item">
+              <div class="topic-header">
+                <div>
+                  <div class="topic-title">Looking for a voice actor for animated short</div>
+                  <div class="topic-meta">
+                    <span>👤 Sarah Chen</span>
+                    <span>📁 Collaboration Hub</span>
+                    <span>🕒 2 hours ago</span>
+                  </div>
+                </div>
+                <div class="topic-stats">
+                  <span>💬 12</span>
+                  <span>👁️ 89</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-item">
+              <div class="topic-header">
+                <div>
+                  <div class="topic-title">Tips for creating realistic lighting in digital art?</div>
+                  <div class="topic-meta">
+                    <span>👤 Mike Torres</span>
+                    <span>📁 Art &amp; Design</span>
+                    <span>🕒 5 hours ago</span>
+                  </div>
+                </div>
+                <div class="topic-stats">
+                  <span>💬 8</span>
+                  <span>👁️ 54</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-item">
+              <div class="topic-header">
+                <div>
+                  <div class="topic-title">Share your favorite royalty-free sound libraries</div>
+                  <div class="topic-meta">
+                    <span>👤 Alex Rivera</span>
+                    <span>📁 Music &amp; Audio</span>
+                    <span>🕒 1 day ago</span>
+                  </div>
+                </div>
+                <div class="topic-stats">
+                  <span>💬 24</span>
+                  <span>👁️ 156</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-item">
+              <div class="topic-header">
+                <div>
+                  <div class="topic-title">Beginner's guide to screenplay formatting</div>
+                  <div class="topic-meta">
+                    <span>👤 Jamie Lee</span>
+                    <span>📁 Writing &amp; Scripts</span>
+                    <span>🕒 1 day ago</span>
+                  </div>
+                </div>
+                <div class="topic-stats">
+                  <span>💬 15</span>
+                  <span>👁️ 203</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-item">
+              <div class="topic-header">
+                <div>
+                  <div class="topic-title">Seeking feedback on my animated short film concept</div>
+                  <div class="topic-meta">
+                    <span>👤 Taylor Kim</span>
+                    <span>📁 Film &amp; Animation</span>
+                    <span>🕒 2 days ago</span>
+                  </div>
+                </div>
+                <div class="topic-stats">
+                  <span>💬 19</span>
+                  <span>👁️ 127</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center">
+            <button class="new-topic-btn" onclick="alert('Please log in to create a new topic!')">
+              ✨ Start New Topic
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 IdeaForge. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <!-- Authentication Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="header-inject.js"></script>
+    <script src="auth.js"></script>
+    <script src="theme-toggle.js"></script>
+  </body>
+</html>
