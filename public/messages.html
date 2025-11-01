@@ -543,6 +543,9 @@
             notLoggedInContent.style.display = 'block';
           }
         });
+      } else {
+        // Firebase not loaded, show not-logged-in state
+        document.getElementById('messages-not-logged-in').style.display = 'block';
       }
     </script>
   </body>
