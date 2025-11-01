@@ -1,0 +1,130 @@
+name: 🎯 Logo Suggestion
+description: Suggest a new logo or logo improvements for IdeaForge
+title: "[Logo]: "
+labels: ["enhancement", "design", "branding", "logo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve IdeaForge's branding! We're excited to see your logo ideas.
+        
+        **Current Logo:** The current IdeaForge logo can be found at [public/img/logo.png](https://github.com/Kiyoshiakira/ideaforge/blob/main/public/img/logo.png)
+        
+  - type: dropdown
+    id: suggestion-type
+    attributes:
+      label: Type of Suggestion
+      description: What kind of logo suggestion are you making?
+      options:
+        - New logo design (complete redesign)
+        - Improvement to existing logo
+        - Alternative version (light/dark mode variant)
+        - Logo animation or interactive version
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: concept
+    attributes:
+      label: Logo Concept
+      description: Describe your logo concept and the ideas behind it
+      placeholder: "My logo concept represents..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: design-elements
+    attributes:
+      label: Design Elements
+      description: What visual elements does your logo include? (shapes, symbols, typography, etc.)
+      placeholder: "The logo features..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: color-scheme
+    attributes:
+      label: Color Scheme
+      description: What colors are used in your logo proposal?
+      placeholder: "Primary colors: #..., Secondary colors: #..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Design Rationale
+      description: Why do you think this logo fits IdeaForge's mission and values?
+      placeholder: "This logo aligns with IdeaForge because..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logo-files
+    attributes:
+      label: Logo Files/Mockups
+      description: |
+        Please provide your logo design files or mockups. You can:
+        - Paste images directly into this field
+        - Provide links to design files (Figma, Adobe, etc.)
+        - Attach files (.png, .svg, .pdf, etc.)
+      placeholder: "Drag and drop images here, or paste links to your design files"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: file-formats
+    attributes:
+      label: Available File Formats
+      description: What file formats can you provide? (Select all that apply)
+      multiple: true
+      options:
+        - SVG (vector)
+        - PNG (transparent background)
+        - JPG/JPEG
+        - PDF
+        - Adobe Illustrator (.ai)
+        - Figma/Sketch file
+        - Other
+    validations:
+      required: false
+      
+  - type: textarea
+    id: variations
+    attributes:
+      label: Logo Variations (Optional)
+      description: Do you have variations for different use cases? (horizontal, vertical, icon-only, dark mode, etc.)
+      placeholder: "I've created variations for..."
+    validations:
+      required: false
+      
+  - type: textarea
+    id: usage-examples
+    attributes:
+      label: Usage Examples (Optional)
+      description: Show how the logo would look in different contexts (website header, social media, merchandise, etc.)
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights and Attribution
+      description: Please confirm the following regarding your logo submission
+      options:
+        - label: I created this logo myself or have permission to submit it
+          required: true
+        - label: I agree to license this logo under terms compatible with IdeaForge's AGPL-3.0 license
+          required: true
+        - label: I understand that if my logo is selected, I will be credited appropriately
+          required: true
+          
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/Kiyoshiakira/ideaforge/blob/main/CONTRIBUTING.MD)
+      options:
+        - label: I agree to follow this project's Contributing Guidelines
+          required: true

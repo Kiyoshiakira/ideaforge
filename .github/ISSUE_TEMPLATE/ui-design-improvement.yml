@@ -1,0 +1,96 @@
+name: 🎨 UI/Design Improvement
+description: Suggest improvements to the site's user interface or design
+title: "[UI/Design]: "
+labels: ["enhancement", "design", "ui/ux"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to help improve IdeaForge's design! We value your feedback.
+        
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area of Improvement
+      description: Which area of the site does this improvement relate to?
+      options:
+        - Homepage
+        - Navigation
+        - Feature pages
+        - Profile/Dashboard
+        - Project workspace
+        - Authentication (Login/Signup)
+        - Dark mode
+        - Mobile responsiveness
+        - Accessibility
+        - Color scheme
+        - Typography
+        - Layout/Spacing
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How would you rate the importance of this improvement?
+      options:
+        - Low - Nice to have
+        - Medium - Would significantly improve UX
+        - High - Critical for usability
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: Describe the current design or UI element you'd like to improve
+      placeholder: "Currently, the navigation menu..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: Describe your suggested improvement in detail
+      placeholder: "I suggest we change the navigation to..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: What benefits will this improvement bring to users?
+      placeholder: "This will improve user experience by..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups or Examples (Optional)
+      description: If you have mockups, screenshots, or links to examples, please share them here
+      placeholder: "You can paste images directly or provide links to design tools like Figma"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information or context about the improvement
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/Kiyoshiakira/ideaforge/blob/main/CONTRIBUTING.MD)
+      options:
+        - label: I agree to follow this project's Contributing Guidelines
+          required: true
