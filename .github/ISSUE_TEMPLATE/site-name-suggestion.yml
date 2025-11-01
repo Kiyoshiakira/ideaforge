@@ -1,0 +1,134 @@
+name: 💡 Site Name Suggestion
+description: Suggest an alternative name for IdeaForge or provide feedback on the current name
+title: "[Name]: "
+labels: ["enhancement", "branding", "naming"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us explore naming options for our platform! 
+        
+        **Current Name:** IdeaForge
+        **Current Tagline:** "Where Art Meets Collaboration"
+        
+  - type: dropdown
+    id: suggestion-type
+    attributes:
+      label: Type of Suggestion
+      description: What kind of naming suggestion are you making?
+      options:
+        - New name suggestion (complete rename)
+        - Variation of current name (IdeaForge)
+        - Tagline improvement
+        - Both name and tagline
+        - Feedback on current name
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed-name
+    attributes:
+      label: Proposed Name
+      description: What name(s) are you suggesting?
+      placeholder: "Suggested name(s): ..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed-tagline
+    attributes:
+      label: Proposed Tagline (Optional)
+      description: If you have a tagline suggestion, please share it here
+      placeholder: "Suggested tagline: ..."
+    validations:
+      required: false
+      
+  - type: textarea
+    id: meaning
+    attributes:
+      label: Meaning and Significance
+      description: What does the proposed name mean? What inspired it?
+      placeholder: "The name means... / I chose this because..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alignment
+    attributes:
+      label: Alignment with Mission
+      description: How does this name align with IdeaForge's mission of collaborative creation?
+      placeholder: "This name reflects our mission by..."
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: name-qualities
+    attributes:
+      label: Name Qualities
+      description: Which of these qualities does your proposed name have? (Select all that apply)
+      options:
+        - label: Easy to remember
+        - label: Easy to spell
+        - label: Easy to pronounce
+        - label: Unique and distinctive
+        - label: Evokes creativity and collaboration
+        - label: Works internationally (no negative connotations in other languages)
+        - label: Domain name likely available
+        - label: Social media handles likely available
+          
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why This Name?
+      description: Explain why you think this name is better than the current one, or why it fits the platform
+      placeholder: "I believe this name is a good fit because..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: domain-availability
+    attributes:
+      label: Domain/Social Media Availability (Optional)
+      description: Have you checked if the domain name or social media handles are available?
+      placeholder: "I checked and found that..."
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: preference
+    attributes:
+      label: Preference Level
+      description: How strongly do you feel about this naming suggestion?
+      options:
+        - Strong preference - I think this is significantly better
+        - Moderate preference - I think this is an improvement
+        - Neutral - Just offering an alternative
+        - Current name is good - This is just an option to consider
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Names (Optional)
+      description: Do you have other name ideas you'd like to share?
+      placeholder: "Other names I considered: ..."
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other thoughts or context about naming?
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/Kiyoshiakira/ideaforge/blob/main/CONTRIBUTING.MD)
+      options:
+        - label: I agree to follow this project's Contributing Guidelines
+          required: true
