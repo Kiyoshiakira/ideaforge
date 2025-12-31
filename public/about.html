@@ -9,198 +9,242 @@
     <link rel="stylesheet" href="dark-theme.css" />
     <link rel="stylesheet" href="theme-toggle.css" />
     <style>
-      .about-section {
-        margin-bottom: 46px;
-      }
-      .about-section h2 {
-        margin-top: 36px;
-        margin-bottom: 10px;
-        color: #6e33b7;
-        font-size: 2rem;
-      }
-      .about-section p,
-      .about-section ul,
-      .about-section li {
-        font-size: 1.13rem;
-        color: #444;
-      }
-      .about-section ul {
-        margin: 10px 0 20px 25px;
-        padding: 0;
-      }
-      .about-list {
-        margin-top: 10px;
-        margin-bottom: 24px;
-        list-style-type: disc;
-      }
-      .about-feature-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin: 25px 0 30px 0;
-      }
-      .feature-blurb {
-        background: linear-gradient(90deg, #6e33b7 0%, #421e7c 100%);
-        color: #fff;
-        border-radius: 18px;
-        box-shadow: 0 2px 12px rgba(80, 30, 140, 0.09);
-        padding: 22px 20px 20px 20px;
-        min-width: 220px;
-        max-width: 300px;
-        flex: 1 1 220px;
-        margin-bottom: 18px;
-      }
-      .feature-blurb i {
-        font-size: 2em;
-        color: #ffd86b;
-        margin-bottom: 4px;
-        display: block;
-      }
-      .feature-blurb strong {
-        color: #ffd86b !important;
-        font-weight: bold;
-      }
-      .about-values-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px;
-        margin-top: 16px;
-      }
-      .value-card {
-        background: #ffd86b;
-        color: #421e7c;
-        border-radius: 14px;
-        padding: 18px 18px 13px 18px;
-        font-size: 1.13rem;
-        box-shadow: 0 2px 12px rgba(110, 51, 183, 0.09);
-        flex: 1 1 180px;
-        min-width: 170px;
-        max-width: 300px;
-        margin-bottom: 7px;
-        font-weight: 500;
-      }
-      .about-steps-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px;
-        margin-top: 16px;
-        list-style: none;
-        padding: 0;
-      }
-      .step-card {
-        background: #fff;
-        color: #421e7c;
-        border: 2px solid #6e33b7;
-        border-radius: 14px;
-        padding: 18px 18px 13px 18px;
-        font-size: 1.08rem;
-        box-shadow: 0 2px 12px rgba(110, 51, 183, 0.09);
-        flex: 1 1 280px;
-        min-width: 260px;
-        max-width: 360px;
-        margin-bottom: 7px;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-      .step-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 16px rgba(110, 51, 183, 0.15);
-      }
-      .step-card strong {
-        color: #6e33b7;
-        display: block;
-        margin-bottom: 6px;
-        font-size: 1.15rem;
-      }
-      .about-roadmap-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px;
-        margin-top: 16px;
-        list-style: none;
-        padding: 0;
-      }
-      .roadmap-card {
-        background: linear-gradient(135deg, #6e33b7 0%, #421e7c 100%);
-        color: #fff;
-        border-radius: 14px;
-        padding: 18px 18px 13px 18px;
-        font-size: 1.08rem;
-        box-shadow: 0 2px 12px rgba(110, 51, 183, 0.12);
-        flex: 1 1 220px;
-        min-width: 200px;
-        max-width: 280px;
-        margin-bottom: 7px;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-      .roadmap-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 16px rgba(110, 51, 183, 0.2);
-      }
-      .roadmap-card strong {
-        color: #ffd86b;
-        display: block;
-        margin-bottom: 6px;
-        font-size: 1.15rem;
-      }
-      .about-info-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px;
-        margin-top: 16px;
-      }
-      .info-card {
-        background: #f9f5ff;
-        color: #421e7c;
-        border-left: 4px solid #6e33b7;
-        border-radius: 10px;
-        padding: 18px 18px 13px 18px;
-        font-size: 1.08rem;
-        box-shadow: 0 2px 8px rgba(110, 51, 183, 0.08);
-        flex: 1 1 100%;
-        margin-bottom: 7px;
-      }
-      .info-card h3 {
-        color: #6e33b7;
-        margin: 0 0 10px 0;
-        font-size: 1.2rem;
-      }
-      .info-card ul {
-        margin: 8px 0 0 20px;
-        padding: 0;
-      }
-      .info-card li {
-        margin-bottom: 8px;
-      }
-      .primary-link {
-        color: #6e33b7;
-        font-weight: 600;
-      }
-      .centered-text {
-        text-align: center;
-        margin-top: 20px;
-      }
-      @media (max-width: 900px) {
-        .about-feature-list,
-        .about-values-list,
-        .about-steps-list,
-        .about-roadmap-list,
-        .about-info-grid {
-          flex-direction: column;
-          gap: 12px;
-        }
-        .feature-blurb,
-        .value-card,
-        .step-card,
-        .roadmap-card,
-        .info-card {
-          max-width: 100%;
-          min-width: unset;
-        }
-      }
+/* ===============================
+   GLOBAL TEXT LEGIBILITY FIXES
+================================ */
+
+body {
+  line-height: 1.75;
+}
+
+.about-section {
+  margin-bottom: 46px;
+}
+
+/* ===============================
+   DARK MODE TEXT COLORS
+================================ */
+body.dark-mode {
+  color: #eae6f5;
+}
+
+body.dark-mode .about-section h1 {
+  color: #f5f3ff;
+}
+
+body.dark-mode .about-section h2 {
+  color: #c4b5fd;
+}
+
+body.dark-mode .about-section p,
+body.dark-mode .about-section li {
+  color: #e5e1f0;
+}
+
+/* ===============================
+   LIGHT MODE TEXT COLORS
+================================ */
+body.light-mode {
+  color: #2e1065;
+}
+
+body.light-mode .about-section h1 {
+  color: #3b0764;
+}
+
+body.light-mode .about-section h2 {
+  color: #5b21b6;
+}
+
+body.light-mode .about-section p,
+body.light-mode .about-section li {
+  color: #2e1065;
+}
+
+/* ===============================
+   FEATURE CARDS (BOTH MODES OK)
+================================ */
+.about-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0 30px 0;
+}
+
+.feature-blurb {
+  background: linear-gradient(135deg, #5b21b6, #3b0764);
+  border-radius: 18px;
+  padding: 22px 20px;
+  min-width: 220px;
+  max-width: 300px;
+  flex: 1 1 220px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.feature-blurb i {
+  font-size: 2em;
+  color: #fde68a;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.feature-blurb strong {
+  color: #fde68a;
+  font-weight: 600;
+}
+
+.feature-blurb p {
+  color: #ede9fe;
+}
+
+/* ===============================
+   VALUE CARDS
+================================ */
+.about-values-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 16px;
+}
+
+.value-card {
+  background: #fde68a;
+  color: #3b0764;
+  border-radius: 14px;
+  padding: 18px;
+  flex: 1 1 180px;
+  font-weight: 500;
+}
+
+/* ===============================
+   HOW IT WORKS – MODE AWARE
+================================ */
+.about-steps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+}
+
+.step-card {
+  border-radius: 14px;
+  padding: 18px;
+  flex: 1 1 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode steps */
+body.dark-mode .step-card {
+  background: #1f143d;
+  color: #ede9fe;
+}
+
+body.dark-mode .step-card strong {
+  color: #fde68a;
+}
+
+/* Light mode steps */
+body.light-mode .step-card {
+  background: #ffffff;
+  color: #2e1065;
+}
+
+body.light-mode .step-card strong {
+  color: #5b21b6;
+}
+
+/* ===============================
+   ROADMAP CARDS
+================================ */
+.about-roadmap-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-card {
+  background: linear-gradient(135deg, #4c1d95, #2e1065);
+  color: #f5f3ff;
+  border-radius: 14px;
+  padding: 18px;
+  flex: 1 1 220px;
+}
+
+.roadmap-card strong {
+  color: #fde68a;
+}
+
+/* ===============================
+   INFO CARDS (MODE AWARE)
+================================ */
+.about-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.info-card {
+  border-left: 4px solid #c4b5fd;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+/* Dark mode */
+body.dark-mode .info-card {
+  background: #1f143d;
+  color: #ede9fe;
+}
+
+/* Light mode */
+body.light-mode .info-card {
+  background: #f5f3ff;
+  color: #2e1065;
+}
+
+/* ===============================
+   LINKS
+================================ */
+.primary-link {
+  font-weight: 600;
+}
+
+body.dark-mode .primary-link {
+  color: #a5b4fc;
+}
+
+body.light-mode .primary-link {
+  color: #5b21b6;
+}
+
+.primary-link:hover {
+  color: #fde68a;
+}
+
+/* ===============================
+   CENTER TEXT
+================================ */
+.centered-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ===============================
+   RESPONSIVE (UNCHANGED)
+================================ */
+@media (max-width: 900px) {
+  .about-feature-list,
+  .about-values-list,
+  .about-steps-list,
+  .about-roadmap-list,
+  .about-info-grid {
+    flex-direction: column;
+  }
+}
+
+
     </style>
   </head>
   <body>
